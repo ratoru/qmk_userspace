@@ -1,0 +1,71 @@
+layout: {qmk_keyboard: splitkb/aurora/sweep/rev1, layout_name: LAYOUT_split_3x5_2}
+layers:
+  COLEMAK:
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - [A, R, S, T, G, M, N, E, I, O]
+  - [Z, X, C, D, V, K, H, ',', ., /]
+  - [SPC, ANY(TL LOWR), ANY(TL UPPR), BSPC]
+  QWERTY:
+  - [Q, W, E, R, T, Y, U, I, O, P]
+  - [A, S, D, F, G, H, J, K, L, ;]
+  - [Z, X, C, V, B, N, M, ',', ., /]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  NAV:
+  - [TAB, ANY(DM REC1), ANY(DM PLY1), CW TOGG, QK REP, BRIU, MUTE, VOLD, VOLU, BSPC]
+  - [OS CTRL, OS ALT, OS CMD, OS SHFT, ANY(SELWORD), LEFT, DOWN, UP, RGHT, ENT]
+  - [ANY(SW CTAB), ANY(SW BTICK), ANY(SW TAB), ESC, QK AREP, BRID, MPRV, MPLY, MNXT, DEL]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  SYM:
+  - ['~', <, '>', '#', '@', '&', '`', '[', ']', \]
+  - ['!', '-', +, '=', '0', '1', _, (, ), '%']
+  - [^, ':', '*', '''', ANY(UPDIR), '|', '"', '{', '}', $]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  NUM:
+  - - {t: GAME, h: toggle}
+    - '-'
+    - +
+    - BSPC
+    - ANY(RGBT NE)
+    - '-'
+    - '7'
+    - '8'
+    - '9'
+    - BSPC
+  - [OS CTRL, OS ALT, OS CMD, OS SHFT, ANY(RGB IB NE), '*', '4', '5', '6', '0']
+  - - {t: QWERTY, h: toggle}
+    - '='
+    - ','
+    - ESC
+    - ANY(RGB DB NE)
+    - /
+    - '1'
+    - '2'
+    - '3'
+    - .
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  GAME:
+  - ['1', '2', '3', '4', '5', '', '', '', '', BSPC]
+  - - Q
+    - W
+    - E
+    - R
+    - T
+    - ''
+    - {t: COLEMAK, h: toggle}
+    - ESC
+    - ''
+    - ENT
+  - [A, S, D, F, G, '', '', '', '', RSFT]
+  - [SPC, LALT, ANY(TL UPPR), ANY(TL LOWR)]

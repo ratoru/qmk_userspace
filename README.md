@@ -1,59 +1,66 @@
-# QMK Userspace
+# My QMK Keymaps
 
-This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
+## Features
 
-## Howto configure your build targets
+## How to build with GitHub
 
-1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
-1. Fork this repository
-1. Clone your fork to your local machine
-1. Enable userspace in QMK config using `qmk config user.overlay_dir="$(realpath qmk_userspace)"`
-1. Add a new keymap for your board using `qmk new-keymap`
-    * This will create a new keymap in the `keyboards` directory, in the same location that would normally be used in the main QMK repository. For example, if you wanted to add a keymap for the Planck, it will be created in `keyboards/planck/keymaps/<your keymap name>`
-    * You can also create a new keymap using `qmk new-keymap -kb <your_keyboard> -km <your_keymap>`
-    * Alternatively, add your keymap manually by placing it in the location specified above.
-    * `layouts/<layout name>/<your keymap name>/keymap.*` is also supported if you prefer the layout system
-1. Add your keymap(s) to the build by running `qmk userspace-add -kb <your_keyboard> -km <your_keymap>`
-    * This will automatically update your `qmk.json` file
-    * Corresponding `qmk userspace-remove -kb <your_keyboard> -km <your_keymap>` will delete it
-    * Listing the build targets can be done with `qmk userspace-list`
-1. Commit your changes
+✅ Easier. No setup required.
 
-## Howto build with GitHub
+❌ Longer feedback loop. Changes need to go through CI.
 
-1. In the GitHub Actions tab, enable workflows
-1. Push your changes above to your forked GitHub repository
-1. Look at the GitHub Actions for a new actions run
-1. Wait for the actions run to complete
-1. Inspect the Releases tab on your repository for the latest firmware build
+1. Push your changes to the remote.
 
-## Howto build locally
+    ```sh
+    git push origin main
+    ```
 
-1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
-1. Fork this repository
-1. Clone your fork to your local machine
-1. `cd` into this repository's clone directory
-1. Set global userspace path: `qmk config user.overlay_dir="$(realpath .)"` -- you MUST be located in the cloned userspace location for this to work correctly
-    * This will be automatically detected if you've `cd`ed into your userspace repository, but the above makes your userspace available regardless of your shell location.
-1. Compile normally: `qmk compile -kb your_keyboard -km your_keymap` or `make your_keyboard:your_keymap`
+2. Wait for the CI to pass. (A GitHub Action will build your firmware.)
 
-Alternatively, if you configured your build targets above, you can use `qmk userspace-compile` to build all of your userspace targets at once.
+    ```sh
+    gh run watch
+    ```
 
-## Extra info
+3. Grab the firmware from the CI artifacts.
 
-If you wish to point GitHub actions to a different repository, a different branch, or even a different keymap name, you can modify `.github/workflows/build_binaries.yml` to suit your needs.
+    ```sh
+    gh run download
+    ```
 
-To override the `build` job, you can change the following parameters to use a different QMK repository or branch:
+    > ℹ️ Please note that these artifacts are ephemeral and they may be expired if you try to access them later on. You can always grab the latest firmware from the [Releases](https://github.com/mikybars/qmk_userspace/releases) page.
+
+4. Flash the firmware to your keyboard. This depends on your microcontroller. If yours is RP2040 based, take a look at the next section.
+
+## Flashing RP2040 microcontroller
+
+> ⚠️ Please always unplug your keyboard from your computer before removing the TRRS cable!
+
+-   Disconnect TRRS/TRS cable between the splits (keyboard halfs).
+-   For each split, do:
+    -   Connect your split to the computer using USB.
+    -   Press the reset switch of the split two times consequently so that your RP2040 based MCU will go to Bootloader Mode.
+    -   You must see Raspberry PI Boot Device in the output of lsusb. It's also detected as Mass Storage Device.
+    -   Drag and Drop (cp or copy) the .uf2 file to the RP2040 Mass Storage Device.
+    -   After the firmware is copied, you will see that the MCU exits Bootloader mode and Mass Storage Device is no longer present. It means that the firmware is flashed!
+
+## Drawing your keymap
+
+Drawing your keymap can really help you memorize the different layers. Furthermore, it lets others discover your keymap more easily.
+
+The fancy graphics in this repo are custom made. For a more repeatable process I use [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
+For example, to generate the sweep `keymap.yaml` file, I ran the following command. It uses `uv` to avoid having to install the tool:
+
+```bash
+uvx --from keymap-drawer keymap parse -c 10 -l COLEMAK QWERTY NAV SYM NUM GAME -q keymap.json > sweep_osm.yaml
 ```
-    with:
-      qmk_repo: qmk/qmk_firmware
-      qmk_ref: master
+
+Unfortunately, it does not automatically parse combos. You will have to add those manually. To finally draw the keymap run:
+
+```bash
+uvx --from keymap-drawer keymap draw sweep_osm.yaml > sweep_osm_keymap.svg
 ```
 
-If you wish to manually manage `qmk_firmware` using git within the userspace repository, you can add `qmk_firmware` as a submodule in the userspace directory instead. GitHub Actions will automatically use the submodule at the pinned revision if it exists, otherwise it will use the default latest revision of `qmk_firmware` from the main repository.
+I am also working on a worklfow to automate the drawing.
 
-This can also be used to control which fork is used, though only upstream `qmk_firmware` will have support for external userspace until other manufacturers update their forks.
+## My keymaps in detail
 
-1. (First time only) `git submodule add https://github.com/qmk/qmk_firmware.git`
-1. (To update) `git submodule update --init --recursive`
-1. Commit your changes to your userspace repository
+Check `docs/generated` for the most up-to-date graphics.
