@@ -7,14 +7,23 @@ permissions:
 
 jobs:
   build:
-    name: 'QMK Userspace Build'
+    name: "QMK Userspace Build"
     uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
     with:
       qmk_repo: qmk/qmk_firmware
       qmk_ref: master
 
   publish:
-    name: 'QMK Userspace Publish'
+    name: "QMK Userspace Publish"
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
     needs: build
+
+  draw:
+    name: "Draw QMK Keymaps"
+    needs: build
+    uses: ./.github/workflows/draw_qmk.yaml
+    with:
+      keymap_patterns: "keyboards/**/keymap.json"
+      config_path: "keymap_drawer.config.yaml"
+      destination: "artifact"
