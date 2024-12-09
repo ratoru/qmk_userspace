@@ -14,37 +14,37 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   NAV:
-  - [TAB, ANY(DM REC1), ANY(DM PLY1), CW TOGG, QK REP, BRIU, MUTE, VOLD, VOLU, BSPC]
-  - [OS CTRL, OS ALT, OS CMD, OS SHFT, ANY(SELWORD), LEFT, DOWN, UP, RGHT, ENT]
-  - [ANY(SW CTAB), ANY(SW BTICK), ANY(SW TAB), ESC, QK AREP, BRID, MPRV, MPLY, MNXT, DEL]
+  - [TAB, ANY(DM REC1), ANY(DM PLY1), CW TOGG, PGUP, BRIU, ANY(CPY URL), QK REP, QK AREP, BSPC]
+  - [ANY(OS CTRL), ANY(OS ALT), ANY(OS CMD), ANY(OS SHFT), ANY(OS HYPR), LEFT, DOWN, UP, RGHT, ENT]
+  - [ANY(SW CTAB), ANY(SW BTICK), ANY(SW TAB), ESC, PGDN, BRID, ANY(SELWORD), Gui+ SPC, ANY(S END), DEL]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   SYM:
   - ['~', <, '>', '#', '@', '&', '`', '[', ']', \]
-  - ['!', '-', +, '=', '0', '1', _, (, ), '%']
-  - [^, ':', '*', '''', ANY(UPDIR), '|', '"', '{', '}', $]
+  - ['!', '-', +, '=', '0', '1', _, (, ), $]
+  - [^, ':', '*', '''', ANY(UPDIR), '|', '"', '{', '}', '%']
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   NUM:
   - - {t: GAME, h: toggle}
-    - '-'
-    - +
-    - BSPC
+    - MUTE
+    - VOLD
+    - VOLU
     - ANY(RGBT NE)
-    - '-'
+    - '*'
     - '7'
     - '8'
     - '9'
     - BSPC
-  - [OS CTRL, OS ALT, OS CMD, OS SHFT, ANY(RGB IB NE), '*', '4', '5', '6', '0']
+  - [ANY(OS CTRL), ANY(OS ALT), ANY(OS CMD), ANY(OS SHFT), ANY(RGB IB NE), '-', '4', '5', '6', '0']
   - - {t: QWERTY, h: toggle}
-    - '='
-    - ','
-    - ESC
+    - MPRV
+    - MPLY
+    - MNXT
     - ANY(RGB DB NE)
     - /
     - '1'
