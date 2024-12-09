@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Call Draw QMK Workflow
-        uses: ./.github/workflows/draw-zmk.yml
+        uses: ./.github/workflows/draw_qmk.yaml
         with:
           keymap_patterns: "keyboards/*/keymap.json"
           config_path: "keymap_drawer.config.yaml"

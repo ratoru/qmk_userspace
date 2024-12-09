@@ -1,6 +1,28 @@
 # My QMK Keymaps
 
+These are my keymaps for the [Kyria rev3](https://github.com/splitkb/kyria) and the [Aurora Sweep](https://splitkb.com/collections/keyboard-kits/products/aurora-sweep). Learn more about how and why I created them by reading [my guide](https://ratoru.com/blog/choose-the-right-base-layout).
+
+It was heavily inspired by [Pascal Getreuer's keymap](https://github.com/getreuer/qmk-keymap). It uses a `Colemak-DH` base layer with an option to switch to `Qwerty`. I spent a lot of time trying to design a very efficient symbol layer for programming. To do so, I referred heavily to character and bigram frequencies in programming langues.
+
+The keymap is compiled using a GitHub Action. See more about that below.
+
 ## Features
+
+- [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
+- [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
+- [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
+- QMK Features:
+  - [Caps Word](https://docs.qmk.fm/#/feature_caps_word)
+  - [Layer Lock](https://docs.qmk.fm/features/layer_lock)
+- `../` key in symbol layer
+- Layer keys activated by the thumbs via mod-tap.
+- RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
+- Combos like `spc + bspc = one-shot sift`. See `combos.inc` for more info.
+- Layouts for both home row mods (named `*-hrm.json`) and one-shot modifiers (named `*-osm.json`).
+- For home row mods users: [timeless home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods) implementation for QMK.
+- Callum style one shot modifiers.
+
+Note that keymap documentation might not always be up to date.
 
 ## How to build with GitHub
 
