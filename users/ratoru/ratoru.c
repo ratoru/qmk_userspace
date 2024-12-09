@@ -87,7 +87,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     case S_END:
       if (record->event.pressed) {
         SEND_STRING(". ");
-        tap_code16(OSM(KC_LSFT));
+        add_oneshot_mods(MOD_BIT(KC_LSFT));  // Set one-shot mod for shift.
       }
       return false;
     case CPY_URL:
