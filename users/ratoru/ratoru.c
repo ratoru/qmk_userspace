@@ -84,6 +84,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         SEND_STRING("../");
       }
       return false;
+    case S_END:
+      if (record->event.pressed) {
+        SEND_STRING(". ");
+        tap_code16(OSM(KC_LSFT));
+      }
+      return false;
+    case CPY_URL:
+      if (record->event.pressed) {
+        SEND_STRING(SS_LGUI("lc"));
+      }
+      return false;
     #ifdef RGBLIGHT_ENABLE
     case RGBT_NE:
       if (record->event.pressed) {

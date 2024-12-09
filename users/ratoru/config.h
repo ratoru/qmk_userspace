@@ -50,4 +50,6 @@
 #define OS_ALT QK_USER + 11
 #define OS_CMD QK_USER + 12
 #define OS_HYPR QK_USER + 13
+#define S_END QK_USER + 14
+#define CPY_URL QK_USER + 15
 #endif
