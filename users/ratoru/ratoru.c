@@ -122,6 +122,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
 
+// Define custom alt repeat keys
+#ifdef REPEAT_KEY_ENABLE
+uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
+    bool cmd_held = (mods & MOD_MASK_GUI);
+    bool shift_held = (mods & MOD_MASK_SHIFT);
+    if (cmd_held && shift_held) {
+        switch (keycode) {
+            case KC_Z: return G(KC_Z);  // CMD + Shift + Z reverses to CMD + Z.
+            case KC_T: return G(KC_W);  // CMD + Shift + T reverses to CMD + W.
+        }
+    }
+    if (cmd_held) {
+        switch (keycode) {
+            case KC_Z: return G(S(KC_Z));  // CMD + Z reverses to CMD + Shift + Z.
+            case KC_W: return G(S(KC_T));  // CMD + W reverses to CMD + Shift + T.
+        }
+    }
+
+    return KC_TRNS;  // Defer to default definitions.
+}
+#endif
+
 // ---- Home Row Mods "Timeless" Config ----
 #ifdef TIMELESSHMR_ENABLE
 static uint16_t    next_keycode;
