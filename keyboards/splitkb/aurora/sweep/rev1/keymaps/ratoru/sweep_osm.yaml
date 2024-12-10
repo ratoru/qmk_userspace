@@ -16,7 +16,7 @@ layers:
   NAV:
   - [TAB, ANY(DM REC1), ANY(DM PLY1), CW TOGG, PGUP, BRIU, ANY(CPY URL), QK REP, QK AREP, BSPC]
   - [ANY(OS CTRL), ANY(OS ALT), ANY(OS CMD), ANY(OS SHFT), ANY(OS HYPR), LEFT, DOWN, UP, RGHT, ENT]
-  - [ANY(SW CTAB), ANY(SW BTICK), ANY(SW TAB), ESC, PGDN, BRID, ANY(SELWORD), Gui+ SPC, ANY(S END), DEL]
+  - [ANY(SW CTAB), ANY(SW BTICK), ANY(SW TAB), ESC, PGDN, BRID, ANY(SELWORD), ANY(SRCHSEL), ANY(S END), DEL]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

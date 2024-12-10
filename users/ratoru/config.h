@@ -52,4 +52,5 @@
 #define OS_HYPR QK_USER + 13
 #define S_END QK_USER + 14
 #define CPY_URL QK_USER + 15
+#define SRCHSEL QK_USER + 16
 #endif

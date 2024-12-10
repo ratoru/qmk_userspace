@@ -84,17 +84,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         SEND_STRING("../");
       }
       return false;
-    case S_END:
+    case S_END:  // Sentence end
       if (record->event.pressed) {
         SEND_STRING(". ");
         add_oneshot_mods(MOD_BIT(KC_LSFT));  // Set one-shot mod for shift.
       }
       return false;
-    case CPY_URL:
+    case CPY_URL:  // Copy browser url
       if (record->event.pressed) {
         SEND_STRING(SS_LGUI("lc"));
       }
       return false;
+    case SRCHSEL:  // Searches the current selection in a new tab.
+      if (record->event.pressed) {
+        // Windows users, change LGUI to LCTL.
+        SEND_STRING(SS_LGUI("ct") SS_DELAY(100) SS_LGUI("v") SS_TAP(X_ENTER));
+      }
+  return false;
     #ifdef RGBLIGHT_ENABLE
     case RGBT_NE:
       if (record->event.pressed) {
