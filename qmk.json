@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["splitkb/aurora/sweep/rev1", "ratoru"]
+        ["splitkb/aurora/sweep/rev1", "ratoru"],
+        ["crkbd/rev1", "ratoru"]
     ]
 }
