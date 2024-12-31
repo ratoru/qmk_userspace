@@ -26,9 +26,12 @@ The keymap is compiled using a GitHub Action. See more about that below.
     -   For home row mods users: [timeless home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods) implementation for QMK.
     -   Callum style one shot modifiers.
 
-Note that keymap documentation might not always be up to date.
+My keymap documentation might not always be up to date. Don't blindly trust the images.
 
 ## How to build with GitHub
+
+> [!NOTE]
+> The keymaps are compiled for the microcontrollers that I own using `CONVERT_TO=` In the respective `config.h` files. If you have a [different controller](https://docs.qmk.fm/#/feature_converters?id=converters), you might want to change that definition!
 
 ✅ Easier. No setup required.
 
