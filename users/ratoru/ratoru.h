@@ -1,7 +1,7 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
-#ifdef TIMELESSHRM_ENABLE
+#ifdef THRM_ENABLE
 #define IS_HOMEROW(r)        (r->event.key.row == 1 || r->event.key.row == 5)
 
 #define IS_UNILATERAL_TAP(r, n) ((r->event.key.col != n.event.key.col) && (    \

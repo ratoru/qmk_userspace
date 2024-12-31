@@ -1,12 +1,16 @@
 #include "ratoru.h"
 #include "features/select_word.h"
 #include "features/swapper.h"
+
+#ifdef COSM_ENABLE
 #include "features/oneshot.h"
+#endif
 
 bool sw_tab_active = false;
 bool sw_control_tab_active = false;
 bool sw_backtick_active = false;
 
+#ifdef COSM_ENABLE
 oneshot_state os_shft_state = os_up_unqueued;
 oneshot_state os_ctrl_state = os_up_unqueued;
 oneshot_state os_alt_state = os_up_unqueued;
@@ -38,6 +42,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
         return false;
     }
 }
+#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   if (!process_select_word(keycode, record, SELWORD)) { return false; }
@@ -56,6 +61,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
       keycode, record
   );
 
+  #ifdef COSM_ENABLE
   // Process oneshot keys
   update_oneshot(
     &os_shft_state, KC_LSFT, OS_SHFT,
@@ -77,6 +83,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     &os_hypr_state, KC_HYPR, OS_HYPR,
     keycode, record
   );
+  #endif
 
   switch (keycode) {
     case UPDIR:  // Types ../ to go up a directory on the shell.
@@ -145,7 +152,7 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
 #endif
 
 // ---- Home Row Mods "Timeless" Config ----
-#ifdef TIMELESSHMR_ENABLE
+#ifdef THRM_ENABLE
 static uint16_t    next_keycode;
 static keyrecord_t next_record;
 

@@ -7,7 +7,7 @@
 
 // ---- Home row mods settings ----
 // Configure the global tapping term (default: 200ms)
-#ifdef TIMELESSHRM_ENABLE
+#ifdef THRM_ENABLE
 #define TAPPING_TERM 500
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 0

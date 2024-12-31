@@ -1,6 +1,6 @@
 # Custom ifdef for timeless homerow mods.
-ifeq ($(strip $(TIMELESSHRM_ENABLE)), yes)
-    OPT_DEFS += -DTIMELESSHRM_ENABLE
+ifeq ($(strip $(THRM_ENABLE)), yes)
+    OPT_DEFS += -DTHRM_ENABLE
 endif
 
 # Custom ifdef for callum oneshot modifiers
