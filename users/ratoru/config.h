@@ -38,19 +38,18 @@
 #include "quantum/keycodes.h"
 #define SELWORD QK_USER
 #define UPDIR QK_USER + 1
-#define LLOCK QK_USER + 2
-#define SW_TAB QK_USER + 3
-#define SW_CTAB QK_USER + 4
-#define SW_BTICK QK_USER + 5
-#define RGBT_NE QK_USER + 6
-#define RGB_DB_NE QK_USER + 7
-#define RGB_IB_NE QK_USER + 8
-#define OS_SHFT QK_USER + 9
-#define OS_CTRL QK_USER + 10
-#define OS_ALT QK_USER + 11
-#define OS_CMD QK_USER + 12
-#define OS_HYPR QK_USER + 13
-#define S_END QK_USER + 14
-#define CPY_URL QK_USER + 15
-#define SRCHSEL QK_USER + 16
+#define SW_TAB QK_USER + 2
+#define SW_CTAB QK_USER + 3
+#define SW_BTICK QK_USER + 4
+#define RGBT_NE QK_USER + 5
+#define RGB_DB_NE QK_USER + 6
+#define RGB_IB_NE QK_USER + 7
+#define OS_SHFT QK_USER + 8
+#define OS_CTRL QK_USER + 9
+#define OS_ALT QK_USER + 10
+#define OS_CMD QK_USER + 11
+#define OS_HYPR QK_USER + 12
+#define S_END QK_USER + 13
+#define CPY_URL QK_USER + 14
+#define SRCHSEL QK_USER + 15
 #endif

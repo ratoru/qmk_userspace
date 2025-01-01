@@ -1,10 +1,8 @@
 layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
 layers:
   COLEMAK:
-  - [TAB, Q, W, F, P, B, J, L, U, Y]
-  - - ;
-    - BSPC
-    - ESC
+  - [TAB, Q, W, F, P, B, J, L, U, Y, ;, BSPC]
+  - - ESC
     - {t: A, h: LCTL}
     - {t: R, h: LALT}
     - {t: S, h: LGUI}
@@ -12,110 +10,137 @@ layers:
     - G
     - M
     - {t: N, h: RSFT}
-  - - {t: E, h: RGUI}
+    - {t: E, h: RGUI}
     - {t: I, h: RALT}
     - {t: O, h: RCTL}
-    - ''''
-    - {t: LSFT, h: sticky}
+    - ENT
+  - - {t: LSFT, h: sticky}
     - Z
     - X
     - C
     - D
     - V
-  - - ANY(DM REC1)
+    - ANY(DM REC1)
     - ANY(DM PLY1)
-    - ANY(DM PLY2)
-    - ANY(DM REC2)
+    - QK REP
+    - QK AREP
     - K
     - H
-    - ','
+  - - ','
     - .
     - /
     - {t: RSFT, h: sticky}
-  - - {t: GAME, h: toggle}
-    - CW TOGG
-    - {t: LSFT, h: sticky}
+    - {t: QWERTY, h: toggle}
+    - {t: FUN, h: tap-toggle}
     - ANY(TL LOWR)
-    - BSPC
-    - ENT
-    - ANY(TL UPPR)
     - SPC
     - ANY(SELWORD)
-    - {t: QWERTY, h: toggle}
+    - CW TOGG
+    - {t: LSFT, h: sticky}
+    - ANY(TL UPPR)
+  - - {t: HYPR, h: sticky}
+    - {t: GAME, h: toggle}
   QWERTY:
-  - [TAB, Q, W, E, R, T, Y, U, I, O]
-  - [P, BSPC, ESC, A, S, D, F, G, H, J]
-  - - K
+  - - {t: ▽, type: trans}
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - A
+    - S
+    - D
+    - F
+    - G
+    - H
+    - J
+    - K
     - L
     - ;
-    - ''''
-    - {t: LSFT, h: sticky}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - Z
     - X
     - C
     - V
     - B
-  - - LCTL
-    - CW TOGG
-    - QK AREP
-    - QK REP
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - N
     - M
-    - ','
+  - - ','
     - .
     - /
-    - {t: RSFT, h: sticky}
-  - - LCTL
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: COLEMAK, h: toggle}
+  NAV:
+  - - TAB
+    - ''
+    - ''
+    - ANY(SRCHSEL)
+    - ''
+    - ''
+    - ''
+    - ANY(CPY URL)
+    - HOME
+    - END
+    - ''
+    - {t: ▽, type: trans}
+  - - ESC
+    - LCTL
     - LALT
     - LGUI
-    - {t: LSFT, h: sticky}
-    - NAV
-    - {t: ENT, h: NUM}
-    - {t: SPC, h: SYM}
-    - {t: BSPC, h: LGUI}
-    - ANY(SELWORD)
-    - {t: ▽, type: trans}
-  NAV:
-  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  - - '0'
-    - {t: ▽, type: trans}
-    - ESC
-    - {t: LCTL, h: sticky}
-    - {t: LALT, h: sticky}
-    - {t: LGUI, h: sticky}
-    - {t: LSFT, h: sticky}
-    - VOLU
-    - LEFT
-    - DOWN
-  - - UP
-    - RGHT
-    - BSPC
-    - {t: ▽, type: trans}
     - LSFT
     - ''
+    - LEFT
+    - DOWN
+    - UP
+    - RGHT
+    - DEL
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ANY(SW CTAB)
+    - ANY(SW BTICK)
+    - ANY(SW TAB)
     - ''
     - ''
-    - ''
-    - VOLD
-  - - ANY(LLOCK)
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - MUTE
-    - MPRV
-    - MPLY
-    - MNXT
-    - BRID
-    - BRIU
+    - {t: ▽, type: trans}
+    - ''
+    - PGDN
+  - - PGUP
+    - ANY(S END)
+    - ''
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   SYM:
   - - {t: ▽, type: trans}
@@ -125,121 +150,166 @@ layers:
     - '#'
     - '@'
     - '&'
-    - ':'
+    - '`'
     - '['
     - ']'
-  - - \
+    - \
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
     - '!'
     - '-'
-    - +
+    - ':'
     - '='
-    - '`'
-    - $
-    - _
-  - - (
-    - )
-    - '%'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - ^
-    - /
-    - '*'
     - '0'
+    - '1'
+    - _
+    - (
+    - )
+    - $
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ^
+    - +
+    - '*'
+    - '"'
     - ANY(UPDIR)
-  - - ANY(LLOCK)
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '|'
-    - '1'
-    - '{'
+    - ''''
+  - - '{'
     - '}'
-    - ''
+    - '%'
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   NUM:
   - - {t: ▽, type: trans}
-    - F1
-    - F2
-    - F3
-    - F4
-    - {t: ▽, type: trans}
+    - ''
     - '-'
+    - /
+    - ''
+    - ''
+    - ''
     - '7'
     - '8'
     - '9'
-  - - +
+    - ','
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: LCTL, h: sticky}
-    - {t: LALT, h: sticky}
-    - {t: LGUI, h: sticky}
-    - {t: LSFT, h: sticky}
-    - {t: ▽, type: trans}
-    - '*'
+  - - {t: ▽, type: trans}
+    - LCTL
+    - LALT
+    - LGUI
+    - LSFT
+    - ''
+    - ''
     - '4'
-  - - '5'
+    - '5'
     - '6'
     - '0'
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - F9
-    - F10
-    - F11
-    - F12
-    - {t: ▽, type: trans}
-  - - ANY(LLOCK)
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - /
-    - '1'
-    - '2'
-    - '3'
+  - - ANY(QK LLCK)
+    - ''
+    - +
+    - '*'
     - '='
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - '1'
+  - - '2'
+    - '3'
+    - .
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+  FUN:
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
+  - - {t: ▽, type: trans}
+    - ''
+    - MUTE
+    - VOLD
+    - VOLU
+    - ''
+    - ''
+    - MPRV
+    - MPLY
+    - MNXT
+    - ''
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ''
+    - SLEP
+    - BRID
+    - BRIU
+    - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - ANY(RGBT NE)
+  - - ANY(RGB DB NE)
+    - ANY(RGB IB NE)
+    - ''
+    - ANY(QK LLCK)
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  GAME:
-  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  - ['0', BSPC, ESC, Q, W, E, R, T, '', RSFT]
-  - [LGUI, RALT, LCTL, ENT, LSFT, A, S, D, F, G]
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+  GAME:
+  - [TAB, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BSPC]
+  - [ESC, Q, W, E, R, T, '', RSFT, LGUI, RALT, LCTL, ENT]
+  - - LSFT
+    - A
+    - S
+    - D
+    - F
+    - G
+    - C
+    - V
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
     - ''
-    - ''
+  - - ''
     - ''
     - ''
     - RSFT
-  - - {t: ▽, type: trans}
+    - ANY(SW TAB)
     - LCTL
     - SPC
-    - A
-    - LGUI
+    - Z
+    - X
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: COLEMAK, h: toggle}
+  - - {t: ▽, type: trans}
+    - {t: GAME, h: toggle}
