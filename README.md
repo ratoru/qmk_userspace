@@ -11,20 +11,21 @@ The keymap is compiled using a GitHub Action. See more about that below.
 ## Features
 
 -   Efficient symbol layer.
--   [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
 -   [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
 -   [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
 -   QMK Features:
+    -   [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
     -   [Caps Word](https://docs.qmk.fm/#/feature_caps_word)
     -   [Layer Lock](https://docs.qmk.fm/features/layer_lock)
     -   Combos. See `combos.inc` for more detail.
     -   Custom repeat keys.
     -   Different useful Macros around browser usage.
--   Layer keys activated by the thumbs via mod-tap.
 -   RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
--   Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore.
+-   Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis.
     -   For home row mods users: [timeless home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods) implementation for QMK.
     -   Callum style one shot modifiers.
+-   Layer keys activated by the thumbs via mod-tap.
+-   Hyper key to use as a "leader key" for global shortcuts.
 
 My keymap documentation might not always be up to date. Don't blindly trust the images.
 
