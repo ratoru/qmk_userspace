@@ -1,6 +1,6 @@
 # Custom ifdef for timeless homerow mods.
-ifeq ($(strip $(THRM_ENABLE)), yes)
-    OPT_DEFS += -DTHRM_ENABLE
+ifeq ($(strip $(HRM_ENABLE)), yes)
+    OPT_DEFS += -DHRM_ENABLE
 endif
 
 # Custom ifdef for callum oneshot modifiers
@@ -13,12 +13,15 @@ SRC += ratoru.c \
         features/swapper.c \
         features/oneshot.c
 
+ifeq ($(strip $(HRM_ENABLE)), yes)
+    SRC += features/achordion.c
+endif
+
 # Enable features on all keymaps
 CAPS_WORD_ENABLE = yes
 DYNAMIC_MACRO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
 TRI_LAYER_ENABLE = yes
-LAYER_LOCK_ENABLE = yes
 
 ifeq ($(strip $(COMBO_ENABLE)), yes)
     INTROSPECTION_KEYMAP_C = combos.c
