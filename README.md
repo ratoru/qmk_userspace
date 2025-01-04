@@ -22,7 +22,7 @@ The keymap is compiled using a GitHub Action. See more about that below.
     -   Different useful Macros around browser usage.
 -   RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
 -   Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis.
-    -   For home row mods users: [timeless home row mods](https://github.com/urob/zmk-config#timeless-homerow-mods) implementation for QMK.
+    -   For home row mods users: [Achordion](https://getreuer.info/posts/keyboards/achordion/index.html).
     -   Callum style one shot modifiers.
 -   Layer keys activated by the thumbs via mod-tap.
 -   Hyper key to use as a "leader key" for global shortcuts.
