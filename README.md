@@ -62,15 +62,18 @@ My keymap documentation might not always be up to date. Don't blindly trust the 
 
 ## Flashing RP2040 microcontroller
 
-> ⚠️ Please always unplug your keyboard from your computer before removing the TRRS cable!
+> [!WARNING]
+> Please always unplug your keyboard from your computer **before** removing the TRRS cable
+> to prevent short-circuiting your board!
 
--   Disconnect TRRS/TRS cable between the splits (keyboard halfs).
+-   Disconnect TRRS/TRS cable between the splits (keyboard halves).
 -   For each split, do:
     -   Connect your split to the computer using USB.
-    -   Press the reset switch of the split two times consequently so that your RP2040 based MCU will go to Bootloader Mode.
-    -   You must see Raspberry PI Boot Device in the output of lsusb. It's also detected as Mass Storage Device.
-    -   Drag and Drop (cp or copy) the .uf2 file to the RP2040 Mass Storage Device.
+    -   Press the reset switch of the split twice. Your RP2040 based MCU will go into Bootloader Mode.
+    -   Your device should appear as a Mass Storage Device. You can also see Raspberry PI Boot Device in the output of lsusb.
+    -   Drag and Drop (cp or copy) the `.uf2` file to the RP2040 Mass Storage Device.
     -   After the firmware is copied, you will see that the MCU exits Bootloader mode and Mass Storage Device is no longer present. It means that the firmware is flashed!
+- After flashing both halves, disconnect your half, reconnect the halves with the TRRS cable, and plug your keyboard back in. Enjoy!
 
 ## Drawing your keymap
 
