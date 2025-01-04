@@ -6,18 +6,15 @@
 #endif
 
 // ---- Home row mods settings ----
-// Configure the global tapping term (default: 200ms)
-#ifdef THRM_ENABLE
-#define TAPPING_TERM 500
-// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define QUICK_TAP_TERM 0
-// "Timeless" config options
-#define TAP_INTERVAL_MS 100 // Instant tap setting
-// Bilateral hold options
+#ifdef HRM_ENABLE
+#define ACHORDION_STREAK
+// Configure the global tapping term (default: 200ms, rec: 170-220ms)
+#define TAPPING_TERM 220
+#define TAPPING_TERM_PER_KEY
+// If you press a dual-role key, tap another key (press and release) and then release the dual-role key,
+// the dual-role key will perform its hold action instead.
 #define PERMISSIVE_HOLD
-#define PERMISSIVE_HOLD_PER_KEY
-#define HOLD_ON_OTHER_KEY_PRESS
-#define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
+#define QUICK_TAP_TERM_PER_KEY
 #endif
 
 #ifdef RGBLIGHT_ENABLE
@@ -27,9 +24,14 @@
 #define RGBLIGHT_LIMIT_VAL 128
 #endif
 
+// General features
+#define CAPS_WORD_INVERT_ON_SHIFT
+
 // Reduze size of firmware
 #define LAYER_STATE_8BIT // Limit the number of layers to 8 to save firmware size.
 #define NO_MUSIC_MODE
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 
