@@ -1,7 +1,7 @@
 USER := ratoru
 
-COSM_ENABLE = yes
-COMBO_ENABLE = yes
+HRM_ENABLE = yes
+# COMBO_ENABLE = yes
 
 # RGB (underglow) lighting for Liatris
 RGBLIGHT_ENABLE = yes

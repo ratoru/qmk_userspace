@@ -9,7 +9,7 @@
 #ifdef HRM_ENABLE
 #define ACHORDION_STREAK
 // Configure the global tapping term (default: 200ms, rec: 170-220ms)
-#define TAPPING_TERM 220
+#define TAPPING_TERM 170
 #define TAPPING_TERM_PER_KEY
 // If you press a dual-role key, tap another key (press and release) and then release the dual-role key,
 // the dual-role key will perform its hold action instead.

@@ -193,6 +193,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
      case 4:
          rgblight_sethsv_noeeprom (HSV_GREEN);
          break;
+     case 5:
+         rgblight_sethsv_noeeprom (HSV_CORAL);
+         break;
      default: //  for any other layers, or the default layer
          rgblight_sethsv_noeeprom (HSV_PINK);
          break;
