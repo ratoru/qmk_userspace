@@ -1,7 +1,7 @@
 USER := ratoru
 
 HRM_ENABLE = yes
-# COMBO_ENABLE = yes
+LAYER_LOCK_ENABLE = yes
 
 # RGB (underglow) lighting for Liatris
 RGBLIGHT_ENABLE = yes

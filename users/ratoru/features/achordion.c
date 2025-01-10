@@ -335,7 +335,9 @@ __attribute__((weak)) bool achordion_chord(uint16_t tap_hold_keycode,
                                            keyrecord_t* tap_hold_record,
                                            uint16_t other_keycode,
                                            keyrecord_t* other_record) {
-  // Exclude thumb keys
+  // Allow layer tap + same side
+  if (QK_LAYER_TAP <= tap_hold_keycode && tap_hold_keycode <= QK_LAYER_TAP_MAX) { return true; }
+  // Allow mod + thumb key
   if (other_record->event.key.row % (MATRIX_ROWS / 2) >= 3) { return true; }
 
   return achordion_opposite_hands(tap_hold_record, other_record);

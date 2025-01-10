@@ -37,10 +37,10 @@
       "KC_COMM",
       "KC_DOT",
       "KC_SLSH",
-      "LT(4,KC_ESC)",
+      "LT(4,KC_TAB)",
       "LT(2,KC_SPC)",
       "LT(3,KC_BSPC)",
-      "LT(5,KC_ENT)"
+      "LT(5,KC_ESC)"
     ],
     [
       "KC_Q",
@@ -103,7 +103,7 @@
       "ANY(SW_BTICK)",
       "ANY(SW_TAB)",
       "ANY(SELWORD)",
-      "KC_NO",
+      "ANY(QK_LLCK)",
       "KC_NO",
       "KC_PGDN",
       "KC_PGUP",
@@ -175,7 +175,7 @@
       "KC_LALT",
       "KC_LSFT",
       "KC_LGUI",
-      "KC_NO",
+      "ANY(QK_LLCK)",
       "KC_SLSH",
       "KC_1",
       "KC_2",
