@@ -1,7 +1,5 @@
 {
   "version": 1,
-  "notes": "",
-  "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "splitkb/aurora/sweep/rev1",
   "keymap": "splitkb_aurora_sweep_rev1_splitkb_aurora_sweep_rev1_ratoru",
   "layout": "LAYOUT_split_3x5_2",
@@ -53,16 +51,16 @@
       "KC_I",
       "KC_O",
       "KC_P",
-      "LCTL(KC_A)",
-      "LALT(KC_S)",
-      "LSFT(KC_D)",
-      "LGUI(KC_F)",
+      "LCTL_T(KC_A)",
+      "LALT_T(KC_S)",
+      "LSFT_T(KC_D)",
+      "LGUI_T(KC_F)",
       "KC_G",
       "KC_H",
-      "RGUI(KC_J)",
-      "RSFT(KC_K)",
-      "RALT(KC_L)",
-      "RCTL(KC_SCLN)",
+      "RGUI_T(KC_J)",
+      "RSFT_T(KC_K)",
+      "RALT_T(KC_L)",
+      "RCTL_T(KC_SCLN)",
       "KC_Z",
       "KC_X",
       "KC_C",
@@ -212,7 +210,7 @@
       "ANY(RGBT_NE)",
       "ANY(RGB_DB_NE)",
       "KC_NO",
-      "KC_NO",
+      "ANY(QK_LLCK)",
       "KC_F1",
       "KC_F2",
       "KC_F3",
@@ -259,5 +257,5 @@
       "ANY(TL_LOWR)"
     ]
   ],
-  "author": ""
+  "author": "ratoru"
 }

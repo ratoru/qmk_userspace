@@ -36,8 +36,30 @@ layers:
     - {t: BSPC, h: SYM}
     - {t: ESC, h: FUN}
   QWERTY:
-  - [Q, W, E, R, T, Y, U, I, O, P, Ctl+A, Alt+S]
-  - [Sft+D, Gui+F, G, H, Gui+J, Sft+K, AltGr+L, Ctl+;, Z, X, C, V]
+  - - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: A, h: LCTL}
+    - {t: S, h: LALT}
+  - - {t: D, h: LSFT}
+    - {t: F, h: LGUI}
+    - G
+    - H
+    - {t: J, h: RGUI}
+    - {t: K, h: RSFT}
+    - {t: L, h: RALT}
+    - {t: ;, h: RCTL}
+    - Z
+    - X
+    - C
+    - V
   - - B
     - N
     - M
@@ -91,7 +113,7 @@ layers:
   - [BRIU, MUTE, VOLD, VOLU, '', '', F7, F8, F9, F12, BRID, MPRV]
   - [MPLY, MNXT, '', '', F4, F5, F6, F11, '', ANY(RGB IB NE), ANY(RGBT NE), ANY(RGB DB NE)]
   - - ''
-    - ''
+    - ANY(QK LLCK)
     - F1
     - F2
     - F3
