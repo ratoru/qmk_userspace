@@ -1,4 +1,4 @@
-/* 
+/*
 Define combos here.
 
 COMB(name, keycode_shortcut, combo_sequence...)
@@ -21,7 +21,18 @@ SSTR(vi_save,  ":q!",    KC_Q,    KC_F)
 
 // Simple keycodes
 //   name      result           chord keys
-COMB(O_LSHIFT,  OSM(MOD_LSFT),   KC_T, KC_G)
-COMB(O_RSHIFT,  OSM(MOD_RSFT),   KC_N, KC_M)
+COMB(O_TAB,  KC_TAB,   KC_T, KC_G)
+COMB(O_ESC,  KC_ESC,   KC_N, KC_M)
 COMB(IDX_ESC,  KC_ESC,          KC_D, KC_H)
 COMB(CMD_SPC,  LGUI(KC_SPC),    KC_G, KC_M)
+
+// Home row combos
+COMB(O_LSHFT, OSM(MOD_LSFT), KC_T, KC_D)
+COMB(O_LGUI, OSM(MOD_LGUI), KC_S, KC_C)
+COMB(O_LCTRL, OSM(MOD_LCTL), KC_R, KC_X)
+COMB(O_LALT, OSM(MOD_LALT), KC_A, KC_Z)
+
+COMB(O_RSHFT, OSM(MOD_RSFT), KC_N, KC_H)
+COMB(O_RGUI, OSM(MOD_RGUI), KC_E, KC_COMMA)
+COMB(O_RCTRL, OSM(MOD_RCTL), KC_I, KC_DOT)
+COMB(O_RALT, OSM(MOD_RALT), KC_O, KC_SLASH)

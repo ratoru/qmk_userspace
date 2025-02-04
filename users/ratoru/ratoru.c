@@ -25,6 +25,10 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case TL_LOWR:
     case TL_UPPR:
+    case MO(2):
+    case MO(3):
+    case MO(4):
+    case MO(5):
         return true;
     default:
         return false;
@@ -35,6 +39,10 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     case TL_LOWR:
     case TL_UPPR:
+    case MO(2):
+    case MO(3):
+    case MO(4):
+    case MO(5):
     case KC_LSFT:
     case OS_SHFT:
     case OS_CTRL:
