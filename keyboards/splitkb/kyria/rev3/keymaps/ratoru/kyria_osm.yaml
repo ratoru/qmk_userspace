@@ -94,8 +94,8 @@ layers:
     - BSPC
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - ANY(OS ALT)
     - ANY(OS CTRL)
+    - ANY(OS ALT)
     - ANY(OS CMD)
     - ANY(OS SHFT)
     - ANY(OS HYPR)
@@ -140,8 +140,8 @@ layers:
     - '@'
     - '&'
     - '`'
-    - '['
-    - ']'
+    - '{'
+    - '}'
     - \
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
@@ -168,8 +168,8 @@ layers:
     - {t: ▽, type: trans}
     - '|'
     - ''''
-  - - '{'
-    - '}'
+  - - '['
+    - ']'
     - $
     - ANY(QK LLCK)
     - {t: ▽, type: trans}
@@ -196,8 +196,8 @@ layers:
     - ','
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - ANY(OS ALT)
     - ANY(OS CTRL)
+    - ANY(OS ALT)
     - ANY(OS CMD)
     - ANY(OS SHFT)
     - ANY(OS HYPR)
@@ -244,8 +244,8 @@ layers:
     - ANY(OS HYPR)
     - ANY(OS SHFT)
     - ANY(OS CMD)
-    - ANY(OS CTRL)
     - ANY(OS ALT)
+    - ANY(OS CTRL)
     - {t: ▽, type: trans}
   - - ANY(QK LLCK)
     - ''
