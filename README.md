@@ -4,28 +4,28 @@ These are my keymaps for the [Kyria rev3](https://github.com/splitkb/kyria) and 
 
 It was heavily inspired by [Pascal Getreuer's keymap](https://github.com/getreuer/qmk-keymap). It uses a `Colemak-DH` base layer with an option to switch to `Qwerty`. I spent a lot of time trying to design a very efficient symbol layer for programming. To do so, I referred heavily to character and bigram frequencies in programming langues.
 
-The keymap is compiled using a GitHub Action. See more about that below.
+The keymap is compiled using a GitHub Action. See more about that below. If you compile locally, remember to update the `qmk-firmware` repo periodically.
 
 ![sweep-keymap](docs/sweep-osm.png)
 
 ## Features
 
--   Efficient symbol layer.
--   [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
--   [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
--   QMK Features:
-    -   [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
-    -   [Caps Word](https://docs.qmk.fm/#/feature_caps_word)
-    -   [Layer Lock](https://docs.qmk.fm/features/layer_lock)
-    -   Combos. See `combos.inc` for more detail.
-    -   Custom repeat keys.
-    -   Different useful Macros around browser usage.
--   RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
--   Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis.
-    -   For home row mods users: [Achordion](https://getreuer.info/posts/keyboards/achordion/index.html).
-    -   Callum style one shot modifiers.
--   Layer keys activated by the thumbs via mod-tap.
--   Hyper key to use as a "leader key" for global shortcuts.
+- Efficient symbol layer.
+- [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
+- [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
+- QMK Features:
+    - [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
+    - [Caps Word](https://docs.qmk.fm/#/feature_caps_word)
+    - [Layer Lock](https://docs.qmk.fm/features/layer_lock)
+    - Combos. See `combos.inc` for more detail.
+    - Custom repeat keys.
+    - Different useful Macros around browser usage.
+- RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
+- Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis.
+    - For home row mods users: [Achordion](https://getreuer.info/posts/keyboards/achordion/index.html).
+    - Callum style one shot modifiers.
+- Layer keys activated by the thumbs via mod-tap.
+- Hyper key to use as a "leader key" for global shortcuts.
 
 My keymap documentation might not always be up to date. Don't blindly trust the images.
 
@@ -66,13 +66,13 @@ My keymap documentation might not always be up to date. Don't blindly trust the 
 > Please always unplug your keyboard from your computer **before** removing the TRRS cable
 > to prevent short-circuiting your board!
 
--   Disconnect TRRS/TRS cable between the splits (keyboard halves).
--   For each split, do:
-    -   Connect your split to the computer using USB.
-    -   Press the reset switch of the split twice. Your RP2040 based MCU will go into Bootloader Mode.
-    -   Your device should appear as a Mass Storage Device. You can also see Raspberry PI Boot Device in the output of lsusb.
-    -   Drag and Drop (cp or copy) the `.uf2` file to the RP2040 Mass Storage Device.
-    -   After the firmware is copied, you will see that the MCU exits Bootloader mode and Mass Storage Device is no longer present. It means that the firmware is flashed!
+- Disconnect TRRS/TRS cable between the splits (keyboard halves).
+- For each split, do:
+    - Connect your split to the computer using USB.
+    - Press the reset switch of the split twice. Your RP2040 based MCU will go into Bootloader Mode.
+    - Your device should appear as a Mass Storage Device. You can also see Raspberry PI Boot Device in the output of lsusb.
+    - Drag and Drop (cp or copy) the `.uf2` file to the RP2040 Mass Storage Device.
+    - After the firmware is copied, you will see that the MCU exits Bootloader mode and Mass Storage Device is no longer present. It means that the firmware is flashed!
 - After flashing both halves, disconnect your half, reconnect the halves with the TRRS cable, and plug your keyboard back in. Enjoy!
 
 ## Drawing your keymap

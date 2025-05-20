@@ -1,0 +1,224 @@
+layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
+layers:
+  GRAPHITE:
+  - [TAB, B, L, D, W, Z, '''', F, O, U, J, BSPC]
+  - [ESC, N, R, S, T, G, Y, H, A, E, I, ENT]
+  - - {t: LSFT, h: sticky}
+    - Q
+    - X
+    - M
+    - C
+    - V
+    - ANY(DM REC1)
+    - ANY(DM PLY1)
+    - QK REP
+    - QK AREP
+    - K
+    - P
+  - - .
+    - '-'
+    - ','
+    - {t: RSFT, h: sticky}
+    - ''
+    - {t: HYPR, h: sticky}
+    - NAV
+    - SPC
+    - NUM
+    - FUN
+    - {t: LSFT, h: sticky}
+    - SYM
+  - - {t: MEH, h: sticky}
+    - ''
+  NAV:
+  - - {t: ▽, type: trans}
+    - ''
+    - ''
+    - ANY(SRCHSEL)
+    - ANY(CPY URL)
+    - ''
+    - PGUP
+    - HOME
+    - UP
+    - END
+    - BSPC
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - ANY(OS LCTL)
+    - ANY(OS LALT)
+    - ANY(OS LGUI)
+    - ANY(OS LSFT)
+    - ANY(OS HYPR)
+    - PGDN
+    - LEFT
+    - DOWN
+    - RGHT
+    - DEL
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ANY(SW CTAB)
+    - ANY(SW BTICK)
+    - ANY(SW TAB)
+    - CW TOGG
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - ANY(SELWORD)
+  - - ''
+    - ANY(S END)
+    - ''
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - BSPC
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  SYM:
+  - - {t: ▽, type: trans}
+    - '~'
+    - <
+    - '>'
+    - '#'
+    - '@'
+    - '&'
+    - '`'
+    - '{'
+    - '}'
+    - \
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '!'
+    - '-'
+    - ':'
+    - '='
+    - '0'
+    - '1'
+    - _
+    - (
+    - )
+    - '%'
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ^
+    - +
+    - '*'
+    - '"'
+    - ANY(UPDIR)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '|'
+    - ''''
+  - - '['
+    - ']'
+    - $
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - BSPC
+    - {type: held}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  NUM:
+  - - {t: ▽, type: trans}
+    - ''
+    - '-'
+    - /
+    - ''
+    - ''
+    - ''
+    - '7'
+    - '8'
+    - '9'
+    - ','
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - ANY(OS LCTL)
+    - ANY(OS LALT)
+    - ANY(OS LGUI)
+    - ANY(OS LSFT)
+    - ANY(OS HYPR)
+    - ''
+    - '4'
+    - '5'
+    - '6'
+    - '0'
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ''
+    - +
+    - '*'
+    - '='
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - '1'
+  - - '2'
+    - '3'
+    - .
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - BSPC
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  FUN:
+  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
+  - - {t: ▽, type: trans}
+    - ''
+    - MUTE
+    - VOLD
+    - VOLU
+    - ''
+    - ANY(OS HYPR)
+    - ANY(OS LSFT)
+    - ANY(OS LGUI)
+    - ANY(OS LALT)
+    - ANY(OS LCTL)
+    - {t: ▽, type: trans}
+  - - ANY(QK LLCK)
+    - ''
+    - SLEP
+    - BRID
+    - BRIU
+    - ''
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - ''
+    - MPRV
+  - - MPLY
+    - MNXT
+    - ''
+    - ANY(QK LLCK)
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}

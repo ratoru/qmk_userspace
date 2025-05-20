@@ -2,22 +2,18 @@
 Define combos here.
 
 COMB(name, keycode_shortcut, combo_sequence...)
-SSTR(name, "string to send", combo_sequence...)
-ACTN(name, function_call(),  combo_sequence...)
+SUBS(name, "string to send", combo_sequence...)
 
 Use the COMB macro for simple keycode shortcuts
 Example: COMB(vol_up, KC_VOLU, KC_Y, KC_U).
 
-Use the SSTR macro for sending strings
-Example: SSTR(which, "which ", KC_W, KC_H).
-
-Use the ACTN macro for function callbacks
-Example: ACTN(rgb_tog, rgb_matrix_toggle(), KC_Z, KC_X)
+Use the SUBS macro for sending strings
+Example: SUBS(which, "which ", KC_W, KC_H).
 */
 
 // Macros
-SSTR(vi_quit,  ":wq",    KC_Q,    KC_W)
-SSTR(vi_save,  ":q!",    KC_Q,    KC_F)
+SUBS(vi_quit,  ":wq",    KC_Q,    KC_W)
+SUBS(vi_save,  ":q!",    KC_Q,    KC_F)
 
 // Simple keycodes
 //   name      result           chord keys
@@ -28,7 +24,7 @@ COMB(O_SLWRD,  SELWORD,   KC_N, KC_L)
 //COMB(IDX_ESC,  KC_ESC,          KC_D, KC_H)
 //COMB(CMD_SPC,  LGUI(KC_SPC),    KC_G, KC_M)
 
-// Home row combos
+// Home row combos for colemak dh
 COMB(O_LSHFT, OSM(MOD_LSFT), KC_T, KC_D)
 COMB(O_LGUI, OSM(MOD_LGUI), KC_S, KC_C)
 COMB(O_LCTRL, OSM(MOD_LALT), KC_R, KC_X)
