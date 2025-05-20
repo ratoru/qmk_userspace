@@ -1,6 +1,7 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
+#include "keycodes.h"
 #include "features/swapper.h"
 
 #ifdef NSM_ENABLE

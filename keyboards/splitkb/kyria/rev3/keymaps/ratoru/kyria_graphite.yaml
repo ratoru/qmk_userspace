@@ -1,22 +1,33 @@
 layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
 layers:
   GRAPHITE:
-  - [TAB, Q, W, F, P, B, J, L, U, Y, ;, BSPC]
-  - [ESC, A, R, S, T, G, M, N, E, I, O, ENT]
-  - ['', Z, X, C, D, V, ANY(DM REC1), ANY(DM PLY1), QK REP, QK AREP, K, H]
-  - - ','
-    - .
-    - /
+  - [TAB, B, L, D, W, Z, '''', F, O, U, J, BSPC]
+  - [ESC, N, R, S, T, G, Y, H, A, E, I, ENT]
+  - - {t: LSFT, h: sticky}
+    - Q
+    - X
+    - M
+    - C
+    - V
+    - ANY(DM REC1)
+    - ANY(DM PLY1)
+    - QK REP
+    - QK AREP
+    - K
+    - P
+  - - .
+    - '-'
+    - ','
+    - {t: RSFT, h: sticky}
     - ''
-    - ''
-    - CAPS
+    - {t: HYPR, h: sticky}
     - NAV
     - SPC
     - NUM
     - FUN
     - {t: LSFT, h: sticky}
     - SYM
-  - - {t: HYPR, h: sticky}
+  - - {t: MEH, h: sticky}
     - ''
   NAV:
   - - {t: ▽, type: trans}
@@ -54,7 +65,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - SELWORD
+    - ANY(SELWORD)
   - - ''
     - ANY(S END)
     - ''

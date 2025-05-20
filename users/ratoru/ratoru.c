@@ -2,10 +2,6 @@
 
 static bool is_linux = false;
 
-bool sw_tab_active = false;
-bool sw_control_tab_active = false;
-bool sw_backtick_active = false;
-
 #ifdef NSM_ENABLE
 /* N-SHOT MOD CONFIGURATION.
  * Reminder of the nshot structure:
@@ -26,9 +22,9 @@ nshot_state_t  nshot_states[] = {
 //| trigger  | modbit            | swap-to          | max | roll into | State         | ## | timer | keydown? | //roll-in action |
 //|----------|-------------------|------------------|-----|-----------|---------------|----|-------|----------|------------------|
     {OS_LSFT,  MOD_BIT(KC_LSFT),  MOD_BIT(KC_LSFT),   1,   true,       os_up_unqueued,  0,   0,     false},    // S-a
-    {OS_LCTL,  MOD_BIT(KC_LCTL),  MOD_BIT(KC_LGUI),   1,   true,       os_up_unqueued,  0,   0,     false},    // C-a
+    {OS_LCTL,  MOD_BIT(KC_LCTL),  MOD_BIT(KC_LCTL),   1,   true,       os_up_unqueued,  0,   0,     false},    // C-a
     {OS_LALT,  MOD_BIT(KC_LALT),  MOD_BIT(KC_LALT),   1,   true,       os_up_unqueued,  0,   0,     false},    // A-a
-    {OS_LGUI,  MOD_BIT(KC_LGUI),  MOD_BIT(KC_LCTL),   1,   true,       os_up_unqueued,  0,   0,     false},    // G-a
+    {OS_LGUI,  MOD_BIT(KC_LGUI),  MOD_BIT(KC_LGUI),   1,   true,       os_up_unqueued,  0,   0,     false},    // G-a
     {OS_HYPR,  MODBIT_HYPR,       MODBIT_HYPR,        1,   true,       os_up_unqueued,  0,   0,     false},    // G-a
 };
 uint8_t        NUM_NSHOT_STATES = sizeof(nshot_states) / sizeof(nshot_state_t);
@@ -69,25 +65,21 @@ bool is_nshot_ignored_key(uint16_t keycode) {
 }
 #endif
 
+// These are MacOS specific
+swapper_state_t swapper_states[] = {
+    {false, KC_LGUI, KC_TAB, S(KC_TAB), SW_APP, SW_REV},
+    {false, KC_LGUI, KC_GRAVE, S(KC_GRAVE), SW_WIN, SW_REV},
+    {false, KC_LCTL, KC_TAB, S(KC_TAB), SW_WIN, SW_REV}
+};
+uint8_t         NUM_SWAPPER_STATES = sizeof(swapper_states) / sizeof(swapper_state_t);
+
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
   #ifdef NSM_ENABLE
   process_nshot_state(keycode, record, !is_linux);
   #endif
 
-  // Adds functionality to switch apps and windows.
-  update_swapper(
-      &sw_tab_active, KC_LGUI, KC_TAB, SW_TAB,
-      keycode, record
-  );
-  update_swapper(
-      &sw_control_tab_active, KC_LCTL, KC_TAB, SW_CTAB,
-      keycode, record
-  );
-  update_swapper(
-      &sw_backtick_active, KC_LGUI, KC_GRAVE, SW_BTICK,
-      keycode, record
-  );
+  process_swappers(keycode, record);
 
   switch (keycode) {
     case UPDIR:  // Types ../ to go up a directory on the shell.
