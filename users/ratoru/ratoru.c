@@ -1,66 +1,79 @@
 #include "ratoru.h"
-#include "features/select_word.h"
-#include "features/swapper.h"
 
-#ifdef HRM_ENABLE
-#include "features/achordion.h"
-#endif
-
-#ifdef COSM_ENABLE
-#include "features/oneshot.h"
-#endif
+static bool is_linux = false;
 
 bool sw_tab_active = false;
 bool sw_control_tab_active = false;
 bool sw_backtick_active = false;
 
-#ifdef COSM_ENABLE
-oneshot_state os_shft_state = os_up_unqueued;
-oneshot_state os_ctrl_state = os_up_unqueued;
-oneshot_state os_alt_state = os_up_unqueued;
-oneshot_state os_cmd_state = os_up_unqueued;
-oneshot_state os_hypr_state = os_up_unqueued;
+#ifdef NSM_ENABLE
+/* N-SHOT MOD CONFIGURATION.
+ * Reminder of the nshot structure:
+ *
+ * typedef struct {
+ *     uint16_t      trigger;          // Keycode to activate the n-shot mod
+ *     uint8_t       modbit;           // Modbit allows for mod combos.
+ *     uint8_t       alternate_modbit; // Alternate modbit for Gui-Ctl swapping.
+ *     uint8_t       max_count;        // one-shot, two-shot, ..., n-shot.
+ *     bool          active_on_rolls;  // Behavior for A down, Mod down, A up = (active_on_rolls == true ? Mod-A : a)
+ *     oneshot_state state;            // Direct from users/callum
+ *     uint8_t       count;            // N-shot count state
+ *     bool          had_keydown;      // keydown state for (active_on_rolls == false)
+ * } nshot_state_t;
+ */
+#define MODBIT_HYPR  MOD_BIT(KC_LCTL) | MOD_BIT(KC_LGUI) | MOD_BIT(KC_LSFT) | MOD_BIT(KC_LALT)
+nshot_state_t  nshot_states[] = {
+//| trigger  | modbit            | swap-to          | max | roll into | State         | ## | timer | keydown? | //roll-in action |
+//|----------|-------------------|------------------|-----|-----------|---------------|----|-------|----------|------------------|
+    {OS_LSFT,  MOD_BIT(KC_LSFT),  MOD_BIT(KC_LSFT),   1,   true,       os_up_unqueued,  0,   0,     false},    // S-a
+    {OS_LCTL,  MOD_BIT(KC_LCTL),  MOD_BIT(KC_LGUI),   1,   true,       os_up_unqueued,  0,   0,     false},    // C-a
+    {OS_LALT,  MOD_BIT(KC_LALT),  MOD_BIT(KC_LALT),   1,   true,       os_up_unqueued,  0,   0,     false},    // A-a
+    {OS_LGUI,  MOD_BIT(KC_LGUI),  MOD_BIT(KC_LCTL),   1,   true,       os_up_unqueued,  0,   0,     false},    // G-a
+    {OS_HYPR,  MODBIT_HYPR,       MODBIT_HYPR,        1,   true,       os_up_unqueued,  0,   0,     false},    // G-a
+};
+uint8_t        NUM_NSHOT_STATES = sizeof(nshot_states) / sizeof(nshot_state_t);
 
-bool is_oneshot_cancel_key(uint16_t keycode) {
+bool is_nshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
-    case TL_LOWR:
-    case TL_UPPR:
-    case MO(2):
-    case MO(3):
-    case MO(4):
-    case MO(5):
-        return true;
-    default:
-        return false;
+        case TL_LOWR:
+        case TL_UPPR:
+        case MO(1):
+        case MO(2):
+        case MO(3):
+        case MO(4):
+        case MO(5):
+            return true;
+        default:
+            return false;
     }
 }
 
-bool is_oneshot_ignored_key(uint16_t keycode) {
+bool is_nshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
-    case TL_LOWR:
-    case TL_UPPR:
-    case MO(2):
-    case MO(3):
-    case MO(4):
-    case MO(5):
-    case KC_LSFT:
-    case OS_SHFT:
-    case OS_CTRL:
-    case OS_ALT:
-    case OS_CMD:
-    case OS_HYPR:
-        return true;
-    default:
-        return false;
+        case TL_LOWR:
+        case TL_UPPR:
+        case MO(1):
+        case MO(2):
+        case MO(3):
+        case MO(4):
+        case MO(5):
+        case OS_LSFT:
+        case OS_LCTL:
+        case OS_LALT:
+        case OS_LGUI:
+        case OS_HYPR:
+            return true;
+        default:
+            return false;
     }
 }
 #endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-  #ifdef HRM_ENABLE
-  if (!process_achordion(keycode, record)) { return false; }
+
+  #ifdef NSM_ENABLE
+  process_nshot_state(keycode, record, !is_linux);
   #endif
-  if (!process_select_word(keycode, record, SELWORD)) { return false; }
 
   // Adds functionality to switch apps and windows.
   update_swapper(
@@ -75,30 +88,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
       &sw_backtick_active, KC_LGUI, KC_GRAVE, SW_BTICK,
       keycode, record
   );
-
-  #ifdef COSM_ENABLE
-  // Process oneshot keys
-  update_oneshot(
-    &os_shft_state, KC_LSFT, OS_SHFT,
-    keycode, record
-  );
-  update_oneshot(
-    &os_ctrl_state, KC_LCTL, OS_CTRL,
-    keycode, record
-  );
-  update_oneshot(
-    &os_alt_state, KC_LALT, OS_ALT,
-    keycode, record
-  );
-  update_oneshot(
-    &os_cmd_state, KC_LCMD, OS_CMD,
-    keycode, record
-  );
-  update_oneshot(
-    &os_hypr_state, KC_HYPR, OS_HYPR,
-    keycode, record
-  );
-  #endif
 
   switch (keycode) {
     case UPDIR:  // Types ../ to go up a directory on the shell.
@@ -172,7 +161,6 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
 }
 #endif
 
-#ifdef RGBLIGHT_ENABLE
 void keyboard_pre_init_user(void) {
   // Set our LED pin as output
   setPinOutput(24);
@@ -181,6 +169,7 @@ void keyboard_pre_init_user(void) {
   writePinHigh(24);
 }
 
+#ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
     rgblight_enable_noeeprom(); // Enables RGB, without saving settings
     rgblight_sethsv_noeeprom(HSV_PINK);

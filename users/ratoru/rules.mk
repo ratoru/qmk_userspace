@@ -3,19 +3,14 @@ ifeq ($(strip $(HRM_ENABLE)), yes)
     OPT_DEFS += -DHRM_ENABLE
 endif
 
-# Custom ifdef for callum oneshot modifiers
-ifeq ($(strip $(COSM_ENABLE)), yes)
-    OPT_DEFS += -DCOSM_ENABLE
+# Custom ifdef for n_shot modifiers (callum style).
+ifeq ($(strip $(NSM_ENABLE)), yes)
+    OPT_DEFS += -DNSM_ENABLE
 endif
 
-SRC += ratoru.c \
-        features/select_word.c \
-        features/swapper.c \
-        features/oneshot.c
-
-ifeq ($(strip $(HRM_ENABLE)), yes)
-    SRC += features/achordion.c
-endif
+SRC += features/nshot_mod.c
+SRC += features/swapper.c
+SRC += features/oneshot.c
 
 # Enable features on all keymaps
 CAPS_WORD_ENABLE = yes
@@ -24,7 +19,8 @@ REPEAT_KEY_ENABLE = yes
 TRI_LAYER_ENABLE = yes
 
 ifeq ($(strip $(COMBO_ENABLE)), yes)
-    INTROSPECTION_KEYMAP_C = combos.c
+	VPATH += keyboards/gboards/ # using gboards combo code: see https://combos.gboards.ca/
+    INTROSPECTION_KEYMAP_C = ratoru.c
 endif
 
 # Turn off unused features to reduce size
