@@ -16,7 +16,7 @@ layers:
     - K
     - P
   - - .
-    - '-'
+    - _
     - ','
     - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - ''
