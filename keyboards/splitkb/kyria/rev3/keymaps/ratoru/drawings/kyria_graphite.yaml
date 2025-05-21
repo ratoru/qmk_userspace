@@ -9,10 +9,10 @@ layers:
     - M
     - C
     - V
-    - ANY(DM REC1)
-    - ANY(DM PLY1)
-    - QK REP
-    - QK AREP
+    - $$tabler:photo-video$$
+    - $$tabler:video$$
+    - $$tabler:repeat-off$$
+    - $$tabler:repeat$$
     - K
     - P
   - - .
@@ -33,8 +33,8 @@ layers:
   - - {t: ▽, type: trans}
     - ''
     - ''
-    - ANY(SRCHSEL)
-    - ANY(CPY URL)
+    - $$tabler:list-search$$
+    - $$tabler:link$$
     - ''
     - PGUP
     - HOME
@@ -58,16 +58,16 @@ layers:
     - SW BTAB
     - SW WIN
     - SW APP
-    - CW TOGG
+    - $$tabler:letter-case-upper$$
     - SW REV
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - ANY(SELWORD)
+    - $$tabler:brackets-contain$$
   - - ''
-    - ANY(S END)
+    - S END
     - ''
     - $$tabler:lock$$
     - {t: ▽, type: trans}
@@ -100,7 +100,7 @@ layers:
     - '='
     - '0'
     - '1'
-    - _
+    - /
     - (
     - )
     - '%'
@@ -116,7 +116,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '|'
-    - ''''
+    - ;
   - - '['
     - ']'
     - $
@@ -198,7 +198,7 @@ layers:
     - {t: ▽, type: trans}
   - - $$tabler:lock$$
     - ''
-    - SLEP
+    - $$tabler:zzz$$
     - $$tabler:brightness-down$$
     - $$tabler:brightness-up$$
     - ''

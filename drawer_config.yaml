@@ -158,6 +158,16 @@ parse_config:
     MPRV: '$$tabler:player-track-prev$$'
     MPLY: '$$tabler:player-play$$'
     MNXT: '$$tabler:player-track-next$$'
+    CW_TOGG: '$$tabler:letter-case-upper$$'
+    ANY(DM_REC1): '$$tabler:video$$'
+    ANY(DM_PLY1): '$$tabler:photo-video$$'
+    QK_REP: '$$tabler:repeat$$'
+    QK_AREP: '$$tabler:repeat-off$$'
+    SLEP: '$$tabler:zzz$$'
+    ANY(SRCHSEL): '$$tabler:list-search$$'
+    ANY(CPY_URL): '$$tabler:link$$'
+    ANY(SELWORD): '$$tabler:brackets-contain$$'
+    ANY(S_END): 'S END'
   zmk_remove_keycode_prefix: []
   zmk_keycode_map:
     EXCLAMATION: '!'
