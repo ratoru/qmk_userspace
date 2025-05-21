@@ -1,9 +1,9 @@
 layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
 layers:
   GRAPHITE:
-  - [TAB, B, L, D, W, Z, '''', F, O, U, J, BSPC]
-  - [ESC, N, R, S, T, G, Y, H, A, E, I, ENT]
-  - - {t: LSFT, h: sticky}
+  - [TAB, B, L, D, W, Z, '''', F, O, U, J, '$$tabler:backspace$$']
+  - [ESC, N, R, T, S, G, Y, H, A, E, I, ENT]
+  - - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - Q
     - X
     - M
@@ -18,14 +18,14 @@ layers:
   - - .
     - '-'
     - ','
-    - {t: RSFT, h: sticky}
+    - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - ''
     - {t: HYPR, h: sticky}
     - NAV
-    - SPC
+    - $$tabler:space$$
     - NUM
     - FUN
-    - {t: LSFT, h: sticky}
+    - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - SYM
   - - {t: MEH, h: sticky}
     - ''
@@ -38,28 +38,28 @@ layers:
     - ''
     - PGUP
     - HOME
-    - UP
+    - $$tabler:arrow-narrow-up$$
     - END
-    - BSPC
+    - $$tabler:backspace$$
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - ANY(OS LCTL)
-    - ANY(OS LALT)
-    - ANY(OS LGUI)
-    - ANY(OS LSFT)
-    - ANY(OS HYPR)
+    - OS Ctrl
+    - $$tabler:alt$$
+    - $$tabler:command$$
+    - $$tabler:arrow-big-up-line$$
+    - OS HYPR
     - PGDN
-    - LEFT
-    - DOWN
-    - RGHT
+    - $$tabler:arrow-narrow-left$$
+    - $$tabler:arrow-narrow-down$$
+    - $$tabler:arrow-narrow-right$$
     - DEL
     - {t: ▽, type: trans}
-  - - ANY(QK LLCK)
-    - ANY(SW CTAB)
-    - ANY(SW BTICK)
-    - ANY(SW TAB)
+  - - $$tabler:lock$$
+    - SW BTAB
+    - SW WIN
+    - SW APP
     - CW TOGG
-    - ''
+    - SW REV
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -69,14 +69,14 @@ layers:
   - - ''
     - ANY(S END)
     - ''
-    - ANY(QK LLCK)
+    - $$tabler:lock$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - BSPC
+    - $$tabler:backspace$$
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -105,12 +105,12 @@ layers:
     - )
     - '%'
     - {t: ▽, type: trans}
-  - - ANY(QK LLCK)
+  - - $$tabler:lock$$
     - ^
     - +
     - '*'
     - '"'
-    - ANY(UPDIR)
+    - ../
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -120,14 +120,14 @@ layers:
   - - '['
     - ']'
     - $
-    - ANY(QK LLCK)
+    - $$tabler:lock$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - BSPC
+    - $$tabler:backspace$$
     - {type: held}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -145,18 +145,18 @@ layers:
     - ','
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - ANY(OS LCTL)
-    - ANY(OS LALT)
-    - ANY(OS LGUI)
-    - ANY(OS LSFT)
-    - ANY(OS HYPR)
+    - OS Ctrl
+    - $$tabler:alt$$
+    - $$tabler:command$$
+    - $$tabler:arrow-big-up-line$$
+    - OS HYPR
     - ''
     - '4'
     - '5'
     - '6'
     - '0'
     - {t: ▽, type: trans}
-  - - ANY(QK LLCK)
+  - - $$tabler:lock$$
     - ''
     - +
     - '*'
@@ -171,14 +171,14 @@ layers:
   - - '2'
     - '3'
     - .
-    - ANY(QK LLCK)
+    - $$tabler:lock$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-    - BSPC
+    - $$tabler:backspace$$
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -186,32 +186,32 @@ layers:
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
   - - {t: ▽, type: trans}
     - ''
-    - MUTE
-    - VOLD
-    - VOLU
+    - $$tabler:volume-3$$
+    - $$tabler:volume-2$$
+    - $$tabler:volume$$
     - ''
-    - ANY(OS HYPR)
-    - ANY(OS LSFT)
-    - ANY(OS LGUI)
-    - ANY(OS LALT)
-    - ANY(OS LCTL)
+    - OS HYPR
+    - $$tabler:arrow-big-up-line$$
+    - $$tabler:command$$
+    - $$tabler:alt$$
+    - OS Ctrl
     - {t: ▽, type: trans}
-  - - ANY(QK LLCK)
+  - - $$tabler:lock$$
     - ''
     - SLEP
-    - BRID
-    - BRIU
+    - $$tabler:brightness-down$$
+    - $$tabler:brightness-up$$
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - MPRV
-  - - MPLY
-    - MNXT
+    - $$tabler:player-track-prev$$
+  - - $$tabler:player-play$$
+    - $$tabler:player-track-next$$
     - ''
-    - ANY(QK LLCK)
+    - $$tabler:lock$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

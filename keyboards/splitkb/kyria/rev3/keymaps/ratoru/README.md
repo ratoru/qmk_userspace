@@ -1,8 +1,10 @@
 # Kyria Keymap
 
-![kyria-generated-keymap](./kyria_graphite.svg)
+![kyria-generated-keymap](./drawings/kyria_graphite.svg)
 
 ---
+
+Run `just draw`. Under the hood it does the following:
 
 Redraw the `svg` file with the following. Remember to update the layer names (`-l`) if you change them.
 
