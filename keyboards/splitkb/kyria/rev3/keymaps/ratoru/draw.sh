@@ -3,9 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # ==== CONFIGURE THESE ====
-LAYERS=("GRAPHITE" "NAV" "SYM" "NUM" "FUN") # List of layer names
-COLS=12                                     # Number of columns
-OUTPUT_NAME="kyria_graphite"                # Output file name (no ext.)
+LAYERS=("Graphite" "Gallium" "Nav" "Sym" "Num" "Fun") # List of layer names
+COLS=12                                               # Number of columns
+OUTPUT_NAME="kyria_graphite"                          # Output file name (no ext.)
 
 # ==== MAIN ====
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

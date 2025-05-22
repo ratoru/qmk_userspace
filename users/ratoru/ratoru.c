@@ -33,11 +33,11 @@ bool is_nshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
         case TL_LOWR:
         case TL_UPPR:
-        case MO(1):
-        case MO(2):
-        case MO(3):
-        case MO(4):
-        case MO(5):
+        case TT(1):
+        case TT(2):
+        case TT(3):
+        case TT(4):
+        case TT(5):
             return true;
         default:
             return false;
@@ -48,11 +48,11 @@ bool is_nshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
         case TL_LOWR:
         case TL_UPPR:
-        case MO(1):
-        case MO(2):
-        case MO(3):
-        case MO(4):
-        case MO(5):
+        case TT(1):
+        case TT(2):
+        case TT(3):
+        case TT(4):
+        case TT(5):
         case OS_LSFT:
         case OS_LCTL:
         case OS_LALT:
