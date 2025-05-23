@@ -15,7 +15,6 @@ SRC += features/swapper.c
 CAPS_WORD_ENABLE = yes
 DYNAMIC_MACRO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
-TRI_LAYER_ENABLE = yes
 
 ifeq ($(strip $(COMBO_ENABLE)), yes)
 	VPATH += keyboards/gboards/ # using gboards combo code: see https://combos.gboards.ca/

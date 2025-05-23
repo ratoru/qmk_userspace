@@ -8,6 +8,10 @@
     [
       "splitkb/kyria/rev3",
       "ratoru"
+    ],
+    [
+      "crkbd/rev1/",
+      "ratoru"
     ]
   ]
 }

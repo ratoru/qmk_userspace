@@ -1,0 +1,34 @@
+/*
+Define combos here.
+
+COMB(ident, keycodeToEmit, keySequence...)
+SUBS(ident, sendStringArg, keySequence...)
+
+Use the COMB macro for simple keycode shortcuts
+Example: COMB(vol_up, KC_VOLU, KC_Y, KC_U).
+
+Use the SUBS macro for sending strings
+Example: SUBS(which, "which ", KC_W, KC_H).
+*/
+
+// Macros
+SUBS(vi_quit,  ":wq",    KC_Q,    KC_W)
+SUBS(vi_save,  ":q!",    KC_Q,    KC_F)
+
+// Simple keycodes
+//   name      result    chord keys
+COMB(sgTab,  KC_TAB,   KC_S, KC_G)
+COMB(yhEsc,  KC_ESC,   KC_Y, KC_H)
+COMB(wsSelW,  SELWORD,   KC_W, KC_S)
+COMB(fhCwT,  CW_TOGG,   KC_F, KC_H)
+
+// Home row combos for Graphite
+COMB(O_LSHFT, OSM(MOD_LSFT), KC_S, KC_W)
+COMB(O_LGUI, OSM(MOD_LGUI), KC_T, KC_M)
+COMB(O_LCTRL, OSM(MOD_LALT), KC_R, KC_Q)
+COMB(O_LALT, OSM(MOD_LCTL), KC_N, KC_X)
+
+COMB(O_RSHFT, OSM(MOD_RSFT), KC_H, KC_F)
+COMB(O_RGUI, OSM(MOD_RGUI), KC_A, KC_QUOT)
+COMB(O_RCTRL, OSM(MOD_RALT), KC_E, KC_SCLN)
+COMB(O_RALT, OSM(MOD_RCTL), KC_I, KC_DOT)

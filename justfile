@@ -1,4 +1,5 @@
-kb := "splitkb/kyria/rev3"
+kb := "crkbd/rev1"
+km := "ratoru"
 
 default: all
 
@@ -6,7 +7,7 @@ all:
     qmk userspace-compile
 
 compile:
-    qmk compile -kb {{ kb }} -km ratoru
+    qmk compile -kb {{ kb }} -km {{ km }}
 
 draw:
-    ./keyboards/{{ kb }}/keymaps/ratoru/draw.sh
+    ./keyboards/{{ kb }}/keymaps/{{ km }}/draw.sh

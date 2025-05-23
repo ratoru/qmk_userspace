@@ -1,8 +1,10 @@
 # My QMK Keymaps
 
-These are my keymaps for the [Kyria rev3](https://github.com/splitkb/kyria) and the [Aurora Sweep](https://splitkb.com/collections/keyboard-kits/products/aurora-sweep). Learn more about how and why I created them by reading [my guide](https://ratoru.com/blog/choose-the-right-base-layout).
+These are my keymaps for the [Kyria rev3](https://github.com/splitkb/kyria), [Aurora Sweep](https://splitkb.com/collections/keyboard-kits/products/aurora-sweep), and Corne. Learn more about how and why I created them by reading [my guide](https://ratoru.com/blog/choose-the-right-base-layout).
 
-It was heavily inspired by [Pascal Getreuer's keymap](https://github.com/getreuer/qmk-keymap). It uses a `Colemak-DH` base layer with an option to switch to `Qwerty`. I spent a lot of time trying to design a very efficient symbol layer for programming. To do so, I referred heavily to character and bigram frequencies in programming langues.
+Since first creating the keymaps, a lot has changed in the keyboard layout space. The introduction of new evaluation metrics has lead to much more optimized layouts than `Colemak-DH`, my previous layout. I am now using `Graphite`.
+
+I spent a lot of time trying to design a very efficient symbol layer for programming. To do so, I referred heavily to character and bigram frequencies in programming langues.
 
 The keymap is compiled using a GitHub Action. See more about that below. If you compile locally, remember to update the `qmk-firmware` repo periodically.
 
@@ -13,17 +15,16 @@ The keymap is compiled using a GitHub Action. See more about that below. If you 
 - Efficient symbol layer.
 - [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
 - [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
+- N-Shot macros.
 - QMK Features:
     - [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)
     - [Caps Word](https://docs.qmk.fm/#/feature_caps_word)
     - [Layer Lock](https://docs.qmk.fm/features/layer_lock)
-    - Combos. See `combos.inc` for more detail.
+    - Combos. See `combos.def` for more detail.
     - Custom repeat keys.
     - Different useful Macros around browser usage.
 - RGB lighting (= underglow) using `_noeeprom` functions. Uses different colors to indicate current layer. Turns off microcontroller light.
-- Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis.
-    - For home row mods users: [Achordion](https://getreuer.info/posts/keyboards/achordion/index.html).
-    - Callum style one shot modifiers.
+- Layouts for both home row mods and one-shot modifiers. Note that I do not use home row mods anymore on a daily basis due to the input lag.
 - Layer keys activated by the thumbs via mod-tap.
 - Hyper key to use as a "leader key" for global shortcuts.
 

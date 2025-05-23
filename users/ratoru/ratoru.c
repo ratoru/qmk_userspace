@@ -125,12 +125,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
 
-#ifdef HRM_ENABLE
-void matrix_scan_user(void) {
-  achordion_task();
-}
-#endif
-
 // Define custom alt repeat keys
 #ifdef REPEAT_KEY_ENABLE
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
