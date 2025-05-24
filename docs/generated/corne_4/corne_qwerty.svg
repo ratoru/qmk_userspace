@@ -338,6 +338,48 @@
   <path d="M8 11v-4a4 4 0 1 1 8 0v4" />
 </svg>
 </svg>
+<svg id="tabler:palette">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-palette"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" />
+  <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+</svg>
+</svg>
+<svg id="tabler:palette-off">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-palette-off"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M15 15h-1a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25a9 9 0 0 1 -6.372 -15.356" />
+  <path d="M8 4c1.236 -.623 2.569 -1 4 -1c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828a4.516 4.516 0 0 1 -1.127 .73" />
+  <path d="M8.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M12.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M16.5 10.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M3 3l18 18" />
+</svg>
+</svg>
 <svg id="tabler:photo-video">
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -847,7 +889,8 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#Num">
 <text x="0" y="0" class="key tap layer-activator">Num</text>
-</a></g>
+</a><text x="0" y="24" class="key hold"><tspan style="font-size: 70%">tap-toggle</tspan></text>
+</g>
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#tabler:arrow-big-up-line" xlink:href="#tabler:arrow-big-up-line" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:arrow-big-up-line"/>
@@ -857,12 +900,14 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <a href="#Nav">
 <text x="0" y="0" class="key tap layer-activator">Nav</text>
-</a></g>
+</a><text x="0" y="38" class="key hold"><tspan style="font-size: 70%">tap-toggle</tspan></text>
+</g>
 <g transform="translate(489, 224) rotate(-30.0)" class="key keypos-43">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <a href="#Fun">
 <text x="0" y="0" class="key tap layer-activator">Fun</text>
-</a></g>
+</a><text x="0" y="38" class="key hold"><tspan style="font-size: 70%">tap-toggle</tspan></text>
+</g>
 <g transform="translate(554, 213) rotate(-15.0)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#tabler:space" xlink:href="#tabler:space" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:space"/>
@@ -871,7 +916,8 @@ path.combo { stroke: #7f7f7f; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#Sym">
 <text x="0" y="0" class="key tap layer-activator">Sym</text>
-</a></g>
+</a><text x="0" y="24" class="key hold"><tspan style="font-size: 70%">tap-toggle</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(30, 331)" class="layer-Nav">
@@ -1099,7 +1145,6 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(532, 42)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#tabler:bulb" xlink:href="#tabler:bulb" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bulb"/>
 </g>
 <g transform="translate(588, 35)" class="key keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1154,7 +1199,6 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(532, 98)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#tabler:bounce-left" xlink:href="#tabler:bounce-left" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bounce-left"/>
 </g>
 <g transform="translate(588, 91)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1203,7 +1247,6 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(532, 154)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#tabler:bounce-right" xlink:href="#tabler:bounce-right" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bounce-right"/>
 </g>
 <g transform="translate(588, 147)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1262,12 +1305,15 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#tabler:bulb" xlink:href="#tabler:bulb" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bulb"/>
 </g>
 <g transform="translate(196, 28)" class="key keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#tabler:bounce-left" xlink:href="#tabler:bounce-left" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bounce-left"/>
 </g>
 <g transform="translate(252, 35)" class="key keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#tabler:bounce-right" xlink:href="#tabler:bounce-right" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:bounce-right"/>
 </g>
 <g transform="translate(308, 42)" class="key keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1375,9 +1421,11 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(196, 140)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#tabler:palette-off" xlink:href="#tabler:palette-off" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:palette-off"/>
 </g>
 <g transform="translate(252, 147)" class="key keypos-32">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#tabler:palette" xlink:href="#tabler:palette" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:palette"/>
 </g>
 <g transform="translate(308, 154)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

@@ -172,6 +172,8 @@ parse_config:
     ANY(LUMINO): '$$tabler:bulb$$'
     ANY(RM_NEXT): '$$tabler:bounce-right$$'
     ANY(RM_PREV): '$$tabler:bounce-left$$'
+    ANY(RM_HUEU): '$$tabler:palette$$'
+    ANY(RM_HUED): '$$tabler:palette-off$$'
   zmk_remove_keycode_prefix: []
   zmk_keycode_map:
     EXCLAMATION: '!'

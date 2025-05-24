@@ -30,12 +30,12 @@ layers:
     - .
     - /
     - {t: MEH, h: sticky}
-    - Num
+    - {t: Num, h: tap-toggle}
     - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
-    - Nav
-    - Fun
+    - {t: Nav, h: tap-toggle}
+    - {t: Fun, h: tap-toggle}
     - $$tabler:space$$
-    - Sym
+    - {t: Sym, h: tap-toggle}
   Nav:
   - - {t: ▽, type: trans}
     - $$tabler:video$$
@@ -92,7 +92,7 @@ layers:
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - $$tabler:bulb$$
+    - ''
     - $$tabler:volume-3$$
     - $$tabler:volume-2$$
     - $$tabler:volume$$
@@ -106,7 +106,7 @@ layers:
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - $$tabler:bounce-left$$
+    - ''
     - $$tabler:arrow-big-up-line$$
   - - OS Ctrl
     - $$tabler:alt$$
@@ -118,7 +118,7 @@ layers:
     - F11
     - F12
     - ''
-    - $$tabler:bounce-right$$
+    - ''
     - $$tabler:player-track-prev$$
   - - $$tabler:player-play$$
     - $$tabler:player-track-next$$
@@ -133,9 +133,9 @@ layers:
   Num:
   - - {t: ▽, type: trans}
     - ''
-    - ''
-    - ''
-    - ''
+    - $$tabler:bulb$$
+    - $$tabler:bounce-left$$
+    - $$tabler:bounce-right$$
     - '%'
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -162,8 +162,8 @@ layers:
     - {t: ▽, type: trans}
     - ''
     - ''
-    - ''
-    - ''
+    - $$tabler:palette-off$$
+    - $$tabler:palette$$
     - /
     - '*'
     - '1'

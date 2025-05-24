@@ -10,24 +10,19 @@ Example: COMB(vol_up, KC_VOLU, KC_Y, KC_U).
 Use the SUBS macro for sending strings
 Example: SUBS(which, "which ", KC_W, KC_H).
 */
-
-// Macros
-SUBS(vi_quit,  ":wq",    KC_Q,    KC_W)
-SUBS(vi_save,  ":q!",    KC_Q,    KC_F)
-
 // Simple keycodes
 //   name      result    chord keys
-COMB(sgTab,  KC_TAB,   KC_S, KC_G)
-COMB(yhEsc,  KC_ESC,   KC_Y, KC_H)
-COMB(wsSelW,  SELWORD,   KC_W, KC_S)
-COMB(fhCwT,  CW_TOGG,   KC_F, KC_H)
+COMB(fgTab,  KC_TAB,   KC_F, KC_G)
+COMB(jhEsc,  KC_ESC,   KC_J, KC_H)
+COMB(rfSelW,  SELWORD,   KC_R, KC_F)
+COMB(ujCwT,  CW_TOGG,   KC_U, KC_J)
 
 // Home row combos for Graphite
-COMB(O_LSHFT, OSM(MOD_LSFT), KC_S, KC_W)
-COMB(O_LCTRL, OSM(MOD_LCTL), KC_R, KC_Q)
-COMB(O_LALT, OSM(MOD_LALT), KC_N, KC_X)
+COMB(O_LSHFT, OSM(MOD_LSFT), KC_F, KC_V)
+COMB(O_LCTRL, OSM(MOD_LCTL), KC_D, KC_C)
+COMB(O_LALT, OSM(MOD_LALT), KC_S, KC_X)
 
-COMB(O_RSHFT, OSM(MOD_RSFT), KC_H, KC_F)
-COMB(O_RCTRL, OSM(MOD_RCTL), KC_E, KC_SCLN)
-COMB(O_RALT, OSM(MOD_RALT), KC_I, KC_DOT)
+COMB(O_RSHFT, OSM(MOD_RSFT), KC_J, KC_M)
+COMB(O_RCTRL, OSM(MOD_RCTL), KC_K, KC_COMMA)
+COMB(O_RALT, OSM(MOD_RALT), KC_L, KC_DOT)
 
