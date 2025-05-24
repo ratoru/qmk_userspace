@@ -1,0 +1,185 @@
+layout: {qmk_keyboard: crkbd/rev1, layout_name: LAYOUT_split_3x6_3}
+layers:
+  Gallium:
+  - [TAB, B, L, D, C, V, J, Y, O, U, ',', '$$tabler:backspace$$']
+  - [ESC, N, R, T, S, G, P, H, A, E, I, ENT]
+  - - {t: HYPR, h: sticky}
+    - X
+    - Q
+    - M
+    - W
+    - Z
+    - K
+    - F
+    - ''''
+    - ;
+    - .
+    - {t: HYPR, h: sticky}
+  - - {t: Num, h: tap-toggle}
+    - {t: Nav, h: tap-toggle}
+    - $$tabler:space$$
+    - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
+    - {t: Sym, h: tap-toggle}
+    - {t: Fun, h: tap-toggle}
+  Qwerty:
+  - [TAB, Q, W, E, R, T, Y, U, I, O, P, '$$tabler:backspace$$']
+  - [ESC, A, S, D, F, G, H, J, K, L, ;, ENT]
+  - - {t: HYPR, h: sticky}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - N
+    - M
+    - ','
+    - .
+    - /
+    - {t: HYPR, h: sticky}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Nav:
+  - [TAB, '$$tabler:video$$', '$$tabler:photo-video$$', '$$tabler:list-search$$', '$$tabler:link$$', '', PGUP, HOME, '$$tabler:arrow-narrow-up$$', END, '$$tabler:backspace$$',
+    '']
+  - [ESC, OS Ctrl, '$$tabler:alt$$', '$$tabler:command$$', '$$tabler:arrow-big-up-line$$', OS HYPR, PGDN, '$$tabler:arrow-narrow-left$$', '$$tabler:arrow-narrow-down$$',
+    '$$tabler:arrow-narrow-right$$', DEL, ENT]
+  - ['', SW BTAB, SW WIN, SW APP, '$$tabler:letter-case-upper$$', '', '', '$$tabler:brackets-contain$$', join, '$$tabler:repeat$$', '$$tabler:repeat-off$$', '']
+  - - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - $$tabler:backspace$$
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Sym:
+  - - {t: ▽, type: trans}
+    - '~'
+    - <
+    - '>'
+    - '#'
+    - '@'
+    - '&'
+    - '`'
+    - '{'
+    - '}'
+    - \
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '!'
+    - '-'
+    - ':'
+    - '='
+    - '0'
+    - '1'
+    - _
+    - (
+    - )
+    - '%'
+    - {t: ▽, type: trans}
+  - - $$tabler:lock$$
+    - ^
+    - +
+    - '*'
+    - '"'
+    - ../
+    - '|'
+    - '"'
+    - '['
+    - ']'
+    - $
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+  Num:
+  - - {t: ▽, type: trans}
+    - ''
+    - '-'
+    - +
+    - '~'
+    - ''
+    - ''
+    - '7'
+    - '8'
+    - '9'
+    - ','
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - OS Ctrl
+    - $$tabler:alt$$
+    - $$tabler:command$$
+    - $$tabler:arrow-big-up-line$$
+    - ''
+    - ''
+    - '4'
+    - '5'
+    - '6'
+    - '0'
+    - {t: ▽, type: trans}
+  - - $$tabler:lock$$
+    - ''
+    - /
+    - '*'
+    - '='
+    - ''
+    - ''
+    - '1'
+    - '2'
+    - '3'
+    - .
+    - {t: ▽, type: trans}
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Fun:
+  - - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
+    - $$tabler:brightness-up$$
+    - $$tabler:bulb$$
+    - $$tabler:player-track-prev$$
+    - $$tabler:player-play$$
+    - $$tabler:player-track-next$$
+    - ''
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F5
+    - F6
+    - F7
+    - F8
+    - $$tabler:brightness-down$$
+    - $$tabler:bounce-right$$
+    - $$tabler:arrow-big-up-line$$
+    - $$tabler:command$$
+    - $$tabler:alt$$
+    - OS Ctrl
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - F9
+    - F10
+    - F11
+    - F12
+    - ''
+    - $$tabler:bounce-left$$
+    - $$tabler:volume-3$$
+    - $$tabler:volume-2$$
+    - $$tabler:volume$$
+    - {t: Qwerty, h: toggle}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}

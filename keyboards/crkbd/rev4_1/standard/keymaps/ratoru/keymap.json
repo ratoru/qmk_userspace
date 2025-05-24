@@ -46,12 +46,12 @@
       "KC_DOT",
       "KC_SLSH",
       "OSM(MOD_MEH)",
-      "MO(3)",
+      "TT(3)",
       "OSM(MOD_LSFT)",
-      "MO(1)",
-      "MO(2)",
+      "TT(1)",
+      "TT(2)",
       "KC_SPC",
-      "MO(4)"
+      "TT(4)"
     ],
     [
       "KC_TRNS",
