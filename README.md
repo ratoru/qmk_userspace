@@ -98,3 +98,7 @@ I am also working on a worklfow to automate the drawing.
 ## My keymaps in detail
 
 Check `docs/generated` for the most up-to-date graphics.
+
+## Future additions
+
+- X-case

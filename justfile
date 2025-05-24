@@ -1,10 +1,12 @@
-kb := "crkbd/rev1"
+kb := "crkbd/rev4_1/standard"
 km := "ratoru"
 
-default: all
+default: build
 
 all:
     qmk userspace-compile
+
+build: compile draw
 
 compile:
     qmk compile -kb {{ kb }} -km {{ km }}

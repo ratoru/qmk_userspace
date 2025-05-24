@@ -3,14 +3,14 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # ==== CONFIGURE THESE ====
-LAYERS=("Graphite" "Gallium" "Nav" "Sym" "Num" "Fun") # List of layer names
-COLS=12                                               # Number of columns
-OUTPUT_NAME="kyria_graphite"                          # Output file name (no ext.)
+LAYERS=("Qwerty" "Nav" "Fun" "Num" "Sym") # List of layer names
+COLS=12                                   # Number of columns
+OUTPUT_NAME="corne_qwerty"                # Output file name (no ext.)
 
 # ==== MAIN ====
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 KEYMAP_FILE="$SCRIPT_DIR/keymap.json"
-DRAWINGS_DIR="docs/generated/kyria"
+DRAWINGS_DIR="docs/generated/corne_4"
 YAML_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.yaml"
 SVG_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.svg"
 CONFIG_PATH="drawer_config.yaml" # Always resolved relative to CWD

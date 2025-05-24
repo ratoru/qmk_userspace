@@ -10,7 +10,7 @@ OUTPUT_NAME="sweep_colemak"                         # Output file name (no ext.)
 # ==== MAIN ====
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 KEYMAP_FILE="$SCRIPT_DIR/keymap.json"
-DRAWINGS_DIR="$SCRIPT_DIR/drawings"
+DRAWINGS_DIR="docs/generated/sweep"
 YAML_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.yaml"
 SVG_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.svg"
 CONFIG_PATH="drawer_config.yaml" # Always resolved relative to CWD
