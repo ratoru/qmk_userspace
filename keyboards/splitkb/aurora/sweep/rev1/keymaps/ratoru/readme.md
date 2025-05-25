@@ -1,5 +1,3 @@
 # Sweep OSM Keymap
 
-This is my favorite keymap at the moment.
-
-![sweep-generated-keymap](./sweep_osm_keymap.svg)
+![sweep-generated-keymap](../../../../../../../docs/generated/sweep/sweep_colemak.svg)

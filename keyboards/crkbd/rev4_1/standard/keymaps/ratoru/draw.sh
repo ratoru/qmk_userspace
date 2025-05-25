@@ -12,6 +12,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 KEYMAP_FILE="$SCRIPT_DIR/keymap.json"
 DRAWINGS_DIR="docs/generated/corne_4"
 YAML_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.yaml"
+COMBO_FILE="$SCRIPT_DIR/combos.yaml"
 SVG_FILE="$DRAWINGS_DIR/$OUTPUT_NAME.svg"
 CONFIG_PATH="drawer_config.yaml" # Always resolved relative to CWD
 
@@ -26,7 +27,7 @@ uvx --from keymap-drawer keymap -c "$CONFIG_PATH" parse -c "$COLS" -l $LAYERS_ST
 echo "✅ YAML generated at: $YAML_FILE"
 
 # Generate SVG from YAML
-uvx --from keymap-drawer keymap -c "$CONFIG_PATH" draw "$YAML_FILE" >"$SVG_FILE"
+uvx --from keymap-drawer keymap -c "$CONFIG_PATH" draw "$YAML_FILE" "$COMBO_FILE" >"$SVG_FILE"
 echo "✅ SVG generated at: $SVG_FILE"
 
 echo "🎉 All done! Your keymap drawing is ready."

@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: crkbd/rev4_1/standard, layout_name: LAYOUT_split_3x6_3_ex2}
 layers:
   Qwerty:
-  - [TAB, Q, W, E, R, T, '$$tabler:repeat$$', LGUI, Y, U, I, O]
+  - [TAB, Q, W, E, R, T, '$$tabler:repeat$$', '$$tabler:brand-windows$$', Y, U, I, O]
   - - P
     - ENT
     - {t: ESC, h: LCTL}

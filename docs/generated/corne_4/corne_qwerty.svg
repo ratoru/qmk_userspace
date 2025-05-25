@@ -190,6 +190,25 @@
   <path d="M16 16h.01" />
 </svg>
 </svg>
+<svg id="tabler:brand-windows">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-windows"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M17.8 20l-12 -1.5c-1 -.1 -1.8 -.9 -1.8 -1.9v-9.2c0 -1 .8 -1.8 1.8 -1.9l12 -1.5c1.2 -.1 2.2 .8 2.2 1.9v12.1c0 1.2 -1.1 2.1 -2.2 1.9z" />
+  <path d="M12 5l0 14" />
+  <path d="M4 12l16 0" />
+</svg>
+</svg>
 <svg id="tabler:brightness-down">
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -751,7 +770,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(476, 70)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">LGUI</text>
+<use href="#tabler:brand-windows" xlink:href="#tabler:brand-windows" x="-7" y="-7" height="14" width="14.0" class="key tap glyph tabler:brand-windows"/>
 </g>
 <g transform="translate(532, 42)" class="key keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -917,6 +936,46 @@ path.combo { stroke: #7f7f7f; }
 <a href="#Sym">
 <text x="0" y="0" class="key tap layer-activator">Sym</text>
 </a><text x="0" y="24" class="key hold"><tspan style="font-size: 70%">tap-toggle</tspan></text>
+</g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="126" y="106" width="28" height="26" class="combo"/>
+<use href="#tabler:alt" xlink:href="#tabler:alt" x="133" y="112" height="14" width="14.0" class="combo tap glyph tabler:alt"/>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="182" y="99" width="28" height="26" class="combo"/>
+<text x="196" y="112" class="combo tap">ctrl</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="238" y="106" width="28" height="26" class="combo"/>
+<use href="#tabler:arrow-big-up-line" xlink:href="#tabler:arrow-big-up-line" x="245" y="112" height="14" width="14.0" class="combo tap glyph tabler:arrow-big-up-line"/>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="574" y="106" width="28" height="26" class="combo"/>
+<use href="#tabler:arrow-big-up-line" xlink:href="#tabler:arrow-big-up-line" x="581" y="112" height="14" width="14.0" class="combo tap glyph tabler:arrow-big-up-line"/>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="630" y="99" width="28" height="26" class="combo"/>
+<text x="644" y="112" class="combo tap">ctrl</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="6" ry="6" x="686" y="106" width="28" height="26" class="combo"/>
+<use href="#tabler:alt" xlink:href="#tabler:alt" x="693" y="112" height="14" width="14.0" class="combo tap glyph tabler:alt"/>
+</g>
+<g class="combo combopos-6">
+<rect rx="6" ry="6" x="266" y="82" width="28" height="26" class="combo"/>
+<text x="280" y="94" class="combo tap">TAB</text>
+</g>
+<g class="combo combopos-7">
+<rect rx="6" ry="6" x="238" y="50" width="28" height="26" class="combo"/>
+<use href="#tabler:list-search" xlink:href="#tabler:list-search" x="245" y="56" height="14" width="14.0" class="combo tap glyph tabler:list-search"/>
+</g>
+<g class="combo combopos-8">
+<rect rx="6" ry="6" x="546" y="82" width="28" height="26" class="combo"/>
+<text x="560" y="94" class="combo tap">ESC</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="6" ry="6" x="574" y="50" width="28" height="26" class="combo"/>
+<use href="#tabler:letter-case-upper" xlink:href="#tabler:letter-case-upper" x="581" y="56" height="14" width="14.0" class="combo tap glyph tabler:letter-case-upper"/>
 </g>
 </g>
 </g>

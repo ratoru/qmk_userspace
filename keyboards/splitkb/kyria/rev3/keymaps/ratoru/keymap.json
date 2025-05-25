@@ -196,7 +196,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_PIPE",
-      "ANY(KC_SEMICOLON)",
+      "KC_SEMICOLON",
       "KC_LBRC",
       "KC_RBRC",
       "KC_DLR",

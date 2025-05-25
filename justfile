@@ -3,8 +3,12 @@ km := "ratoru"
 
 default: build
 
-all:
+all: compile-all draw-all
+
+compile-all:
     qmk userspace-compile
+
+draw-all:
     ./keyboards/crkbd/rev1/keymaps/ratoru/draw.sh
     ./keyboards/crkbd/rev4_1/standard/keymaps/ratoru/draw.sh
     ./keyboards/splitkb/aurora/sweep/rev1/keymaps/ratoru/draw.sh

@@ -1,0 +1,16 @@
+# This is used to draw the keymap
+combos:
+  # Home row combos
+  - {tk: [S, C], k: ctrl, l: [Graphite]}
+  - {tk: [T, M], k: $$tabler:alt$$, l: [Graphite]}
+  - {tk: [R, X], k: $$tabler:command$$, l: [Graphite]}
+  - {tk: [N, Q], k: $$tabler:arrow-big-up-line$$, l: [Graphite]}
+  - {tk: [H, P], k: $$tabler:arrow-big-up-line$$, l: [Graphite]}
+  - {tk: [A, .], k: $$tabler:command$$, l: [Graphite]}
+  - {p: [21, 37], k: $$tabler:alt$$, l: [Graphite]}
+  - {p: [22, 38], k: ctrl, l: [Graphite]}
+  # Other combos
+  - {tk: [S, G], k: TAB, l: [Graphite]}
+  - {tk: [S, W], k: $$tabler:list-search$$, l: [Graphite]}
+  - {tk: [H, Y], k: ESC, l: [Graphite]}
+  - {tk: [H, F], k: $$tabler:letter-case-upper$$, l: [Graphite]}
