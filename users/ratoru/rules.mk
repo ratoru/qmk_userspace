@@ -1,8 +1,3 @@
-# Custom ifdef for timeless homerow mods.
-ifeq ($(strip $(HRM_ENABLE)), yes)
-    OPT_DEFS += -DHRM_ENABLE
-endif
-
 # Custom ifdef for n_shot modifiers (callum style).
 ifeq ($(strip $(NSM_ENABLE)), yes)
     OPT_DEFS += -DNSM_ENABLE
@@ -30,3 +25,4 @@ SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 MUSIC_ENABLE = no
+EXTRAFLAGS   += -flto

@@ -167,7 +167,14 @@ parse_config:
     ANY(SRCHSEL): '$$tabler:list-search$$'
     ANY(CPY_URL): '$$tabler:link$$'
     ANY(SELWORD): '$$tabler:brackets-contain$$'
-    ANY(S_END): 'S END'
+    ANY(NEXTSEN): '. SHFT'
+    ANY(JOINLN): 'join'
+    ANY(LUMINO): '$$tabler:bulb$$'
+    ANY(RM_NEXT): '$$tabler:bounce-right$$'
+    ANY(RM_PREV): '$$tabler:bounce-left$$'
+    ANY(RM_HUEU): '$$tabler:palette$$'
+    ANY(RM_HUED): '$$tabler:palette-off$$'
+    LGUI: '$$tabler:brand-windows$$'
   zmk_remove_keycode_prefix: []
   zmk_keycode_map:
     EXCLAMATION: '!'

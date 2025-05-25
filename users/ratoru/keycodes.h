@@ -6,7 +6,7 @@ enum custom_keycodes {
     UPDIR = QK_USER,
 
     // General keycodes
-    SRCHSEL, S_END, CPY_URL,
+    SRCHSEL, NEXTSEN, CPY_URL, JOINLN,
 
     // Swapper keys: Windows, tabs, generic Reverse, and browser tabs
     SW_APP, SW_WIN, SW_REV, SW_BTAB,

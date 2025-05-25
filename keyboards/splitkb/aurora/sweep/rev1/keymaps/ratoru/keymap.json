@@ -105,7 +105,7 @@
       "KC_BRID",
       "ANY(SELWORD)",
       "ANY(SRCHSEL)",
-      "ANY(S_END)",
+      "ANY(NEXTSEN)",
       "KC_DEL",
       "KC_TRNS",
       "KC_TRNS",

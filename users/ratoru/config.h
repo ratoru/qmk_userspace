@@ -5,17 +5,6 @@
 #define DYNAMIC_MACRO_NO_NESTING
 #endif
 
-// ---- Home row mods settings ----
-#ifdef HRM_ENABLE
-// Configure the global tapping term (default: 200ms, rec: 170-220ms)
-#define TAPPING_TERM 220
-#define TAPPING_TERM_PER_KEY
-// If you press a dual-role key, tap another key (press and release) and then release the dual-role key,
-// the dual-role key will perform its hold action instead.
-#define PERMISSIVE_HOLD
-#define QUICK_TAP_TERM_PER_KEY
-#endif
-
 #ifdef RGBLIGHT_ENABLE
 #define WS2812_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the WS2812 implementation uses the PIO0 peripheral
 #define RGB_SLEEP

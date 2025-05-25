@@ -3,6 +3,7 @@
 
 #include "keycodes.h"
 #include "features/swapper.h"
+#include "features/is_mac.h"
 
 #ifdef NSM_ENABLE
 #include "features/nshot_mod.h"
@@ -12,3 +13,4 @@
 #ifdef COMBO_ENABLE
 #include "g/keymap_combo.h"
 #endif
+

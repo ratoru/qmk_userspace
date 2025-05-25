@@ -1,0 +1,5 @@
+brew "qmk/qmk/qmk"
+brew "just"
+
+# To execute the drawing flow
+brew "uv"

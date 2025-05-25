@@ -1,0 +1,10 @@
+USER := ratoru
+
+NSM_ENABLE = yes
+COMBO_ENABLE = yes
+
+RGBLIGHT_ENABLE = no
+
+LAYER_LOCK_ENABLE = yes
+
+PIN_COMPATIBLE = promicro
