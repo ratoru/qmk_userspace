@@ -6,7 +6,7 @@
   "layout": "LAYOUT_split_3x6_3_ex2",
   "layers": [
     [
-      "KC_TAB",
+      "KC_ESC",
       "KC_Q",
       "KC_W",
       "KC_E",
@@ -19,8 +19,8 @@
       "KC_I",
       "KC_O",
       "KC_P",
-      "KC_ENT",
-      "LCTL_T(KC_ESC)",
+      "KC_BSPC",
+      "LCTL_T(KC_TAB)",
       "KC_A",
       "KC_S",
       "KC_D",
@@ -33,7 +33,7 @@
       "KC_K",
       "KC_L",
       "KC_SCLN",
-      "LCTL_T(KC_BSPC)",
+      "LCTL_T(KC_ENT)",
       "OSM(MOD_MEH)",
       "KC_Z",
       "KC_X",

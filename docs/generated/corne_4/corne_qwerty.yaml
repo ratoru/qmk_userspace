@@ -1,10 +1,10 @@
 layout: {qmk_keyboard: crkbd/rev4_1/standard, layout_name: LAYOUT_split_3x6_3_ex2}
 layers:
   Qwerty:
-  - [TAB, Q, W, E, R, T, '$$tabler:repeat$$', '$$tabler:brand-windows$$', Y, U, I, O]
+  - [ESC, Q, W, E, R, T, '$$tabler:repeat$$', '$$tabler:brand-windows$$', Y, U, I, O]
   - - P
-    - ENT
-    - {t: ESC, h: LCTL}
+    - $$tabler:backspace$$
+    - {t: TAB, h: LCTL}
     - A
     - S
     - D
@@ -17,7 +17,7 @@ layers:
   - - K
     - L
     - ;
-    - {t: '$$tabler:backspace$$', h: LCTL}
+    - {t: ENT, h: LCTL}
     - {t: MEH, h: sticky}
     - Z
     - X
