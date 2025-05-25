@@ -24,11 +24,11 @@ mkdir -p "$DRAWINGS_DIR"
 LAYERS_STR="${LAYERS[*]}"
 
 # Generate intermediate YAML
-uvx --from keymap-drawer keymap -c "$CONFIG_PATH" parse -c "$COLS" -l $LAYERS_STR -q "$KEYMAP_FILE" >"$YAML_FILE"
+uv run keymap -c "$CONFIG_PATH" parse -c "$COLS" -l $LAYERS_STR -q "$KEYMAP_FILE" >"$YAML_FILE"
 echo "✅ YAML generated at: $YAML_FILE"
 
 # Generate SVG from YAML
-uvx --from keymap-drawer keymap -c "$CONFIG_PATH" draw "$YAML_FILE" "$COMBO_FILE" >"$SVG_FILE"
+uv run keymap -c "$CONFIG_PATH" draw "$YAML_FILE" "$COMBO_FILE" >"$SVG_FILE"
 echo "✅ SVG generated at: $SVG_FILE"
 
 echo "🎉 All done! Your keymap drawing is ready."

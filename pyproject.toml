@@ -1,0 +1,8 @@
+[project]
+name = "qmk-userspace"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "keymap-drawer>=0.22.0",
+    "pre-commit>=4.2.0",
+]
