@@ -1,13 +1,6 @@
 # This is used to draw the keymap
 combos:
-  - {tk: [S, X], k: $$tabler:alt$$, l: [Qwerty]}
-  - {tk: [D, C], k: ctrl, l: [Qwerty]}
-  - {tk: [F, V], k: $$tabler:arrow-big-up-line$$, l: [Qwerty]}
-  - {tk: [J, M], k: $$tabler:arrow-big-up-line$$, l: [Qwerty]}
-  - {p: [24, 36], k: ctrl, l: [Qwerty]}
-  - {tk: [L, .], k: $$tabler:alt$$, l: [Qwerty]}
-  # Other combos
   - {tk: [F, G], k: TAB, l: [Qwerty]}
-  - {tk: [F, R], k: $$tabler:list-search$$, l: [Qwerty]}
+  - {tk: [F, R], k: "$$tabler:list-search$$", l: [Qwerty]}
   - {tk: [H, J], k: ESC, l: [Qwerty]}
-  - {tk: [U, J], k: $$tabler:letter-case-upper$$, l: [Qwerty]}
+  - {tk: [U, J], k: "$$tabler:letter-case-upper$$", l: [Qwerty]}

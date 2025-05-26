@@ -1,24 +1,24 @@
 layout: {qmk_keyboard: crkbd/rev4_1/standard, layout_name: LAYOUT_split_3x6_3_ex2}
 layers:
   Qwerty:
-  - [ESC, Q, W, E, R, T, '$$tabler:repeat$$', '$$tabler:brand-windows$$', Y, U, I, O]
+  - [ESC, Q, W, E, R, T, '$$tabler:brand-windows$$', PGUP, Y, U, I, O]
   - - P
     - $$tabler:backspace$$
-    - {t: TAB, h: LCTL}
+    - TAB
     - A
-    - S
-    - D
-    - F
+    - {t: S, h: LALT}
+    - {t: D, h: LCTL}
+    - {t: F, h: LSFT}
     - G
-    - $$tabler:repeat-off$$
-    - $$tabler:lock$$
-    - H
-    - J
-  - - K
-    - L
-    - ;
-    - {t: ENT, h: LCTL}
     - {t: MEH, h: sticky}
+    - PGDN
+    - H
+    - {t: J, h: RSFT}
+  - - {t: K, h: RCTL}
+    - {t: L, h: RALT}
+    - ;
+    - ENT
+    - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - Z
     - X
     - C
@@ -29,9 +29,9 @@ layers:
   - - ','
     - .
     - /
-    - {t: MEH, h: sticky}
-    - {t: Num, h: tap-toggle}
     - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
+    - {t: Num, h: tap-toggle}
+    - LALT
     - {t: Nav, h: tap-toggle}
     - {t: Fun, h: tap-toggle}
     - $$tabler:space$$
@@ -53,8 +53,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - $$tabler:brackets-contain$$
-    - $$tabler:alt$$
-    - OS Ctrl
+    - LALT
+    - LCTL
     - $$tabler:arrow-big-up-line$$
     - ''
     - {t: ▽, type: trans}
@@ -108,8 +108,8 @@ layers:
     - {t: ▽, type: trans}
     - ''
     - $$tabler:arrow-big-up-line$$
-  - - OS Ctrl
-    - $$tabler:alt$$
+  - - LCTL
+    - LALT
     - $$tabler:brackets-contain$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -147,8 +147,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - $$tabler:brackets-contain$$
-    - $$tabler:alt$$
-    - OS Ctrl
+    - LALT
+    - LCTL
     - $$tabler:arrow-big-up-line$$
     - '='
     - {t: ▽, type: trans}
