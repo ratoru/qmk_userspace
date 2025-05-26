@@ -2,12 +2,13 @@
 
 #define BINDINGS_OS_WIN
 
+// Home row mods
+#define TAPPING_TERM 250
+#define CHORDAL_HOLD
+#define PERMISSIVE_HOLD
+
 // Turn off layer lock after 60 seconds of idle time.
 #define LAYER_LOCK_IDLE_TIMEOUT 60000
-
-// Tap-Hold behavior
-#define TAPPING_TERM 220
-#define PERMISSIVE_HOLD
 
 // Colors
 #define RGBLIGHT_DISABLE_KEYCODES
