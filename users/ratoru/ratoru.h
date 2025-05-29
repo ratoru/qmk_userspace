@@ -14,3 +14,7 @@
 #include "g/keymap_combo.h"
 #endif
 
+// Define custom alt repeat keys
+#ifdef REPEAT_KEY_ENABLE
+#include "features/arcane.h"
+#endif

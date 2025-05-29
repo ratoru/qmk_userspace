@@ -249,8 +249,7 @@
   "modules": [
     "getreuer/select_word",
     "getreuer/lumino",
-    "getreuer/palettefx",
-    "getreuer/tap_flow"
+    "getreuer/palettefx"
   ],
   "author": "ratoru"
 }

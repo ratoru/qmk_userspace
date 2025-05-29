@@ -1,5 +1,18 @@
 #include "ratoru.h"
 
+#ifdef REPEAT_KEY_ENABLE
+#define IDLE_TIMEOUT_MS 5000  // Idle timeout in milliseconds.
+
+static uint16_t idle_timer = 0;
+
+void housekeeping_task_user(void) {
+  if (idle_timer && timer_expired(timer_read(), idle_timer)) {
+    // If execution reaches here, the keyboard has gone idle.
+    idle_timer = 0;
+  }
+}
+#endif
+
 #ifdef NSM_ENABLE
 /* N-SHOT MOD CONFIGURATION.
  * Reminder of the nshot structure:
@@ -76,6 +89,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
   process_swappers(keycode, record);
 
+#ifdef REPEAT_KEY_ENABLE
+  bool is_idle = idle_timer == 0;
+  idle_timer = (record->event.time + IDLE_TIMEOUT_MS) | 1;
+  if (keycode == ARCANE) {
+      if (record->event.pressed) {
+          process_arcane(get_last_keycode(), get_last_mods(), is_idle);
+      }
+      return false;
+  }
+#endif
   switch (keycode) {
     case UPDIR:  // Types ../ to go up a directory on the shell.
       if (record->event.pressed) {
@@ -121,7 +144,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
                   SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT)))
               // Replace the selection with a single space.
               SS_TAP(X_SPC));
-
         } else {
           SEND_STRING(  // Go to the end of the line and tap delete.
               SS_TAP(X_END) SS_TAP(X_DEL)
@@ -159,29 +181,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   return true;
 }
 
-// Define custom alt repeat keys
 #ifdef REPEAT_KEY_ENABLE
-uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
-  bool cmd_held = (mods & MOD_MASK_GUI);
-  bool shift_held = (mods & MOD_MASK_SHIFT);
-  if (cmd_held && shift_held) {
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record,
+                            uint8_t* remembered_mods) {
     switch (keycode) {
-      case KC_Z:
-        return IS_MAC ? G(KC_Z) : C(KC_Z);  // CMD + Shift + Z reverses to CMD + Z.
-      case KC_T:
-        return IS_MAC ? G(KC_W) : C(KC_W);  // CMD + Shift + T reverses to CMD + W.
+        case ARCANE:
+            return false;  // Ignore ALTREP keys.
     }
-  }
-  if (cmd_held) {
-    switch (keycode) {
-      case KC_Z:
-        return IS_MAC ? G(S(KC_Z)) : C(S(KC_Z));  // CMD + Z reverses to CMD + Shift + Z.
-      case KC_W:
-        return IS_MAC ? G(S(KC_T)) : C(S(KC_T));  // CMD + W reverses to CMD + Shift + T.
-    }
-  }
 
-  return KC_TRNS;  // Defer to default definitions.
+    return true;  // Other keys can be repeated.
 }
 #endif
 
@@ -225,4 +233,3 @@ void suspend_wakeup_init_user(void) {
   rgblight_mode_noeeprom(1);
 }
 #endif
-

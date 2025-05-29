@@ -3,9 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # ==== CONFIGURE THESE ====
-LAYERS=("Graphite" "Gallium" "Nav" "Sym" "Num" "Fun") # List of layer names
+LAYERS=("Gallium" "Graphite" "Nav" "Sym" "Num" "Fun") # List of layer names
 COLS=12                                               # Number of columns
-OUTPUT_NAME="kyria_graphite"                          # Output file name (no ext.)
+OUTPUT_NAME="kyria"                                   # Output file name (no ext.)
 
 # ==== MAIN ====
 # `just` always runs relative to the justfile

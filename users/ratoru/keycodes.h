@@ -17,5 +17,8 @@ enum custom_keycodes {
     // RGB codes
     RGBT_NE, RGB_DB_NE, RGB_IB_NE,
 
+    // Custom magic / repeat key
+    ARCANE,
+
     NEW_SAFE_RANGE  // Use for keymap-specific codes
 };

@@ -1,4 +1,4 @@
-kb := "crkbd/rev4_1/standard"
+kb := "splitkb/kyria/rev3"
 km := "ratoru"
 
 default: build

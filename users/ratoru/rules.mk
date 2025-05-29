@@ -5,6 +5,7 @@ endif
 
 SRC += features/nshot_mod.c
 SRC += features/swapper.c
+SRC += features/arcane.c
 
 # Enable features on all keymaps
 CAPS_WORD_ENABLE = yes

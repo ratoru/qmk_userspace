@@ -1,3 +1,5 @@
+#pragma once
+
 #if defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
 /**
  * @brief Callback for whether the host uses Mac vs. Windows/Linux hotkeys.

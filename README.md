@@ -13,6 +13,12 @@ The keymap is compiled using a GitHub Action. See more about that below. If you 
 ## Features
 
 - Efficient symbol layer.
+- `Arcane` key that mixes repeat and magic functionality. See `features/arcane.c`.
+    - One-shot shift after space or after keyboard idle.
+    - Outputs German Umlaute.
+    - Avoids difficult SFBs.
+    - Repeats commonly repeated characters.
+    - Completes common trigrams (`ion` in English and `sch` in German).
 - [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
 - [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
 - [N-Shot](https://github.com/possumvibes/qmk_userspace/blob/possumdev/users/possumvibes/features/nshot_mod.c) macros.
