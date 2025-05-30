@@ -2,14 +2,14 @@
 
 // Prevent recursive dynamic macros that make the keyboard unresponsive.
 #ifdef DYNAMIC_MARCO_ENABLE
-#define DYNAMIC_MACRO_NO_NESTING
+#    define DYNAMIC_MACRO_NO_NESTING
 #endif
 
 #ifdef RGBLIGHT_ENABLE
-#define WS2812_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the WS2812 implementation uses the PIO0 peripheral
-#define RGB_SLEEP
-#define RGBLIGHT_DISABLE_KEYCODES
-#define RGBLIGHT_LIMIT_VAL 128
+#    define WS2812_PIO_USE_PIO1 // Force the usage of PIO1 peripheral, by default the WS2812 implementation uses the PIO0 peripheral
+#    define RGB_SLEEP
+#    define RGBLIGHT_DISABLE_KEYCODES
+#    define RGBLIGHT_LIMIT_VAL 128
 #endif
 
 // General features

@@ -22,5 +22,9 @@ compile:
 draw: _uv
     ./keyboards/{{ kb }}/keymaps/{{ km }}/draw.sh
 
+format:
+    fd --extension c --extension h --search-path keyboards --search-path users --search-path layouts \
+        --exec clang-format -i
+
 _uv:
     @uv --version || echo 'Please install uv: https://docs.astral.sh/uv/getting-started/installation/'

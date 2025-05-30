@@ -1,6 +1,12 @@
 repos:
   - repo: local
     hooks:
+      - id: format
+        name: Format C code
+        entry: just format
+        language: system
+        always_run: true
+        pass_filenames: false
       - id: draw-all
         name: Draw keymaps
         entry: just draw-all

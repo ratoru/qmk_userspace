@@ -1,5 +1,6 @@
 brew "qmk/qmk/qmk"
 brew "just"
+brew "clang-format"
 
 # To execute the drawing flow
 brew "uv"

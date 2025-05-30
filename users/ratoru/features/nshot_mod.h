@@ -23,7 +23,7 @@ typedef struct {
 } nshot_state_t;
 
 extern nshot_state_t nshot_states[];
-extern uint8_t             NUM_NSHOT_STATES;
+extern uint8_t       NUM_NSHOT_STATES;
 
 // Custom one-or-more-shot sticky mod key implementation that
 // prevents extra mod activation when rolling out of the mod,

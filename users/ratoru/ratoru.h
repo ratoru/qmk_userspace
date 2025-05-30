@@ -6,15 +6,15 @@
 #include "features/is_mac.h"
 
 #ifdef NSM_ENABLE
-#include "features/nshot_mod.h"
+#    include "features/nshot_mod.h"
 #endif
 
 // gboards combos
 #ifdef COMBO_ENABLE
-#include "g/keymap_combo.h"
+#    include "g/keymap_combo.h"
 #endif
 
 // Define custom alt repeat keys
 #ifdef REPEAT_KEY_ENABLE
-#include "features/arcane.h"
+#    include "features/arcane.h"
 #endif

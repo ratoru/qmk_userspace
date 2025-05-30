@@ -15,7 +15,7 @@
  *     }
  */
 bool bindings_host_is_mac(void);
-#endif  // defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
+#endif // defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
 
 // Macro `IS_MAC` determines whether to use Mac vs. Windows/Linux hotkeys:
 //
@@ -28,29 +28,29 @@ bool bindings_host_is_mac(void);
 //   default, or to Windows/Linux with BINDINGS_OS_WIN.
 #if defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
 __attribute__((weak)) bool bindings_host_is_mac(void) {
-#  ifdef OS_DETECTION_ENABLE  // Use OS Detection if enabled.
-  switch (detected_host_os()) {
-    case OS_LINUX:
-    case OS_WINDOWS:
-      return false;
-    case OS_MACOS:
-    case OS_IOS:
-      return true;
-    default:
-      break;
-  }
-#  endif  // OS_DETECTION_ENABLE
-#  ifdef BINDINGS_OS_WIN
-  return false;
-#  else
-  return true;
-#  endif  // BINDINGS_OS_WIN
+#    ifdef OS_DETECTION_ENABLE // Use OS Detection if enabled.
+    switch (detected_host_os()) {
+        case OS_LINUX:
+        case OS_WINDOWS:
+            return false;
+        case OS_MACOS:
+        case OS_IOS:
+            return true;
+        default:
+            break;
+    }
+#    endif // OS_DETECTION_ENABLE
+#    ifdef BINDINGS_OS_WIN
+    return false;
+#    else
+    return true;
+#    endif // BINDINGS_OS_WIN
 }
-#  define IS_MAC bindings_host_is_mac()
+#    define IS_MAC bindings_host_is_mac()
 #else
-#  ifdef BINDINGS_OS_WIN
-#  define IS_MAC false
-#  else
-#  define IS_MAC true
-#  endif  // BINDINGS_OS_WIN
-#endif  // defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
+#    ifdef BINDINGS_OS_WIN
+#        define IS_MAC false
+#    else
+#        define IS_MAC true
+#    endif // BINDINGS_OS_WIN
+#endif     // defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
