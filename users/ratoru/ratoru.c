@@ -1,8 +1,6 @@
 #include "ratoru.h"
 
 #ifdef REPEAT_KEY_ENABLE
-#    define IDLE_TIMEOUT_MS 5000 // Idle timeout in milliseconds.
-
 static uint16_t idle_timer = 0;
 
 void housekeeping_task_user(void) {
@@ -10,6 +8,16 @@ void housekeeping_task_user(void) {
         // If execution reaches here, the keyboard has gone idle.
         idle_timer = 0;
     }
+}
+
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
+    switch (keycode) {
+        case ARCANE:
+            // Ignore custom repeat keys.
+            return false;
+    }
+
+    return true; // Other keys can be repeated.
 }
 #endif
 
@@ -81,22 +89,25 @@ swapper_state_t swapper_states[]   = {{false, IS_MAC ? KC_LGUI : KC_LALT, KC_TAB
 uint8_t         NUM_SWAPPER_STATES = sizeof(swapper_states) / sizeof(swapper_state_t);
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+#ifdef REPEAT_KEY_ENABLE
+    bool is_idle = idle_timer == 0;
+    idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
+    if (keycode == ARCANE) {
+        bool was_processed = false;
+        if (record->event.pressed) {
+            was_processed = process_arcane(get_last_keycode(), get_last_mods(), is_idle);
+        }
+        // Default to repeat key if no custom behavior is defined
+        return was_processed ? false : process_repeat_key(QK_REPEAT_KEY, record);
+    }
+#endif
+
 #ifdef NSM_ENABLE
     process_nshot_state(keycode, record, false);
 #endif
 
     process_swappers(keycode, record);
 
-#ifdef REPEAT_KEY_ENABLE
-    bool is_idle = idle_timer == 0;
-    idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
-    if (keycode == ARCANE) {
-        if (record->event.pressed) {
-            process_arcane(get_last_keycode(), get_last_mods(), is_idle);
-        }
-        return false;
-    }
-#endif
     switch (keycode) {
         case UPDIR: // Types ../ to go up a directory on the shell.
             if (record->event.pressed) {
@@ -178,17 +189,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     }
     return true;
 }
-
-#ifdef REPEAT_KEY_ENABLE
-bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-    switch (keycode) {
-        case ARCANE:
-            return false; // Ignore ALTREP keys.
-    }
-
-    return true; // Other keys can be repeated.
-}
-#endif
 
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {

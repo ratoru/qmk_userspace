@@ -14,6 +14,7 @@
 
 // General features
 #define CAPS_WORD_INVERT_ON_SHIFT
+#define IDLE_TIMEOUT_MS 5000 // Idle timeout in milliseconds.
 
 // Reduze size of firmware
 #define LAYER_STATE_8BIT // Limit the number of layers to 8 to save firmware size.
