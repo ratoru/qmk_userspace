@@ -76,7 +76,7 @@ void process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
             }
             break;
         case KC_E:
-            MAGIC_STRING(/*e*/ "u", KC_E);
+            MAGIC_STRING(/*e*/ "u", KC_U);
             break;
         case KC_F:
             MAGIC_STRING(/*f*/ "f", KC_F);

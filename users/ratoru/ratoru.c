@@ -11,6 +11,15 @@ void housekeeping_task_user(void) {
         idle_timer = 0;
     }
 }
+
+bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
+    switch (keycode) {
+        case ARCANE:
+            return false; // Ignore custom repeat keys.
+    }
+
+    return true; // Other keys can be repeated.
+}
 #endif
 
 #ifdef NSM_ENABLE
@@ -88,11 +97,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     process_swappers(keycode, record);
 
 #ifdef REPEAT_KEY_ENABLE
-    bool is_idle = idle_timer == 0;
-    idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
     if (keycode == ARCANE) {
         if (record->event.pressed) {
-            process_arcane(get_last_keycode(), get_last_mods(), is_idle);
+            repeat_key_invoke(&record->event);
         }
         return false;
     }
@@ -178,17 +185,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     }
     return true;
 }
-
-#ifdef REPEAT_KEY_ENABLE
-bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
-    switch (keycode) {
-        case ARCANE:
-            return false; // Ignore ALTREP keys.
-    }
-
-    return true; // Other keys can be repeated.
-}
-#endif
 
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
