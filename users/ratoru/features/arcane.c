@@ -58,6 +58,9 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
             // Set one-shot mod for shift.
             add_oneshot_mods(MOD_BIT(KC_LSFT));
             return true;
+        case KC_DOT:
+            MAGIC_STRING(/*.*/ "./", UPDIR);
+            return true;
         case KC_A:
             MAGIC_STRING(SS_TAP(X_BSPC) SS_LALT(SS_TAP(X_U)) SS_TAP(X_A), KC_A);
             return true;

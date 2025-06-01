@@ -1,8 +1,19 @@
 layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
 layers:
   Gallium:
-  - [TAB, B, L, D, C, V, J, Y, O, U, ',', '$$tabler:backspace$$']
-  - [ESC, N, R, T, S, G, P, H, A, E, I, ENT]
+  - [TAB, B, L, D, C, V, J, Y, O, U, '''', '$$tabler:backspace$$']
+  - - {t: ESC, h: HYPR}
+    - N
+    - R
+    - T
+    - S
+    - G
+    - P
+    - H
+    - A
+    - E
+    - I
+    - ENT
   - - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - X
     - Q
@@ -15,9 +26,9 @@ layers:
     - $$tabler:repeat$$
     - K
     - F
-  - - ''''
-    - ;
-    - .
+  - - .
+    - _
+    - ','
     - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
     - {t: Graphite, h: toggle}
     - {t: HYPR, h: sticky}
@@ -83,7 +94,7 @@ layers:
   Nav:
   - - {t: ▽, type: trans}
     - ''
-    - ''
+    - join
     - $$tabler:list-search$$
     - $$tabler:link$$
     - ''
@@ -151,7 +162,7 @@ layers:
     - '='
     - '0'
     - '1'
-    - /
+    - ;
     - (
     - )
     - '%'
@@ -167,7 +178,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '|'
-    - ;
+    - /
   - - '['
     - ']'
     - $

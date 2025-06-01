@@ -142,9 +142,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
             if (record->event.pressed) {
                 if (IS_MAC) {
                     SEND_STRING( // Go to the end of the line and tap delete.
-                        SS_TAP(X_END) SS_TAP(X_DEL)
+                        SS_LGUI(SS_TAP(X_RGHT)) SS_TAP(X_DEL)
                         // In case this has joined two words together, insert one space.
-                        SS_TAP(X_SPC) SS_LGUI(
+                        SS_TAP(X_SPC) SS_LCTL(
                             // Go to the beginning of the next word.
                             SS_TAP(X_RGHT) SS_TAP(X_LEFT)
                             // Select back to the end of the previous word. This should select

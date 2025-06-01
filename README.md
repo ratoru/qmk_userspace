@@ -2,7 +2,7 @@
 
 These are my keymaps for the [Kyria rev3](https://github.com/splitkb/kyria), [Aurora Sweep](https://splitkb.com/collections/keyboard-kits/products/aurora-sweep), and Corne. Learn more about how and why I created them by reading [my guide](https://ratoru.com/blog/choose-the-right-base-layout).
 
-Since first creating the keymaps, a lot has changed in the keyboard layout space. The introduction of new evaluation metrics has lead to much more optimized layouts than `Colemak-DH`, my previous layout. I am now using `Graphite`.
+Since created my first keymap, a lot has changed in the keyboard layout space. The introduction of new evaluation metrics has lead to much more optimized layouts than `Colemak-DH`, my original layout. I am now using `Gallium` with `Graphite` punctuation. To make the Gallium layout work with German, I wrote a custom **magic key**. See the `Arcane` section for more.
 
 I spent a lot of time trying to design a very efficient symbol layer for programming. To do so, I referred heavily to character and bigram frequencies in programming langues.
 
@@ -13,12 +13,6 @@ The keymap is compiled using a GitHub Action. See more about that below. If you 
 ## Features
 
 - Efficient symbol layer.
-- `Arcane` key that mixes repeat and magic functionality. See `features/arcane.c`.
-    - One-shot shift after space or after keyboard idle.
-    - Outputs German Umlaute.
-    - Avoids difficult SFBs.
-    - Repeats commonly repeated characters.
-    - Completes common trigrams (`ion` in English and `sch` in German).
 - [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
 - [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
 - [N-Shot](https://github.com/possumvibes/qmk_userspace/blob/possumdev/users/possumvibes/features/nshot_mod.c) macros.
@@ -35,6 +29,19 @@ The keymap is compiled using a GitHub Action. See more about that below. If you 
 - Hyper key to use as a "leader key" for global shortcuts.
 
 My keymap documentation might not always be up to date. Don't blindly trust the images.
+
+### Arcane Key
+
+My `ARCANE` key mixes the functionality of a **repeat key** and a **magic key**.
+
+- If there is no custom functionality, the previous key will be repeated.
+- One-shot shift after space or after keyboard idle.
+- Outputs German Umlaute.
+- Avoids difficult SFBs.
+- Completes common trigrams (`ion` in English and `sch` in German).
+- Outputs common words after shifted letters, e.g. `D->anke`, `T->hank`.
+
+The exact bindings can be found in `features/arcane.c`.
 
 ## How to build with GitHub
 
@@ -86,17 +93,10 @@ My keymap documentation might not always be up to date. Don't blindly trust the 
 
 Drawing your keymap can really help you memorize the different layers. Furthermore, it lets others discover your keymap more easily.
 
-The fancy graphics in this repo are custom made. For a more repeatable process I use [keymap-drawer](https://github.com/caksoylar/keymap-drawer).
-For example, to generate the sweep `keymap.yaml` file, I ran the following command. It uses `uv` to avoid having to install the tool:
+The fancy graphics in this repo are custom made. For a more repeatable process I use [keymap-drawer](https://github.com/caksoylar/keymap-drawer). The commands to draw an individual keymap file can be found in `keyboards/*/draw.sh`. To quickly re-draw a keymap, run the following:
 
 ```bash
-uvx --from keymap-drawer keymap parse -c 10 -l COLEMAK QWERTY NAV SYM NUM GAME -q keymap.json > sweep_osm.yaml
-```
-
-Unfortunately, it does not automatically parse combos. You will have to add those manually. To finally draw the keymap run:
-
-```bash
-uvx --from keymap-drawer keymap draw sweep_osm.yaml > sweep_osm_keymap.svg
+just draw
 ```
 
 I am also working on a worklfow to automate the drawing.
@@ -104,6 +104,24 @@ I am also working on a worklfow to automate the drawing.
 ## My keymaps in detail
 
 Check `docs/generated` for the most up-to-date graphics.
+
+### Kyria
+
+**Base Layer**: My base layer is a mix of Gallium and Graphite punctuation.
+
+![kyria-base](./docs/kyria-layout/base.jpeg)
+
+**Navigation Layer**:
+
+![kyria-nav](./docs/kyria-layout/nav.jpeg)
+
+**Symbol Layer**:
+
+![kyria-sym](./docs/kyria-layout/sym.jpeg)
+
+**Function Layer**: This is home of the function keys and other system related operations.
+
+![kyria-fun](./docs/kyria-layout/fun.jpeg)
 
 ## Future additions
 
