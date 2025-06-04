@@ -2,6 +2,7 @@
 
 #ifdef REPEAT_KEY_ENABLE
 static uint16_t idle_timer = 0;
+static bool     was_arcane = false;
 
 void housekeeping_task_user(void) {
     if (idle_timer && timer_expired(timer_read(), idle_timer)) {
@@ -93,12 +94,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     bool is_idle = idle_timer == 0;
     idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
     if (keycode == ARCANE) {
-        bool was_processed = false;
         if (record->event.pressed) {
-            was_processed = process_arcane(get_last_keycode(), get_last_mods(), is_idle);
+            was_arcane = process_arcane(get_last_keycode(), get_last_mods(), is_idle);
         }
         // Default to repeat key if no custom behavior is defined
-        return was_processed ? false : process_repeat_key(QK_REPEAT_KEY, record);
+        if (!was_arcane) {
+            return process_repeat_key(QK_REPEAT_KEY, record);
+        }
+        return false;
     }
 #endif
 

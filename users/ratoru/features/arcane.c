@@ -61,6 +61,9 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
         case KC_DOT:
             MAGIC_STRING(/*.*/ "./", UPDIR);
             return true;
+        case KC_GRAVE:
+            MAGIC_STRING(/*`*/ "``", KC_GRAVE);
+            return true;
         case KC_A:
             MAGIC_STRING(SS_TAP(X_BSPC) SS_LALT(SS_TAP(X_U)) SS_TAP(X_A), KC_A);
             return true;
@@ -99,10 +102,9 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
             if (!is_caps_word_on() && shift_held) {
                 // Checks for shift mod of previous key
                 SEND_STRING(/*T*/ "hank");
-            } else {
-                MAGIC_STRING(/*t*/ "t", KC_T);
+                return true;
             }
-            return true;
+            break;
         case KC_U:
             MAGIC_STRING(SS_TAP(X_BSPC) SS_LALT(SS_TAP(X_U)) SS_TAP(X_U), KC_U);
             return true;
