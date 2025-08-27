@@ -161,7 +161,7 @@ parse_config:
     ANY(DM_REC1): '$$tabler:video$$'
     ANY(DM_PLY1): '$$tabler:photo-video$$'
     QK_REP: '$$tabler:repeat$$'
-    QK_AREP: '$$tabler:repeat-off$$'
+    QK_AREP: '$$fa:solid/hat-wizard$$'
     SLEP: '$$tabler:zzz$$'
     ANY(SRCHSEL): '$$tabler:list-search$$'
     ANY(CPY_URL): '$$tabler:link$$'
@@ -174,7 +174,12 @@ parse_config:
     ANY(RM_HUEU): '$$tabler:palette$$'
     ANY(RM_HUED): '$$tabler:palette-off$$'
     LGUI: '$$tabler:brand-windows$$'
-    ANY(ARCANE): $$fa:solid/hat-wizard$$
+    ANY(ARCANE): '$$fa:solid/hat-wizard$$'
+    ANY(TL_LOWR): '$$tabler:navigation$$'
+    ANY(TL_UPPR): '$$tabler:code$$'
+    ANY(RGBT_NE): '$$tabler:brightness-half$$'
+    ANY(RGB_IB_NE): '$$tabler:artboard$$'
+    ANY(RGB_DB_NE): '$$tabler:artboard-off$$'
   zmk_remove_keycode_prefix: []
   zmk_keycode_map:
     EXCLAMATION: '!'

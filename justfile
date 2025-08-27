@@ -1,4 +1,4 @@
-kb := "splitkb/kyria/rev3"
+kb := "splitkb/aurora/sweep/rev1"
 km := "ratoru"
 
 default: build

@@ -3,6 +3,11 @@ ifeq ($(strip $(NSM_ENABLE)), yes)
     OPT_DEFS += -DNSM_ENABLE
 endif
 
+# Custom ifdef for arcane key
+ifeq ($(strip $(ARCANE_ENABLE)), yes)
+    OPT_DEFS += -DARCANE_ENABLE
+endif
+
 SRC += features/nshot_mod.c
 SRC += features/swapper.c
 SRC += features/arcane.c

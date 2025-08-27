@@ -16,6 +16,10 @@
 #define CAPS_WORD_INVERT_ON_SHIFT
 #define IDLE_TIMEOUT_MS 5000 // Idle timeout in milliseconds.
 
+// Unfortunately, some applications drop or misorder fast key events. This is a
+// partial fix to slow down the rate at which macros are sent.
+#define TAP_CODE_DELAY 5
+
 // Reduze size of firmware
 #define LAYER_STATE_8BIT // Limit the number of layers to 8 to save firmware size.
 #define NO_MUSIC_MODE

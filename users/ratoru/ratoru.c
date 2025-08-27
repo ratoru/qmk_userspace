@@ -1,6 +1,7 @@
 #include "ratoru.h"
+#include "config.h"
 
-#ifdef REPEAT_KEY_ENABLE
+#ifdef ARCANE_ENABLE
 static uint16_t idle_timer = 0;
 static bool     was_arcane = false;
 
@@ -90,7 +91,7 @@ swapper_state_t swapper_states[]   = {{false, IS_MAC ? KC_LGUI : KC_LALT, KC_TAB
 uint8_t         NUM_SWAPPER_STATES = sizeof(swapper_states) / sizeof(swapper_state_t);
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-#ifdef REPEAT_KEY_ENABLE
+#ifdef ARCANE_ENABLE
     bool is_idle = idle_timer == 0;
     idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
     if (keycode == ARCANE) {
@@ -111,40 +112,67 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 
     process_swappers(keycode, record);
 
+    const uint8_t mods     = get_mods();
+    const uint8_t all_mods = (mods | get_weak_mods()
+#ifndef NO_ACTION_ONESHOT
+                              | get_oneshot_mods()
+#endif // NO_ACTION_ONESHOT
+    );
+
+    // If alt repeating key A, E, I, O, U, Y with no mods other than Shift, set
+    // the last key to KC_N. Above, alternate repeat of KC_N is defined to be
+    // again KC_N. This way, either tapping alt repeat and then repeat (or
+    // equivalently double tapping alt repeat) is useful to type certain patterns
+    // without SFBs:
+    //
+    //   D <altrep> <rep> -> DYN (as in "dynamic")
+    //   O <altrep> <rep> -> OAN (as in "loan")
+    if (get_repeat_key_count() < 0 && (all_mods & ~MOD_MASK_SHIFT) == 0 && (keycode == KC_A || keycode == KC_E || keycode == KC_I || keycode == KC_O || keycode == KC_U || keycode == KC_Y)) {
+        set_last_keycode(KC_N);
+        set_last_mods(0);
+    }
+
     switch (keycode) {
-        case UPDIR: // Types ../ to go up a directory on the shell.
-            if (record->event.pressed) {
-                SEND_STRING("../");
+        // When the Repeat key follows Space, it behaves as one-shot shift.
+        case KC_SPC:
+            if (get_repeat_key_count() > 0) {
+                if (record->event.pressed) {
+                    add_oneshot_mods(MOD_LSFT);
+                    register_mods(MOD_LSFT);
+                } else {
+                    unregister_mods(MOD_LSFT);
+                }
+                return false;
             }
-            return false;
-        case NEXTSEN: // Sentence end
-            if (record->event.pressed) {
-                SEND_STRING(". ");
+            break;
+    }
+
+    if (record->event.pressed) {
+        switch (keycode) {
+            case UPDIR: // Types ../ to go up a directory on the shell.
+                SEND_STRING_DELAY("../", TAP_CODE_DELAY);
+                return false;
+            case NEXTSEN: // Sentence end
+                SEND_STRING_DELAY(". ", TAP_CODE_DELAY);
                 add_oneshot_mods(MOD_BIT(KC_LSFT)); // Set one-shot mod for shift.
-            }
-            return false;
-        case CPY_URL: // Copy browser url
-            if (record->event.pressed) {
+                return false;
+            case CPY_URL: // Copy browser url
                 if (IS_MAC) {
-                    SEND_STRING(SS_LGUI("lc"));
+                    SEND_STRING_DELAY(SS_LGUI("lc"), TAP_CODE_DELAY);
                 } else {
-                    SEND_STRING(SS_LCTL("lc"));
+                    SEND_STRING_DELAY(SS_LCTL("lc"), TAP_CODE_DELAY);
                 }
-            }
-            return false;
-        case SRCHSEL: // Searches the current selection in a new tab.
-            if (record->event.pressed) {
+                return false;
+            case SRCHSEL: // Searches the current selection in a new tab.
                 if (IS_MAC) {
-                    SEND_STRING(SS_LGUI("ct") SS_DELAY(100) SS_LGUI("v") SS_TAP(X_ENTER));
+                    SEND_STRING_DELAY(SS_LGUI("ct") SS_DELAY(100) SS_LGUI("v") SS_TAP(X_ENTER), TAP_CODE_DELAY);
                 } else {
-                    SEND_STRING(SS_LCTL("ct") SS_DELAY(100) SS_LCTL("v") SS_TAP(X_ENTER));
+                    SEND_STRING_DELAY(SS_LCTL("ct") SS_DELAY(100) SS_LCTL("v") SS_TAP(X_ENTER), TAP_CODE_DELAY);
                 }
-            }
-            return false;
-        case JOINLN: // Join lines like Vim's `J` command.
-            if (record->event.pressed) {
+                return false;
+            case JOINLN: // Join lines like Vim's `J` command.
                 if (IS_MAC) {
-                    SEND_STRING( // Go to the end of the line and tap delete.
+                    SEND_STRING_DELAY( // Go to the end of the line and tap delete.
                         SS_LGUI(SS_TAP(X_RGHT)) SS_TAP(X_DEL)
                         // In case this has joined two words together, insert one space.
                         SS_TAP(X_SPC) SS_LCTL(
@@ -155,9 +183,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
                             // or trailing whitespace, including the space inserted earlier.
                             SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT)))
                         // Replace the selection with a single space.
-                        SS_TAP(X_SPC));
+                        SS_TAP(X_SPC),
+                        TAP_CODE_DELAY);
                 } else {
-                    SEND_STRING( // Go to the end of the line and tap delete.
+                    SEND_STRING_DELAY( // Go to the end of the line and tap delete.
                         SS_TAP(X_END) SS_TAP(X_DEL)
                         // In case this has joined two words together, insert one space.
                         SS_TAP(X_SPC) SS_LCTL(
@@ -168,27 +197,57 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
                             // or trailing whitespace, including the space inserted earlier.
                             SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT)))
                         // Replace the selection with a single space.
-                        SS_TAP(X_SPC));
+                        SS_TAP(X_SPC),
+                        TAP_CODE_DELAY);
                 }
-            }
-            return false;
+                return false;
 #ifdef RGBLIGHT_ENABLE
-        case RGBT_NE:
-            if (record->event.pressed) {
+            case RGBT_NE:
                 rgblight_toggle_noeeprom();
-            }
-            return false;
-        case RGB_IB_NE:
-            if (record->event.pressed) {
+                return false;
+            case RGB_IB_NE:
                 rgblight_increase_val_noeeprom();
-            }
-            return false;
-        case RGB_DB_NE:
-            if (record->event.pressed) {
+                return false;
+            case RGB_DB_NE:
                 rgblight_decrease_val_noeeprom();
-            }
-            return false;
+                return false;
 #endif
+            // Macros invoked through the MAGIC key.
+            case M_THE:
+                MAGIC_STRING(/* */ "the", KC_N);
+                break;
+            case M_ION:
+                MAGIC_STRING(/*i*/ "on", KC_S);
+                break;
+            case M_MENT:
+                MAGIC_STRING(/*m*/ "ent", KC_S);
+                break;
+            case M_QUEN:
+                MAGIC_STRING(/*q*/ "uen", KC_C);
+                break;
+            case M_TMENT:
+                MAGIC_STRING(/*t*/ "ment", KC_S);
+                break;
+            case M_UPDIR:
+                MAGIC_STRING(/*.*/ "./", UPDIR);
+                break;
+            case M_INCLUDE:
+                SEND_STRING_DELAY(/*#*/ "include ", TAP_CODE_DELAY);
+                break;
+            case M_EQEQ:
+                SEND_STRING_DELAY(/*=*/"==", TAP_CODE_DELAY);
+                break;
+            case M_NBSP:
+                SEND_STRING_DELAY(/*&*/ "nbsp;", TAP_CODE_DELAY);
+                break;
+
+            case M_DOCSTR:
+                SEND_STRING_DELAY(/*"*/ "\"\"\"\"\"" SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT), TAP_CODE_DELAY);
+                break;
+            case M_MKGRVS:
+                SEND_STRING_DELAY(/*`*/ "``\n\n```" SS_TAP(X_UP), TAP_CODE_DELAY);
+                break;
+        }
     }
     return true;
 }
@@ -233,3 +292,48 @@ void suspend_wakeup_init_user(void) {
     rgblight_mode_noeeprom(1);
 }
 #endif
+
+///////////////////////////////////////////////////////////////////////////////
+// Sentence case (https://getreuer.info/posts/keyboards/sentence-case)
+///////////////////////////////////////////////////////////////////////////////
+#ifdef COMMUNITY_MODULE_SENTENCE_CASE_ENABLE
+char sentence_case_press_user(uint16_t keycode, keyrecord_t* record, uint8_t mods) {
+    if ((mods & ~(MOD_MASK_SHIFT | MOD_BIT_RALT)) == 0) {
+        const bool shifted = mods & MOD_MASK_SHIFT;
+        switch (keycode) {
+            case KC_A ... KC_Z:
+            case M_THE:
+            case M_ION:
+            case M_MENT:
+            case M_TMENT:
+                return 'a'; // Letter key.
+
+            case KC_DOT: // Both . and Shift . (?) punctuate sentence endings.
+            case KC_EXLM:
+            case KC_QUES:
+                return '.';
+
+            case KC_COMM:
+                return shifted ? '.' : '#';
+
+            case KC_2 ... KC_0:       // 2 3 4 5 6 7 8 9 0
+            case KC_AT ... KC_RPRN:   // @ # $ % ^ & * ( )
+            case KC_MINS ... KC_SCLN: // - = [ ] backslash ;
+            case KC_UNDS ... KC_COLN: // _ + { } | :
+            case KC_GRV:
+                return '#'; // Symbol key.
+
+            case KC_SPC:
+                return ' '; // Space key.
+
+            case KC_QUOT:
+            case KC_DQUO:
+                return '\''; // Quote key.
+        }
+    }
+
+    // Otherwise clear Sentence Case to initial state.
+    sentence_case_clear();
+    return '\0';
+}
+#endif // COMMUNITY_MODULE_SENTENCE_CASE_ENABLE

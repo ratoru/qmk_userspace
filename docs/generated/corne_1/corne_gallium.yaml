@@ -47,7 +47,7 @@ layers:
     '']
   - [ESC, OS Ctrl, '$$tabler:alt$$', '$$tabler:command$$', '$$tabler:arrow-big-up-line$$', OS HYPR, PGDN, '$$tabler:arrow-narrow-left$$', '$$tabler:arrow-narrow-down$$',
     '$$tabler:arrow-narrow-right$$', DEL, ENT]
-  - ['', SW BTAB, SW WIN, SW APP, '$$tabler:letter-case-upper$$', '', '', '$$tabler:brackets-contain$$', join, '$$tabler:repeat$$', '$$tabler:repeat-off$$', '']
+  - ['', SW BTAB, SW WIN, SW APP, '$$tabler:letter-case-upper$$', '', '', '$$tabler:brackets-contain$$', join, '$$tabler:repeat$$', '$$fa:solid/hat-wizard$$', '']
   - - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}

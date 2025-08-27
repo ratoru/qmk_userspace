@@ -17,7 +17,7 @@ enum custom_keycodes {
     SW_REV,
     SW_BTAB,
 
-    // N-Shot Mods: "normal" callum-style n-shot mods (now featuring MULTI MODS!!!)
+    // N-Shot Mods: "normal" callum-style n-shot mods (now featuring MULTI MODS!)
     OS_LSFT,
     OS_LCTL,
     OS_LALT,
@@ -31,6 +31,20 @@ enum custom_keycodes {
 
     // Custom magic / repeat key
     ARCANE,
+
+    // Macros invoked through the Magic key.
+    M_DOCSTR,
+    M_EQEQ,
+    M_INCLUDE,
+    M_ION,
+    M_MENT,
+    M_MKGRVS,
+    M_QUEN,
+    M_THE,
+    M_TMENT,
+    M_UPDIR,
+    M_NBSP,
+    M_NOOP,
 
     NEW_SAFE_RANGE // Use for keymap-specific codes
 };

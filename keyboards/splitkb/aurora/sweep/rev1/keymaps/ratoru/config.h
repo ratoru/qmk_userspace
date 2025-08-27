@@ -1,3 +1,12 @@
+#pragma once
+
+#define SELECT_WORD_OS_MAC
+
+#define TAPPING_TERM 220
+#define FLOW_TAP_TERM 100
+#define CHORDAL_HOLD
+#define PERMISSIVE_HOLD
+
 #define TRI_LAYER_LOWER_LAYER 2
 #define TRI_LAYER_UPPER_LAYER 3
 #define TRI_LAYER_ADJUST_LAYER 4

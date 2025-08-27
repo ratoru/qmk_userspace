@@ -4,6 +4,7 @@
 #include "keycodes.h"
 #include "features/swapper.h"
 #include "features/is_mac.h"
+#include "features/magic_string.h"
 
 #ifdef NSM_ENABLE
 #    include "features/nshot_mod.h"
@@ -15,6 +16,6 @@
 #endif
 
 // Define custom alt repeat keys
-#ifdef REPEAT_KEY_ENABLE
+#ifdef ARCANE_ENABLE
 #    include "features/arcane.h"
 #endif

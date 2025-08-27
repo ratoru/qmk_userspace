@@ -2,7 +2,6 @@ USER := ratoru
 
 TRI_LAYER_ENABLE = yes
 
-NSM_ENABLE = yes
 COMBO_ENABLE = yes
 
 # RGB (underglow) lighting for Liatris

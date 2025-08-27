@@ -22,7 +22,7 @@ layers:
     - Z
     - $$tabler:photo-video$$
     - $$tabler:video$$
-    - $$tabler:repeat-off$$
+    - $$fa:solid/hat-wizard$$
     - $$tabler:repeat$$
     - K
     - F
@@ -73,7 +73,7 @@ layers:
     - V
     - $$tabler:photo-video$$
     - $$tabler:video$$
-    - $$tabler:repeat-off$$
+    - $$fa:solid/hat-wizard$$
     - $$tabler:repeat$$
     - K
     - P
