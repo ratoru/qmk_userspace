@@ -4,7 +4,7 @@
 // the Repeat Key is pressed next, it produces `repeat_keycode`. This helper is
 // used below.
 #define MAGIC_STRING(str, repeat_keycode) magic_send_string_P(PSTR(str), (repeat_keycode))
-static void magic_send_string_P(const char* str, uint16_t repeat_keycode) {
+static void magic_send_string_P(const char *str, uint16_t repeat_keycode) {
     uint8_t saved_mods = 0;
     // If Caps Word is on, save the mods and hold Shift.
     if (is_caps_word_on()) {

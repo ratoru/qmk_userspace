@@ -12,7 +12,7 @@ void housekeeping_task_user(void) {
     }
 }
 
-bool remember_last_key_user(uint16_t keycode, keyrecord_t* record, uint8_t* remembered_mods) {
+bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
     switch (keycode) {
         case ARCANE:
             // Ignore custom repeat keys.
@@ -90,7 +90,7 @@ bool is_nshot_ignored_key(uint16_t keycode) {
 swapper_state_t swapper_states[]   = {{false, IS_MAC ? KC_LGUI : KC_LALT, KC_TAB, S(KC_TAB), SW_APP, SW_REV}, {false, KC_LGUI, KC_GRAVE, S(KC_GRAVE), SW_WIN, SW_REV}, {false, KC_LCTL, KC_TAB, S(KC_TAB), SW_WIN, SW_REV}};
 uint8_t         NUM_SWAPPER_STATES = sizeof(swapper_states) / sizeof(swapper_state_t);
 
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef ARCANE_ENABLE
     bool is_idle = idle_timer == 0;
     idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
@@ -297,7 +297,7 @@ void suspend_wakeup_init_user(void) {
 // Sentence case (https://getreuer.info/posts/keyboards/sentence-case)
 ///////////////////////////////////////////////////////////////////////////////
 #ifdef COMMUNITY_MODULE_SENTENCE_CASE_ENABLE
-char sentence_case_press_user(uint16_t keycode, keyrecord_t* record, uint8_t mods) {
+char sentence_case_press_user(uint16_t keycode, keyrecord_t *record, uint8_t mods) {
     if ((mods & ~(MOD_MASK_SHIFT | MOD_BIT_RALT)) == 0) {
         const bool shifted = mods & MOD_MASK_SHIFT;
         switch (keycode) {

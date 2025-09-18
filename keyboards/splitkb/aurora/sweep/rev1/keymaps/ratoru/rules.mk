@@ -1,6 +1,6 @@
 USER := ratoru
 
-TRI_LAYER_ENABLE = yes
+# TRI_LAYER_ENABLE = yes
 
 COMBO_ENABLE = yes
 

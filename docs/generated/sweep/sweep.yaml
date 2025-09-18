@@ -1,28 +1,5 @@
 layout: {qmk_keyboard: splitkb/aurora/sweep/rev1, layout_name: LAYOUT_split_3x5_2}
 layers:
-  Magic Sturdy:
-  - [V, M, L, C, P, B, '$$fa:solid/hat-wizard$$', U, O, Q]
-  - - {t: S, h: LCTL}
-    - {t: T, h: LALT}
-    - {t: R, h: LGUI}
-    - {t: D, h: LSFT}
-    - Y
-    - F
-    - {t: N, h: LSFT}
-    - {t: E, h: LGUI}
-    - {t: A, h: LALT}
-    - {t: I, h: LCTL}
-  - - X
-    - K
-    - {t: J, h: MEH}
-    - {t: G, h: HYPR}
-    - W
-    - Z
-    - {t: H, h: HYPR}
-    - {t: ',', h: MEH}
-    - .
-    - ''''
-  - ['$$tabler:navigation$$', '$$tabler:space$$', '$$tabler:repeat$$', '$$tabler:code$$']
   Night:
   - [B, F, L, K, Q, P, G, O, U, .]
   - - {t: N, h: LCTL}
@@ -45,43 +22,10 @@ layers:
     - {t: /, h: MEH}
     - ;
     - ','
-  - ['$$tabler:navigation$$', '$$tabler:space$$', R, '$$tabler:code$$']
-  Nav:
-  - - $$tabler:video$$
-    - SW BTAB
-    - SW WIN
-    - SW APP
-    - {t: Night, h: toggle}
-    - PGUP
-    - HOME
-    - $$tabler:arrow-narrow-up$$
-    - END
-    - DEL
-  - [LCTL, LALT, '$$tabler:brand-windows$$', '$$tabler:arrow-big-up-line$$', join, PGDN, '$$tabler:arrow-narrow-left$$', '$$tabler:arrow-narrow-down$$', '$$tabler:arrow-narrow-right$$',
-    '$$tabler:backspace$$']
-  - ['$$tabler:photo-video$$', '$$tabler:list-search$$', '$$tabler:letter-case-upper$$', TAB, ANY(SENTENCE CASE ON), ANY(SENTENCE CASE OFF), ANY(SELWBAK), ANY(SELLINE),
-    '$$tabler:brackets-contain$$', '$$tabler:lock$$']
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - ENT
-    - ESC
-  Sym:
-  - ['~', <, '>', '-', '@', '%', ), '}', $, \]
-  - ['''', '"', _, '=', '!', '|', (, '{', ;, /]
-  - [^, '*', ':', '?', '`', '&', '#', '[', +, ']']
-  - - $$tabler:backspace$$
+  - - {t: '$$tabler:repeat$$', h: Nav}
     - $$tabler:space$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  Num:
-  - ['$$tabler:brightness-up$$', '$$tabler:volume-3$$', '$$tabler:volume-2$$', '$$tabler:volume$$', '$$tabler:brightness-half$$', '*', '6', '7', '8', '$$tabler:backspace$$']
-  - [LCTL, LALT, '$$tabler:brand-windows$$', '$$tabler:arrow-big-up-line$$', '$$tabler:artboard$$', '-', '0', '1', '2', '9']
-  - ['$$tabler:brightness-down$$', '$$tabler:player-track-prev$$', '$$tabler:player-play$$', '$$tabler:player-track-next$$', '$$tabler:artboard-off$$', /, '3', '4',
-    '5', .]
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: R, h: Sym}
+    - {t: '$$fa:solid/hat-wizard$$', h: Num}
   Gallium:
   - [B, L, D, C, V, J, Y, O, U, ',']
   - - {t: N, h: LCTL}
@@ -104,4 +48,43 @@ layers:
     - {t: '''', h: MEH}
     - ;
     - .
-  - ['$$tabler:navigation$$', '$$tabler:space$$', '$$tabler:repeat$$', '$$tabler:code$$']
+  - - {t: '$$tabler:repeat$$', h: Nav}
+    - $$tabler:space$$
+    - {t: '$$tabler:backspace$$', h: Sym}
+    - {t: '$$fa:solid/hat-wizard$$', h: Num}
+  Nav:
+  - - $$tabler:video$$
+    - SW BTAB
+    - SW WIN
+    - SW APP
+    - {t: Gallium, h: toggle}
+    - PGUP
+    - HOME
+    - $$tabler:arrow-narrow-up$$
+    - END
+    - DEL
+  - [LCTL, LALT, '$$tabler:brand-windows$$', '$$tabler:arrow-big-up-line$$', join, PGDN, '$$tabler:arrow-narrow-left$$', '$$tabler:arrow-narrow-down$$', '$$tabler:arrow-narrow-right$$',
+    '$$tabler:backspace$$']
+  - ['$$tabler:photo-video$$', '$$tabler:list-search$$', '$$tabler:letter-case-upper$$', ESC, ANY(SENTENCE CASE ON), ANY(SENTENCE CASE OFF), ANY(SELWBAK), ANY(SELLINE),
+    '$$tabler:brackets-contain$$', '$$tabler:lock$$']
+  - - {type: held}
+    - {t: ▽, type: trans}
+    - ENT
+    - TAB
+  Sym:
+  - ['~', <, '>', '`', '@', '&', '{', '}', '#', \]
+  - [+, '-', _, '=', '!', '|', (, ), ;, /]
+  - [^, '*', ':', $, '"', '''', '[', ']', '%', '?']
+  - - $$tabler:backspace$$
+    - $$tabler:space$$
+    - {type: held}
+    - {t: ▽, type: trans}
+  Num:
+  - ['$$tabler:brightness-up$$', '$$tabler:volume-3$$', '$$tabler:volume-2$$', '$$tabler:volume$$', '$$tabler:brightness-half$$', '*', '7', '8', '9', '$$tabler:backspace$$']
+  - [LCTL, LALT, '$$tabler:brand-windows$$', '$$tabler:arrow-big-up-line$$', '$$tabler:artboard$$', '-', '0', '1', '2', '3']
+  - ['$$tabler:brightness-down$$', '$$tabler:player-track-prev$$', '$$tabler:player-play$$', '$$tabler:player-track-next$$', '$$tabler:artboard-off$$', /, '4', '5',
+    '6', .]
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}

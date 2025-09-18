@@ -3,9 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # ==== CONFIGURE THESE ====
-LAYERS=("Magic Sturdy" "Night" "Nav" "Sym" "Num" "Gallium") # List of layer names
-COLS=10                                                     # Number of columns
-OUTPUT_NAME="sweep"                                         # Output file name (no ext.)
+LAYERS=("Night" "Gallium" "Nav" "Sym" "Num") # List of layer names
+COLS=10                                      # Number of columns
+OUTPUT_NAME="sweep"                          # Output file name (no ext.)
 
 # ==== MAIN ====
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -24,6 +24,7 @@ LAYERS_STR="${LAYERS[*]}"
 
 # Generate intermediate YAML
 uv run keymap -c "$CONFIG_PATH" parse -c "$COLS" -l $LAYERS_STR -q "$KEYMAP_FILE" >"$YAML_FILE"
+# echo -e "draw_config:\n  footer_text: '$FOOTER'" >>"$YAML_FILE"
 echo "✅ YAML generated at: $YAML_FILE"
 
 # Generate SVG from YAML

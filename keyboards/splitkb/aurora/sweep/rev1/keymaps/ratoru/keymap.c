@@ -154,10 +154,6 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     }
 
     switch (keycode) {
-        case KC_WH_U:
-            return KC_WH_D;
-        case KC_WH_D:
-            return KC_WH_U;
         case SELWBAK:
             return SELWORD;
         case SELWORD:
