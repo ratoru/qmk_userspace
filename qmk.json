@@ -16,6 +16,14 @@
     [
       "crkbd/rev4_1/standard",
       "ratoru"
+    ],
+    [
+      "splitkb/halcyon/elora/rev2",
+      "ratoru",
+      {
+        "HLC_TFT_DISPLAY": "1",
+        "TARGET": "splitkb_halcyon_elora_rev2_vial_hlc_display"
+      }
     ]
   ]
 }

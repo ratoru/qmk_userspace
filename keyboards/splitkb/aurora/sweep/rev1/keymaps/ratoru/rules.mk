@@ -1,4 +1,4 @@
-USER := ratoru
+USER_NAME := ratoru
 
 # TRI_LAYER_ENABLE = yes
 

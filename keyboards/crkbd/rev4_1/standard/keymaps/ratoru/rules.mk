@@ -1,4 +1,4 @@
-USER := ratoru
+USER_NAME := ratoru
 
 NSM_ENABLE = yes
 COMBO_ENABLE = yes

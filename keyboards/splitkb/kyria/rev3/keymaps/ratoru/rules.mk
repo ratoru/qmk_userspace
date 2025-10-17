@@ -1,4 +1,4 @@
-USER := ratoru
+USER_NAME := ratoru
 
 ARCANE_ENABLE = yes
 NSM_ENABLE = yes
