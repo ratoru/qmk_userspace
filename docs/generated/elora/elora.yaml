@@ -34,11 +34,11 @@ layers:
     - Adjust
     - {t: ▽, type: trans}
     - Nav
-    - $$tabler:space$$
+    - {t: R, h: Sym}
     - Num
     - $$tabler:repeat$$
-    - {t: R, h: Sym}
-    - $$tabler:backspace$$
+    - $$tabler:space$$
+    - $$fa:solid/hat-wizard$$
   - - {t: ▽, type: trans}
     - Adjust
   Gallium:
@@ -75,10 +75,10 @@ layers:
     - Adjust
     - {t: ▽, type: trans}
     - Nav
-    - $$tabler:backspace$$
+    - $$tabler:space$$
     - Num
     - $$tabler:repeat$$
-    - $$tabler:space$$
+    - $$tabler:backspace$$
     - Sym
   - - {t: ▽, type: trans}
     - Adjust
@@ -201,10 +201,10 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
