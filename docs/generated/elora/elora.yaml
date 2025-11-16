@@ -1,7 +1,7 @@
 layout: {qmk_keyboard: splitkb/halcyon/elora/rev2, layout_name: LAYOUT_split_4x6_5}
 layers:
   Night:
-  - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', LCG(Q)]
+  - [ESC, '9', '7', '1', '3', '5', '4', '2', '0', '6', '8', LCG(Q)]
   - [TAB, B, F, L, K, Q, P, G, O, U, ., '$$tabler:backspace$$']
   - - {t: ESC, h: CTL}
     - {t: N, h: CTL}
@@ -33,17 +33,17 @@ layers:
     - OS RSFT
     - Adjust
     - {t: ▽, type: trans}
-    - Nav
-    - R
     - Sym
-    - $$fa:solid/hat-wizard$$
-    - $$tabler:space$$
+    - R
     - Num
+    - $$tabler:repeat$$
+    - $$tabler:space$$
+    - Nav
   - - {t: ▽, type: trans}
     - Adjust
   Gallium:
   - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ESC]
-  - [TAB, B, L, D, C, V, J, Y, O, U, ',', '$$tabler:backspace$$']
+  - [TAB, B, L, D, C, V, J, Y, O, U, ., '$$tabler:backspace$$']
   - - {t: ESC, h: CTL}
     - {t: N, h: CTL}
     - {t: R, h: OPT}
@@ -70,7 +70,7 @@ layers:
     - {t: F, h: HYPR}
   - - {t: '''', h: MEH}
     - ;
-    - .
+    - ','
     - OS RSFT
     - Adjust
     - {t: ▽, type: trans}
@@ -78,7 +78,7 @@ layers:
     - $$tabler:space$$
     - Num
     - $$tabler:repeat$$
-    - $$tabler:backspace$$
+    - $$tabler:repeat$$
     - Sym
   - - {t: ▽, type: trans}
     - Adjust
@@ -137,12 +137,12 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Sym:
@@ -159,52 +159,52 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - '~'
-    - <
-    - '>'
-    - '`'
-    - '@'
-    - '&'
+    - ^
     - '{'
     - '}'
+    - $
+    - '@'
+    - '&'
     - '#'
-    - \
+    - '*'
+    - +
+    - '?'
     - {t: ▽, type: trans}
   - - QK LLCK
-    - +
-    - '-'
-    - _
-    - '='
-    - '!'
-    - '|'
+    - '"'
     - (
     - )
     - ;
-    - /
+    - '!'
+    - '`'
+    - '='
+    - ':'
+    - _
+    - ''''
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - ^
-    - '*'
-    - ':'
-    - $
-    - '"'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - ''''
+    - '~'
     - '['
-  - - ']'
+    - ']'
+    - '-'
+    - \
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '|'
+    - /
+  - - <
+    - '>'
     - '%'
-    - '?'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - $$tabler:repeat$$
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
@@ -254,10 +254,10 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Adjust:
