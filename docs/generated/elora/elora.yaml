@@ -32,7 +32,7 @@ layers:
     - ','
     - OS RSFT
     - Adjust
-    - {t: ▽, type: trans}
+    - ../
     - Sym
     - R
     - Num
@@ -96,7 +96,7 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - SENTENCE CASE OFF
+    - {t: ▽, type: trans}
     - SW BTAB
     - SW WIN
     - SW APP
@@ -120,9 +120,9 @@ layers:
     - $$tabler:backspace$$
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - SENTENCE CASE ON
-    - JOINLN
+    - {t: ▽, type: trans}
     - SRCHSEL
+    - JOINLN
     - $$tabler:letter-case-upper$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

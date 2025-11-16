@@ -1,5 +1,6 @@
 #pragma once
-#include "quantum/keycodes.h"
+
+#include "quantum_keycodes.h"
 
 enum custom_keycodes {
     // OS-specific utilities
@@ -7,22 +8,20 @@ enum custom_keycodes {
 
     // General keycodes
     SRCHSEL,
-    NEXTSEN,
     CPY_URL,
     JOINLN,
 
     // Swapper keys: Windows, tabs, generic Reverse, and browser tabs
     SW_APP,
     SW_WIN,
-    SW_REV,
     SW_BTAB,
 
     // N-Shot Mods: "normal" callum-style n-shot mods (now featuring MULTI MODS!)
-    OS_LSFT,
-    OS_LCTL,
-    OS_LALT,
-    OS_LGUI,
-    OS_HYPR,
+    ONE_LSFT,
+    ONE_LCTL,
+    ONE_LALT,
+    ONE_LGUI,
+    ONE_HYPR,
 
     // RGB codes
     RGBT_NE,
@@ -31,20 +30,6 @@ enum custom_keycodes {
 
     // Custom magic / repeat key
     ARCANE,
-
-    // Macros invoked through the Magic key.
-    M_DOCSTR,
-    M_EQEQ,
-    M_INCLUDE,
-    M_ION,
-    M_MENT,
-    M_MKGRVS,
-    M_QUEN,
-    M_THE,
-    M_TMENT,
-    M_UPDIR,
-    M_NBSP,
-    M_NOOP,
 
     NEW_SAFE_RANGE // Use for keymap-specific codes
 };

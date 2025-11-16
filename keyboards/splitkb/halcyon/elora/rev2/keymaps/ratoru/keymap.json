@@ -9,7 +9,7 @@
             "KC_TAB"        , "KC_B"    , "KC_F"    , "KC_L"    , "KC_K"                , "KC_Q"   ,                                                 "KC_P"    , "KC_G"    , "KC_O"    , "KC_U"    , "KC_DOT"  , "KC_BSPC",
             "CTL_T(KC_ESC)" , "CTL_T(KC_N)", "OPT_T(KC_S)", "CMD_T(KC_H)", "SFT_T(KC_T)", "KC_M"   ,                                                 "KC_Y"    , "SFT_T(KC_C)", "CMD_T(KC_A)", "OPT_T(KC_E)", "CTL_T(KC_I)", "KC_ENT",
             "OS_LSFT"       , "KC_X"    , "KC_V"    , "MEH_T(KC_J)", "HYPR_T(KC_D)"    , "KC_Z"    , "DM_PLY1" , "DM_REC1" , "DM_REC2" , "DM_PLY2" , "KC_QUOT" , "HYPR_T(KC_W)", "MEH_T(KC_SLSH)", "KC_SCLN", "KC_COMM", "OS_RSFT",
-                                                      "MO(5)"   , "_______" ,              "MO(3)" , "KC_R"    , "MO(4)"   ,  "QK_REP" , "KC_SPC"  , "MO(2)"   , "_______" , "MO(5)",
+                                                      "MO(5)"   , "ANY(UPDIR)" ,              "MO(3)" , "KC_R"    , "MO(4)"   ,  "QK_REP" , "KC_SPC"  , "MO(2)"   , "_______" , "MO(5)",
                                                       "KC_MUTE" , "KC_NO"   ,              "KC_NO" , "KC_NO"   , "KC_NO"   , "KC_MUTE" , "KC_NO"   , "KC_NO"   , "KC_NO"   , "KC_NO"
         ],
         [
@@ -21,12 +21,12 @@
                                                       "KC_MUTE" , "KC_NO"   , "KC_NO"              , "KC_NO"   , "KC_NO"   , "KC_MUTE" , "KC_NO"   , "KC_NO"   , "KC_NO"   , "KC_NO"
         ],
         [
-            "_______"       , "_______" , "_______" , "_______" , "_______"             , "_______" ,                                                 "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
-            "_______"       , "SENTENCE_CASE_OFF", "SW_BTAB", "SW_WIN", "SW_APP"      , "_______" ,                                                 "KC_PGUP" , "KC_HOME" , "KC_UP"   , "KC_END"  , "KC_DEL"  , "_______",
-            "_______"       , "KC_LCTL" , "KC_LALT" , "KC_LGUI" , "KC_LSFT"             , "_______" ,                                                 "KC_PGDN" , "KC_LEFT" , "KC_DOWN" , "KC_RGHT" , "KC_BSPC" , "_______",
-            "_______"       , "SENTENCE_CASE_ON", "JOINLN", "SRCHSEL", "CW_TOGG"      , "_______" , "_______" , "_______" , "_______" , "_______" , "KC_NO"   , "SELWBAK" , "SELLINE" , "SELWORD" , "QK_LLCK" , "_______",
-                                                      "_______" , "_______" ,             "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
-                                                      "_______" , "_______" ,             "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______"
+            "_______"       , "_______" , "_______" , "_______" , "_______"     , "_______" ,                                                 "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
+            "_______"       , "_______" , "SW_BTAB" , "SW_WIN"  , "SW_APP"      , "_______" ,                                                 "KC_PGUP" , "KC_HOME" , "KC_UP"   , "KC_END"  , "KC_DEL"  , "_______",
+            "_______"       , "KC_LCTL" , "KC_LALT" , "KC_LGUI" , "KC_LSFT"     , "_______" ,                                                 "KC_PGDN" , "KC_LEFT" , "KC_DOWN" , "KC_RGHT" , "KC_BSPC" , "_______",
+            "_______"       , "_______" , "SRCHSEL" ,  "JOINLN" ,  "CW_TOGG"     , "_______" , "_______" , "_______" , "_______" , "_______" , "KC_NO"   , "SELWBAK" , "SELLINE" , "SELWORD" , "QK_LLCK" , "_______",
+                                                      "_______" , "_______" ,     "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
+                                                      "_______" , "_______" ,     "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______"
         ],
         [
             "_______"       , "_______" , "_______" , "_______" , "_______"             , "_______" ,                                                 "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
@@ -55,7 +55,6 @@
     ],
     "modules": [
         "getreuer/select_word",
-        "getreuer/sentence_case",
         "getreuer/lumino",
         "getreuer/palettefx"
     ]

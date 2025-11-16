@@ -30,9 +30,9 @@ build keyboard: (compile keyboard) (draw keyboard)
 compile keyboard:
     #!/usr/bin/env bash
     case "{{ keyboard }}" in
-        elora) qmk compile -kb {{ kb_elora }} -km {{ km }} {{ extra_elora }} ;;
-        kyria) qmk compile -kb {{ kb_kyria }} -km {{ km }} {{ extra_kyria }} ;;
-        sweep) qmk compile -kb {{ kb_sweep }} -km {{ km }} {{ extra_sweep }} ;;
+        elora) qmk compile -kb {{ kb_elora }} -km {{ km }} {{ extra_elora }} --compiledb ;;
+        kyria) qmk compile -kb {{ kb_kyria }} -km {{ km }} {{ extra_kyria }} --compiledb ;;
+        sweep) qmk compile -kb {{ kb_sweep }} -km {{ km }} {{ extra_sweep }} --compiledb ;;
         *) echo "Unknown keyboard: {{ keyboard }}"; exit 1 ;;
     esac
 

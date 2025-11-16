@@ -26,9 +26,9 @@
 // static const char *caps =        "Caps";
 // static const char *num =         "Num";
 // static const char *scroll =      "Scroll";
-static const char *shift = "Shift";
-static const char *cmd   = "Cmd";
-static const char *ctrl  = "Ctrl";
+static const char *cmd  = "Cmd";
+static const char *ctrl = "Ctrl";
+static const char *opt  = "Opt";
 
 static painter_font_handle_t  Retron27;
 static painter_font_handle_t  Retron27_underline;
@@ -206,9 +206,9 @@ void update_display(void) {
     if (last_mod_state != (get_mods() | get_oneshot_mods()) || first_run_led == false) {
         const uint8_t mods = get_mods() | get_oneshot_mods();
 
-        mods &MOD_MASK_SHIFT ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 3 - 15, Retron27_underline, shift, HSV_CAPS_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 3 - 15, Retron27, shift, HSV_CAPS_OFF, HSV_BLACK);
-        mods &MOD_MASK_GUI ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 2 - 10, Retron27_underline, cmd, HSV_NUM_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 2 - 10, Retron27, cmd, HSV_NUM_OFF, HSV_BLACK);
-        mods &MOD_MASK_CTRL ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height - 5, Retron27_underline, ctrl, HSV_SCROLL_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height - 5, Retron27, ctrl, HSV_SCROLL_OFF, HSV_BLACK);
+        mods &MOD_MASK_GUI ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 3 - 15, Retron27_underline, cmd, HSV_CAPS_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 3 - 15, Retron27, cmd, HSV_CAPS_OFF, HSV_BLACK);
+        mods &MOD_MASK_CTRL ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 2 - 10, Retron27_underline, ctrl, HSV_NUM_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height * 2 - 10, Retron27, ctrl, HSV_NUM_OFF, HSV_BLACK);
+        mods &MOD_MASK_ALT ? qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height - 5, Retron27_underline, opt, HSV_SCROLL_ON, HSV_BLACK) : qp_drawtext_recolor(lcd_surface, 5, LCD_HEIGHT - Retron27->line_height - 5, Retron27, opt, HSV_SCROLL_OFF, HSV_BLACK);
 
         last_mod_state = mods;
         first_run_led  = true;

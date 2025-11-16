@@ -3,8 +3,8 @@
 
 #include "keycodes.h"
 #include "features/swapper.h"
-#include "features/is_mac.h"
-#include "features/magic_string.h"
+// #include "features/is_mac.h"
+// #include "features/magic_string.h"
 
 #ifdef NSM_ENABLE
 #    include "features/nshot_mod.h"

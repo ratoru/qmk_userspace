@@ -123,6 +123,12 @@ Check `docs/generated` for the most up-to-date graphics.
 
 ![kyria-fun](./docs/kyria-layout/fun.jpeg)
 
+## Setting up your LSP
+
+To make your LSP pick up the correct imports, you need to run one of the `just build ...` commands.
+`clangd` will then pick up the correct imports for the keymap you are currently working on. Currently,
+you have to run this build command each time you work on a different keymap.
+
 ## Future additions
 
 - X-case

@@ -17,9 +17,10 @@ CAPS_WORD_ENABLE = yes
 DYNAMIC_MACRO_ENABLE = yes
 REPEAT_KEY_ENABLE = yes
 
+INTROSPECTION_KEYMAP_C = ratoru.c
+
 ifeq ($(strip $(COMBO_ENABLE)), yes)
 	VPATH += keyboards/gboards/ # using gboards combo code: see https://combos.gboards.ca/
-    INTROSPECTION_KEYMAP_C = ratoru.c
 endif
 
 # Turn off unused features to reduce size
