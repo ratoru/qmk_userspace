@@ -2,7 +2,6 @@
 #include QMK_KEYBOARD_H
 
 #include "keycodes.h"
-#include "features/swapper.h"
 // #include "features/is_mac.h"
 // #include "features/magic_string.h"
 

@@ -12,6 +12,10 @@
 #    define RGBLIGHT_LIMIT_VAL 128
 #endif
 
+// Cyclotab: handle Cmd+Tab and Cmd+Grave for Mac app/window switching.
+#define CYCLOTAB_KEYS LCMD(KC_TAB), LCMD(KC_GRAVE), LCTL(KC_TAB)
+#define CYCLOTAB_TIMEOUT 0 // Disable timeout.
+
 // General features
 #define CAPS_WORD_INVERT_ON_SHIFT
 #define IDLE_TIMEOUT_MS 5000 // Idle timeout in milliseconds.

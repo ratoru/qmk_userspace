@@ -84,14 +84,14 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_NO",
-      "ANY(SW_WIN)",
-      "ANY(SW_APP)",
+      "LGUI(KC_GRV)",
+      "LGUI(KC_TAB)",
       "CW_TOGG",
       "KC_NO",
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "ANY(NEXTSEN)",
+      "KC_NO",
       "KC_NO",
       "KC_TRNS",
       "KC_TRNS",
@@ -249,7 +249,8 @@
   "modules": [
     "getreuer/select_word",
     "getreuer/lumino",
-    "getreuer/palettefx"
+    "getreuer/palettefx",
+    "getreuer/cyclotab"
   ],
   "author": "ratoru"
 }

@@ -11,11 +11,6 @@ enum custom_keycodes {
     CPY_URL,
     JOINLN,
 
-    // Swapper keys: Windows, tabs, generic Reverse, and browser tabs
-    SW_APP,
-    SW_WIN,
-    SW_BTAB,
-
     // N-Shot Mods: "normal" callum-style n-shot mods (now featuring MULTI MODS!)
     ONE_LSFT,
     ONE_LCTL,

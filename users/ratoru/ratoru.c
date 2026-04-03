@@ -86,9 +86,6 @@ bool is_nshot_ignored_key(uint16_t keycode) {
 }
 #endif
 
-static bool sw_app_active = false;
-static bool sw_win_active = false;
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef ARCANE_ENABLE
     bool is_idle = idle_timer == 0;
@@ -108,10 +105,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef NSM_ENABLE
     process_nshot_state(keycode, record, false);
 #endif
-
-    // Update swappers (cmd + tab window switching)
-    update_swapper(&sw_app_active, KC_LGUI, KC_TAB, SW_APP, keycode, record);
-    update_swapper(&sw_win_active, KC_LGUI, KC_GRAVE, SW_WIN, keycode, record);
 
     switch (keycode) {
         case UPDIR: // Types ../ to go up a directory on the shell.

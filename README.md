@@ -14,7 +14,7 @@ The keymap is compiled using a GitHub Action. See more about that below. If you 
 
 - Efficient symbol layer.
 - [Word Selection](https://getreuer.info/posts/keyboards/select-word/index.html) macro
-- [Swapper](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum#swapper). Sends `cmd-key`, but holds `cmd` between consecutive keypresses.
+- [Cyclotab](https://getreuer.info/posts/keyboards/cyclotab). Sends `Cmd+Tab`but holds the modifier between consecutive keypresses for easy app/window switching.
 - [N-Shot](https://github.com/possumvibes/qmk_userspace/blob/possumdev/users/possumvibes/features/nshot_mod.c) macros.
 - QMK Features:
     - [Dynamic Macros](https://docs.qmk.fm/#/feature_dynamic_macros)

@@ -97,9 +97,9 @@ layers:
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - SW BTAB
-    - SW WIN
-    - SW APP
+    - Ctrl Tab
+    - Cmd `
+    - Cmd Tab
     - {t: ▽, type: trans}
     - PGUP
     - HOME

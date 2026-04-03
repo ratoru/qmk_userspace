@@ -29,7 +29,7 @@
             "QK_REP"        , "QK_REP"         , "MO(3)"          , "_______"        , "MO(5)"
         ],
         [
-            "_______"       , "_______"        , "SW_BTAB"        , "SW_WIN"         , "SW_APP"         , "_______"       ,
+            "_______"       , "_______"        , "LCTL(KC_TAB)"   , "LGUI(KC_GRV)"   , "LGUI(KC_TAB)"   , "_______"       ,
             "KC_PGUP"       , "KC_HOME"        , "KC_UP"          , "KC_END"         , "KC_DEL"         , "_______"       ,
             "_______"       , "KC_LCTL"        , "KC_LALT"        , "KC_LGUI"        , "KC_LSFT"        , "_______"       ,
             "KC_PGDN"       , "KC_LEFT"        , "KC_DOWN"        , "KC_RGHT"        , "KC_BSPC"        , "_______"       ,
@@ -79,6 +79,7 @@
     ],
     "author": "ratoru",
     "modules": [
-        "getreuer/select_word"
+        "getreuer/select_word",
+        "getreuer/cyclotab"
     ]
 }

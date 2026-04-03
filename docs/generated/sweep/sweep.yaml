@@ -54,9 +54,9 @@ layers:
     - {t: '$$fa:solid/hat-wizard$$', h: Num}
   Nav:
   - - $$tabler:video$$
-    - SW BTAB
-    - SW WIN
-    - SW APP
+    - Ctrl Tab
+    - Cmd `
+    - Cmd Tab
     - {t: Gallium, h: toggle}
     - PGUP
     - HOME

@@ -22,7 +22,7 @@
         ],
         [
             "_______"       , "_______" , "_______" , "_______" , "_______"     , "_______" ,                                                 "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
-            "_______"       , "_______" , "SW_BTAB" , "SW_WIN"  , "SW_APP"      , "_______" ,                                                 "KC_PGUP" , "KC_HOME" , "KC_UP"   , "KC_END"  , "KC_DEL"  , "_______",
+            "_______"       , "_______" , "LCTL(KC_TAB)" , "LGUI(KC_GRV)" , "LGUI(KC_TAB)" , "_______" ,                                                 "KC_PGUP" , "KC_HOME" , "KC_UP"   , "KC_END"  , "KC_DEL"  , "_______",
             "_______"       , "KC_LCTL" , "KC_LALT" , "KC_LGUI" , "KC_LSFT"     , "_______" ,                                                 "KC_PGDN" , "KC_LEFT" , "KC_DOWN" , "KC_RGHT" , "KC_BSPC" , "_______",
             "_______"       , "_______" , "SRCHSEL" ,  "JOINLN" ,  "CW_TOGG"     , "_______" , "_______" , "_______" , "_______" , "_______" , "KC_NO"   , "SELWBAK" , "SELLINE" , "SELWORD" , "QK_LLCK" , "_______",
                                                       "_______" , "_______" ,     "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______" , "_______",
@@ -56,6 +56,7 @@
     "modules": [
         "getreuer/select_word",
         "getreuer/lumino",
-        "getreuer/palettefx"
+        "getreuer/palettefx",
+        "getreuer/cyclotab"
     ]
 }

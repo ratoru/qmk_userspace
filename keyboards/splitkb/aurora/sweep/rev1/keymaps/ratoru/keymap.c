@@ -1,5 +1,20 @@
-#pragma once
-#include "quantum/keycodes.h"
+#include QMK_KEYBOARD_H
+
+// Placeholder keycodes for magic key sequences (alt repeat logic TBD).
+enum sweep_magic_keycodes {
+    M_THE = NEW_SAFE_RANGE,
+    M_ION,
+    M_MENT,
+    M_QUEN,
+    M_TMENT,
+    M_UPDIR,
+    M_NOOP,
+    M_INCLUDE,
+    M_NBSP,
+    M_EQEQ,
+    M_DOCSTR,
+    M_MKGRVS,
+};
 
 // The following describes the magic key functionality, where * represents the
 // magic key and @ the repeat key. For example, tapping A and then the magic key
@@ -158,14 +173,20 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
             return SELWORD;
         case SELWORD:
             return SELWBAK;
+        case LGUI(KC_TAB):
+            return LSG(KC_TAB);
+        case LSG(KC_TAB):
+            return LGUI(KC_TAB);
+        case LGUI(KC_GRV):
+            return LSG(KC_GRV);
     }
     return KC_TRNS;
 }
 
 void keyboard_pre_init_user(void) {
     // Set our LED pin as output
-    setPinOutput(24);
+    gpio_set_pin_output(24);
     // Turn the LED off
     // (Due to technical reasons, high is off and low is on)
-    writePinHigh(24);
+    gpio_write_pin_high(24);
 }

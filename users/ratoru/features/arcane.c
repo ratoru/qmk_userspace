@@ -17,6 +17,9 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
             case KC_T:
                 IS_MAC ? SEND_STRING(SS_LGUI("w")) : SEND_STRING(SS_LCTL("w")); // CMD + Shift + T reverses to CMD + W.
                 return true;
+            case KC_TAB:
+                tap_code16(LGUI(KC_TAB)); // CMD + Shift + Tab reverses to CMD + Tab.
+                return true;
         }
     }
     if (cmd_held) {
@@ -26,6 +29,12 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
                 return true;
             case KC_W:
                 IS_MAC ? SEND_STRING(SS_LGUI(SS_LSFT("t"))) : SEND_STRING(SS_LCTL(SS_LSFT("t"))); // CMD + W reverses to CMD + Shift + T.
+                return true;
+            case KC_TAB:
+                tap_code16(LSG(KC_TAB)); // CMD + Tab reverses to CMD + Shift + Tab.
+                return true;
+            case KC_GRV:
+                tap_code16(LSG(KC_GRV)); // CMD + Grave reverses to CMD + Shift + Grave.
                 return true;
         }
     }

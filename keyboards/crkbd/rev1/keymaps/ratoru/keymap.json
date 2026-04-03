@@ -118,9 +118,9 @@
             "KC_DEL",
             "KC_ENT",
             "KC_NO",
-            "ANY(SW_BTAB)",
-            "ANY(SW_WIN)",
-            "ANY(SW_APP)",
+            "LCTL(KC_TAB)",
+            "LGUI(KC_GRV)",
+            "LGUI(KC_TAB)",
             "CW_TOGG",
             "KC_NO",
             "KC_NO",
@@ -273,6 +273,7 @@
     "modules": [
         "getreuer/select_word",
         "getreuer/lumino",
-        "getreuer/palettefx"
+        "getreuer/palettefx",
+        "getreuer/cyclotab"
     ]
 }

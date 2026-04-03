@@ -67,14 +67,14 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - ''
-    - SW WIN
-    - SW APP
+    - Cmd `
+    - Cmd Tab
     - $$tabler:letter-case-upper$$
     - ''
     - ''
     - ''
   - - ''
-    - . SHFT
+    - ''
     - ''
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}

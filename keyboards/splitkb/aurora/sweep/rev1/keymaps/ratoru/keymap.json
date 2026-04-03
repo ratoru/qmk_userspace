@@ -79,9 +79,9 @@
     ],
     [
       "ANY(DM_REC1)",
-      "ANY(SW_BTAB)",
-      "ANY(SW_WIN)",
-      "ANY(SW_APP)",
+      "LCTL(KC_TAB)",
+      "LGUI(KC_GRV)",
+      "LGUI(KC_TAB)",
       "DF(1)",
       "KC_PGUP",
       "KC_HOME",
@@ -189,6 +189,7 @@
   "author": "ratoru",
   "modules": [
     "getreuer/select_word",
-    "getreuer/sentence_case"
+    "getreuer/sentence_case",
+    "getreuer/cyclotab"
   ]
 }
