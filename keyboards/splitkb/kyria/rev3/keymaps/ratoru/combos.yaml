@@ -1,15 +1,7 @@
 # This is used to draw the keymap
 combos:
-  - {p: [13, 25], k: ctrl, l: [Gallium]}
-  - {p: [14, 26], k: "$$tabler:alt$$", l: [Gallium]}
-  - {p: [15, 27], k: "$$tabler:command$$", l: [Gallium]}
-  - {p: [16, 28], k: "$$tabler:arrow-big-up-line$$", l: [Gallium]}
-  - {p: [19, 35], k: "$$tabler:arrow-big-up-line$$", l: [Gallium]}
-  - {p: [20, 36], k: "$$tabler:command$$", l: [Gallium]}
-  - {p: [21, 37], k: "$$tabler:alt$$", l: [Gallium]}
-  - {p: [22, 38], k: ctrl, l: [Gallium]}
-  # Other combos
-  - {tk: [S, G], k: TAB, l: [Gallium]}
-  - {tk: [S, C], k: "$$tabler:list-search$$", l: [Gallium]}
-  - {tk: [H, P], k: ESC, l: [Gallium]}
-  - {tk: [H, Y], k: "$$tabler:letter-case-upper$$", l: [Gallium]}
+  # Other combos (Night layout)
+  - {tk: [S, H], k: TAB, l: [Night]}
+  - {tk: [Y, C], k: ESC, l: [Night]}
+  - {tk: [C, A], k: "$$tabler:list-search$$", l: [Night]}
+  - {tk: [T, M], k: "$$tabler:letter-case-upper$$", l: [Night]}

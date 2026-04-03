@@ -1,285 +1,284 @@
 layout: {qmk_keyboard: splitkb/kyria/rev3, layout_name: LAYOUT_split_3x6_5}
 layers:
-  Gallium:
-  - [TAB, B, L, D, C, V, J, Y, O, U, '''', '$$tabler:backspace$$']
-  - - {t: ESC, h: HYPR}
-    - N
-    - R
-    - T
-    - S
-    - G
-    - P
-    - H
-    - A
-    - E
-    - I
-    - ENT
-  - - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
-    - X
-    - Q
+  Night:
+  - [TAB, B, F, L, K, Q, P, G, O, U, ., '$$tabler:backspace$$']
+  - - {t: ESC, h: CTL}
+    - {t: N, h: CTL}
+    - {t: S, h: OPT}
+    - {t: H, h: CMD}
+    - {t: T, h: SFT}
     - M
-    - W
-    - Z
-    - $$tabler:photo-video$$
-    - $$tabler:video$$
-    - $$fa:solid/hat-wizard$$
-    - $$tabler:repeat$$
-    - K
-    - F
-  - - .
-    - _
-    - ','
-    - {t: '$$tabler:arrow-big-up-line$$', h: sticky}
-    - {t: Graphite, h: toggle}
-    - {t: HYPR, h: sticky}
-    - {t: Nav, h: tap-toggle}
-    - $$tabler:space$$
-    - {t: Num, h: tap-toggle}
-    - {t: Fun, h: tap-toggle}
-    - $$fa:solid/hat-wizard$$
-    - {t: Sym, h: tap-toggle}
-  - - {t: HYPR, h: sticky}
-    - ''
-  Graphite:
-  - - {t: ▽, type: trans}
-    - B
-    - L
-    - D
-    - W
-    - Z
-    - ''''
-    - F
-    - O
-    - U
-    - J
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - N
-    - R
-    - T
-    - S
-    - G
     - Y
-    - H
-    - A
-    - E
-    - I
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - Q
+    - {t: C, h: SFT}
+    - {t: A, h: CMD}
+    - {t: E, h: OPT}
+    - {t: I, h: CTL}
+    - ENT
+  - - OS LSFT
     - X
-    - M
-    - C
     - V
-    - $$tabler:photo-video$$
-    - $$tabler:video$$
-    - $$fa:solid/hat-wizard$$
-    - $$tabler:repeat$$
-    - K
-    - P
-  - - .
-    - _
+    - {t: J, h: MEH}
+    - {t: D, h: HYPR}
+    - Z
+    - DM PLY1
+    - DM REC1
+    - DM REC2
+    - DM PLY2
+    - ''''
+    - {t: W, h: HYPR}
+  - - {t: /, h: MEH}
+    - ;
     - ','
+    - OS RSFT
+    - Adjust
+    - ../
+    - Sym
+    - R
+    - Num
+    - $$tabler:repeat$$
+    - $$tabler:space$$
+    - Nav
+  - ['$$fa:solid/hat-wizard$$', Adjust]
+  Gallium:
+  - [TAB, B, L, D, C, V, J, Y, O, U, ., '$$tabler:backspace$$']
+  - - {t: ESC, h: CTL}
+    - {t: N, h: CTL}
+    - {t: R, h: OPT}
+    - {t: T, h: CMD}
+    - {t: S, h: SFT}
+    - G
+    - P
+    - {t: H, h: SFT}
+    - {t: A, h: CMD}
+    - {t: E, h: OPT}
+    - {t: I, h: CTL}
+    - ENT
+  - - OS LSFT
+    - X
+    - Q
+    - {t: M, h: MEH}
+    - {t: W, h: HYPR}
+    - Z
+    - DM PLY1
+    - DM REC1
+    - DM REC2
+    - DM PLY2
+    - K
+    - {t: F, h: HYPR}
+  - - {t: '''', h: MEH}
+    - ;
+    - ','
+    - OS RSFT
+    - Adjust
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - Nav
+    - $$tabler:space$$
+    - Num
+    - $$tabler:repeat$$
+    - $$tabler:repeat$$
+    - Sym
   - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - Adjust
   Nav:
   - - {t: ▽, type: trans}
-    - ''
-    - join
-    - $$tabler:list-search$$
-    - $$tabler:link$$
-    - ''
+    - {t: ▽, type: trans}
+    - SW BTAB
+    - SW WIN
+    - SW APP
+    - {t: ▽, type: trans}
     - PGUP
     - HOME
     - $$tabler:arrow-narrow-up$$
     - END
-    - $$tabler:backspace$$
+    - DEL
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - OS Ctrl
-    - $$tabler:alt$$
-    - $$tabler:command$$
+    - LCTL
+    - LALT
+    - $$tabler:brand-windows$$
     - $$tabler:arrow-big-up-line$$
-    - OS HYPR
+    - {t: ▽, type: trans}
     - PGDN
     - $$tabler:arrow-narrow-left$$
     - $$tabler:arrow-narrow-down$$
     - $$tabler:arrow-narrow-right$$
-    - DEL
+    - $$tabler:backspace$$
     - {t: ▽, type: trans}
-  - - $$tabler:lock$$
-    - SW BTAB
-    - SW WIN
-    - SW APP
-    - $$tabler:brackets-contain$$
-    - SW REV
+  - - QK LLCK
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - ''
+    - SRCHSEL
+    - JOINLN
     - $$tabler:letter-case-upper$$
-  - - ''
-    - . SHFT
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - ''
-    - $$tabler:lock$$
+    - SELWBAK
+  - - SELLINE
+    - SELWORD
+    - QK LLCK
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - $$tabler:backspace$$
-    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Sym:
   - - {t: ▽, type: trans}
-    - '~'
-    - <
-    - '>'
-    - '#'
-    - '@'
-    - '&'
-    - '`'
+    - ^
     - '{'
     - '}'
-    - \
+    - $
+    - '@'
+    - '&'
+    - '#'
+    - '*'
+    - +
+    - '?'
     - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - '!'
-    - '-'
-    - ':'
-    - '='
-    - '0'
-    - '1'
-    - ;
+  - - QK LLCK
+    - '"'
     - (
     - )
-    - '%'
+    - ;
+    - '!'
+    - '`'
+    - '='
+    - ':'
+    - _
+    - ''''
     - {t: ▽, type: trans}
-  - - $$tabler:lock$$
-    - ^
-    - +
-    - '*'
-    - '"'
-    - ../
+  - - {t: ▽, type: trans}
+    - '~'
+    - '['
+    - ']'
+    - '-'
+    - \
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - '|'
     - /
-  - - '['
-    - ']'
-    - $
-    - $$tabler:lock$$
+  - - <
+    - '>'
+    - '%'
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - $$tabler:backspace$$
-    - {t: ▽, type: trans}
-    - $$tabler:lock$$
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - $$tabler:repeat$$
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   Num:
   - - {t: ▽, type: trans}
-    - ''
-    - '-'
-    - /
-    - ''
-    - ''
-    - ''
+    - $
+    - '['
+    - ']'
+    - Sft+Alt+2
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - '7'
     - '8'
     - '9'
-    - ','
+    - .
+    - {t: ▽, type: trans}
+  - - QK LLCK
+    - LCTL
+    - LALT
+    - $$tabler:brand-windows$$
+    - $$tabler:arrow-big-up-line$$
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '0'
+    - '1'
+    - '2'
+    - '3'
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
-    - OS Ctrl
-    - $$tabler:alt$$
-    - $$tabler:command$$
-    - $$tabler:arrow-big-up-line$$
-    - OS HYPR
-    - ''
-    - '4'
-    - '5'
-    - '6'
-    - '0'
-    - {t: ▽, type: trans}
-  - - $$tabler:lock$$
-    - ''
-    - +
+    - /
     - '*'
-    - '='
-    - ''
+    - '-'
+    - +
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - ''
-    - '1'
-  - - '2'
-    - '3'
-    - .
-    - $$tabler:lock$$
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '4'
+  - - '5'
+    - '6'
+    - ','
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
     - {t: ▽, type: trans}
-    - $$tabler:backspace$$
-    - $$tabler:lock$$
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-  Fun:
-  - ['', F1, F2, F3, F4, '', '$$tabler:brightness-up$$', '$$tabler:volume-3$$', '$$tabler:volume-2$$', '$$tabler:volume$$', '', '']
+  Adjust:
   - - {t: ▽, type: trans}
+    - {t: Night, h: toggle}
+    - {t: ▽, type: trans}
+    - $$tabler:brightness-down$$
+    - $$tabler:brightness-up$$
+    - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
     - F5
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: Gallium, h: toggle}
+    - $$tabler:player-track-prev$$
+    - $$tabler:player-play$$
+    - $$tabler:player-track-next$$
+    - {t: ▽, type: trans}
     - F6
     - F7
     - F8
-    - ''
-    - OS HYPR
-    - $$tabler:arrow-big-up-line$$
-    - $$tabler:command$$
-    - $$tabler:alt$$
-    - OS Ctrl
-    - {t: ▽, type: trans}
-  - - $$tabler:lock$$
     - F9
     - F10
+    - {t: ▽, type: trans}
+  - - QK LLCK
+    - {t: ▽, type: trans}
+    - $$tabler:volume-3$$
+    - $$tabler:volume-2$$
+    - $$tabler:volume$$
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - F11
     - F12
-    - ''
+  - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - $$tabler:brightness-down$$
-    - $$tabler:player-track-prev$$
-  - - $$tabler:player-play$$
-    - $$tabler:player-track-next$$
-    - $$tabler:zzz$$
-    - $$tabler:lock$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - $$tabler:lock$$
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
   - - {t: ▽, type: trans}

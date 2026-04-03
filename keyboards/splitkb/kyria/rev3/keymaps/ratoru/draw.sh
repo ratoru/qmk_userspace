@@ -3,7 +3,7 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # ==== CONFIGURE THESE ====
-LAYERS=("Gallium" "Graphite" "Nav" "Sym" "Num" "Fun") # List of layer names
+LAYERS=("Night" "Gallium" "Nav" "Sym" "Num" "Adjust") # List of layer names
 COLS=12                                               # Number of columns
 OUTPUT_NAME="kyria"                                   # Output file name (no ext.)
 
