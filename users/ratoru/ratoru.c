@@ -48,7 +48,7 @@ nshot_state_t nshot_states[] = {
     {ONE_LGUI, MOD_BIT(KC_LGUI), MOD_BIT(KC_LCTL), 1, true, os_up_unqueued, 0, 0, false}, // G-a
     {ONE_HYPR, MODBIT_HYPR, MODBIT_HYPR, 1, true, os_up_unqueued, 0, 0, false},           // G-a
 };
-uint8_t NUM_NSHOT_STATES = sizeof(nshot_states) / sizeof(nshot_state_t);
+const uint8_t NUM_NSHOT_STATES = sizeof(nshot_states) / sizeof(nshot_state_t);
 
 bool is_nshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
@@ -109,7 +109,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case UPDIR: // Types ../ to go up a directory on the shell.
             if (record->event.pressed) {
-                // SEND_STRING_DELAY("../", TAP_CODE_DELAY);
                 SEND_STRING_DELAY("../", TAP_CODE_DELAY);
             }
             return false;
@@ -187,7 +186,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
             break;
     }
     return state;
-};
+}
 
 void suspend_power_down_user(void) {
     // code will run multiple times while keyboard is suspended

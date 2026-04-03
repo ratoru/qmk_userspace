@@ -1,5 +1,3 @@
-#pragma once
-
 #include QMK_KEYBOARD_H
 
 uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {

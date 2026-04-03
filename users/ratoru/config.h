@@ -1,7 +1,7 @@
 #pragma once
 
 // Prevent recursive dynamic macros that make the keyboard unresponsive.
-#ifdef DYNAMIC_MARCO_ENABLE
+#ifdef DYNAMIC_MACRO_ENABLE
 #    define DYNAMIC_MACRO_NO_NESTING
 #endif
 

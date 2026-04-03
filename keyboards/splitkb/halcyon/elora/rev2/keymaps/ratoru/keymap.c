@@ -1,5 +1,3 @@
-#pragma once
-
 #include "palettefx.h"
 
 void keyboard_post_init_user(void) {

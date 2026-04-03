@@ -12,10 +12,10 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
     if (cmd_held && shift_held) {
         switch (keycode) {
             case KC_Z:
-                IS_MAC ? SEND_STRING(SS_LGUI("z")) : SEND_STRING(SS_LCTL("z")); // CMD + Shift + Z reverses to CMD + Z.
+                IS_MAC ? SEND_STRING_DELAY(SS_LGUI("z"), TAP_CODE_DELAY) : SEND_STRING_DELAY(SS_LCTL("z"), TAP_CODE_DELAY); // CMD + Shift + Z reverses to CMD + Z.
                 return true;
             case KC_T:
-                IS_MAC ? SEND_STRING(SS_LGUI("w")) : SEND_STRING(SS_LCTL("w")); // CMD + Shift + T reverses to CMD + W.
+                IS_MAC ? SEND_STRING_DELAY(SS_LGUI("w"), TAP_CODE_DELAY) : SEND_STRING_DELAY(SS_LCTL("w"), TAP_CODE_DELAY); // CMD + Shift + T reverses to CMD + W.
                 return true;
             case KC_TAB:
                 tap_code16(LGUI(KC_TAB)); // CMD + Shift + Tab reverses to CMD + Tab.
@@ -25,10 +25,10 @@ bool process_arcane(uint16_t keycode, uint8_t mods, bool is_idle) {
     if (cmd_held) {
         switch (keycode) {
             case KC_Z:
-                IS_MAC ? SEND_STRING(SS_LGUI(SS_LSFT("z"))) : SEND_STRING(SS_LCTL(SS_LSFT("z"))); // CMD + Z reverses to CMD + Shift + Z.
+                IS_MAC ? SEND_STRING_DELAY(SS_LGUI(SS_LSFT("z")), TAP_CODE_DELAY) : SEND_STRING_DELAY(SS_LCTL(SS_LSFT("z")), TAP_CODE_DELAY); // CMD + Z reverses to CMD + Shift + Z.
                 return true;
             case KC_W:
-                IS_MAC ? SEND_STRING(SS_LGUI(SS_LSFT("t"))) : SEND_STRING(SS_LCTL(SS_LSFT("t"))); // CMD + W reverses to CMD + Shift + T.
+                IS_MAC ? SEND_STRING_DELAY(SS_LGUI(SS_LSFT("t")), TAP_CODE_DELAY) : SEND_STRING_DELAY(SS_LCTL(SS_LSFT("t")), TAP_CODE_DELAY); // CMD + W reverses to CMD + Shift + T.
                 return true;
             case KC_TAB:
                 tap_code16(LSG(KC_TAB)); // CMD + Tab reverses to CMD + Shift + Tab.
