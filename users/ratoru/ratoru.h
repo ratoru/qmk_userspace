@@ -2,8 +2,6 @@
 #include QMK_KEYBOARD_H
 
 #include "keycodes.h"
-// #include "features/is_mac.h"
-// #include "features/magic_string.h"
 
 #ifdef NSM_ENABLE
 #    include "features/nshot_mod.h"

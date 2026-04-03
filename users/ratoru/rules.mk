@@ -31,7 +31,6 @@ SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no
 MAGIC_ENABLE = no
 MUSIC_ENABLE = no
-EXTRAFLAGS   += -flto
 
 # halcyon features
 ifneq ($(filter $(strip $(KEYBOARD)), splitkb/halcyon/kyria/rev4 \

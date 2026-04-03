@@ -4,7 +4,7 @@ void process_nshot_state(uint16_t keycode, keyrecord_t *record, bool use_alterna
     nshot_state_t *curr_state = NULL;
 
     // loop through all mods defined in the nshot_states dictionary
-    for (int i = 0; i < NUM_NSHOT_STATES; ++i) {
+    for (uint8_t i = 0; i < NUM_NSHOT_STATES; ++i) {
         // Set the current nshot_state
         curr_state = &nshot_states[i];
 
