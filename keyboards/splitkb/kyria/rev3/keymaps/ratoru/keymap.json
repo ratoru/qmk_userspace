@@ -13,7 +13,7 @@
             "DM_PLY1"       , "DM_REC1"       ,
             "DM_REC2"       , "DM_PLY2"       ,
             "KC_QUOT"       , "HYPR_T(KC_W)"  , "MEH_T(KC_SLSH)", "KC_SCLN"        , "KC_COMM"       , "OS_RSFT"       ,
-            "MO(5)"         , "ANY(UPDIR)"    , "MO(3)"          , "KC_R"          , "MO(4)"         ,
+            "MO(5)"         , "ANY(XCASE)"    , "MO(3)"          , "KC_R"          , "MO(4)"         ,
             "QK_REP"        , "KC_SPC"        , "MO(2)"          , "ANY(ARCANE)"   , "MO(5)"
         ],
         [

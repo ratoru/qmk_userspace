@@ -4,6 +4,12 @@ ifeq ($(strip $(ARCANE_ENABLE)), yes)
     SRC += features/arcane.c
 endif
 
+# Custom ifdef for xcase
+ifeq ($(strip $(XCASE_ENABLE)), yes)
+    OPT_DEFS += -DXCASE_ENABLE
+    SRC += features/xcase.c
+endif
+
 # Enable features on all keymaps
 CAPS_WORD_ENABLE = yes
 DYNAMIC_MACRO_ENABLE = yes

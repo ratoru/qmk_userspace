@@ -17,6 +17,9 @@ bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *reme
 #ifdef ARCANE_ENABLE
         case ARCANE:
 #endif
+#ifdef XCASE_ENABLE
+        case XCASE:
+#endif
         case KC_F23:
         case KC_F24:
             // Ignore custom repeat keys.
@@ -57,6 +60,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
         }
     }
+
+#ifdef XCASE_ENABLE
+    if (!process_xcase(keycode, record)) {
+        return false;
+    }
+#endif
 
     if (!process_record_keymap(keycode, record)) {
         return false;

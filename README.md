@@ -12,10 +12,11 @@ The firmware is compiled by a GitHub Action on every push, and can also be built
 
 ## Features
 
-- Efficient symbol layer.
-- Home row mods, tuned with [Chordal Hold](https://docs.qmk.fm/tap_hold#chordal-hold) and [Flow Tap](https://docs.qmk.fm/tap_hold#flow-tap).
-- Layer keys on the thumbs via layer-tap.
-- Hyper key to use as a "leader key" for global shortcuts.
+- Efficient symbol layer
+- Home row mods, tuned with [Chordal Hold](https://docs.qmk.fm/tap_hold#chordal-hold) and [Flow Tap](https://docs.qmk.fm/tap_hold#flow-tap)
+- Layer keys on the thumbs via layer-tap
+- Hyper key to use as a "leader key" for global shortcuts
+- Xcase key to type words like "hello_world" and "hello-world"
 - Community modules from [getreuer](https://github.com/getreuer/qmk-modules), included as a submodule in `modules/getreuer`:
     - [Select Word](https://getreuer.info/posts/keyboards/select-word/index.html)
     - [Cyclotab](https://getreuer.info/posts/keyboards/cyclotab). Sends `Cmd+Tab` but holds the modifier between consecutive keypresses for easy app/window switching.
@@ -161,7 +162,3 @@ just draw-all     # every keymap
 ## Setting up your LSP
 
 To make your LSP pick up the correct imports, run `just compile <keyboard>`. It writes a `compile_commands.json` that `clangd` uses for the keymap you are currently working on. Run it again when you switch to a different keymap.
-
-## Future additions
-
-- X-case

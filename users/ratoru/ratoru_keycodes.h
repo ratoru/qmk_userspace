@@ -19,5 +19,8 @@ enum custom_keycodes {
     // Custom magic / repeat key
     ARCANE,
 
+    // snake_case, kebab-case and camelCase
+    XCASE,
+
     NEW_SAFE_RANGE // Use for keymap-specific codes
 };

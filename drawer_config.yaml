@@ -141,6 +141,7 @@ parse_config:
     RSFT: '$$tabler:arrow-big-up-line$$'
     ANY(QK_LLCK): '$$tabler:lock$$'
     ANY(UPDIR): '../'
+    ANY(XCASE): 'xcase'
     LGUI(KC_TAB): 'Cmd Tab'
     LSG(KC_TAB): 'Cmd⇧Tab'
     LGUI(KC_GRV): 'Cmd `'

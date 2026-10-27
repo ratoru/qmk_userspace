@@ -11,3 +11,7 @@ bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 #ifdef ARCANE_ENABLE
 #    include "features/arcane.h"
 #endif
+
+#ifdef XCASE_ENABLE
+#    include "features/xcase.h"
+#endif

@@ -1,6 +1,7 @@
 USER_NAME := ratoru
 
 ARCANE_ENABLE = yes
+XCASE_ENABLE = yes
 
 LAYER_LOCK_ENABLE = yes
 
