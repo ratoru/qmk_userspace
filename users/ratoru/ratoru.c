@@ -1,98 +1,43 @@
 #include "ratoru.h"
-#include "config.h"
+#include "features/is_mac.h"
 
 #ifdef ARCANE_ENABLE
-static uint16_t idle_timer = 0;
-static bool     was_arcane = false;
+static uint32_t last_event_time = 0;
+static bool     was_arcane      = false;
+#endif
 
-void housekeeping_task_user(void) {
-    if (idle_timer && timer_expired(timer_read(), idle_timer)) {
-        // If execution reaches here, the keyboard has gone idle.
-        idle_timer = 0;
-    }
-}
-
+// Layer-taps can only hold basic keycodes, so LT(layer, KC_F23) and
+// LT(layer, KC_F24) stand in for Repeat and Alt Repeat as the tap action.
 bool remember_last_key_user(uint16_t keycode, keyrecord_t *record, uint8_t *remembered_mods) {
+    if (IS_QK_LAYER_TAP(keycode)) {
+        keycode = QK_LAYER_TAP_GET_TAP_KEYCODE(keycode);
+    }
+
     switch (keycode) {
+#ifdef ARCANE_ENABLE
         case ARCANE:
+#endif
+        case KC_F23:
+        case KC_F24:
             // Ignore custom repeat keys.
             return false;
     }
 
     return true; // Other keys can be repeated.
 }
-#endif
 
-#ifdef NSM_ENABLE
-/* N-SHOT MOD CONFIGURATION.
- * Reminder of the nshot structure:
- *
- * typedef struct {
- *     uint16_t      trigger;          // Keycode to activate the n-shot mod
- *     uint8_t       modbit;           // Modbit allows for mod combos.
- *     uint8_t       alternate_modbit; // Alternate modbit for Gui-Ctl swapping.
- *     uint8_t       max_count;        // one-shot, two-shot, ..., n-shot.
- *     bool          active_on_rolls;  // Behavior for A down, Mod down, A up =
- * (active_on_rolls == true ? Mod-A : a) oneshot_state state;            //
- * Direct from users/callum uint8_t       count;            // N-shot count
- * state bool          had_keydown;      // keydown state for (active_on_rolls
- * == false) } nshot_state_t;
- */
-#    define MODBIT_HYPR MOD_BIT(KC_LCTL) | MOD_BIT(KC_LGUI) | MOD_BIT(KC_LSFT) | MOD_BIT(KC_LALT)
-nshot_state_t nshot_states[] = {
-    //| trigger  | modbit            | swap-to          | max | roll into | State         | ## | timer | keydown? | //roll-in action |
-    //|----------|-------------------|------------------|-----|-----------|---------------|----|-------|----------|------------------|
-    {ONE_LSFT, MOD_BIT(KC_LSFT), MOD_BIT(KC_LSFT), 1, true, os_up_unqueued, 0, 0, false}, // S-a
-    {ONE_LCTL, MOD_BIT(KC_LCTL), MOD_BIT(KC_LGUI), 1, true, os_up_unqueued, 0, 0, false}, // C-a
-    {ONE_LALT, MOD_BIT(KC_LALT), MOD_BIT(KC_LALT), 1, true, os_up_unqueued, 0, 0, false}, // A-a
-    {ONE_LGUI, MOD_BIT(KC_LGUI), MOD_BIT(KC_LCTL), 1, true, os_up_unqueued, 0, 0, false}, // G-a
-    {ONE_HYPR, MODBIT_HYPR, MODBIT_HYPR, 1, true, os_up_unqueued, 0, 0, false},           // G-a
-};
-const uint8_t NUM_NSHOT_STATES = sizeof(nshot_states) / sizeof(nshot_state_t);
-
-bool is_nshot_cancel_key(uint16_t keycode) {
-    switch (keycode) {
-        case TL_LOWR:
-        case TL_UPPR:
-        case TT(1):
-        case TT(2):
-        case TT(3):
-        case TT(4):
-        case TT(5):
-            return true;
-        default:
-            return false;
-    }
+__attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+    return true;
 }
-
-bool is_nshot_ignored_key(uint16_t keycode) {
-    switch (keycode) {
-        case TL_LOWR:
-        case TL_UPPR:
-        case TT(1):
-        case TT(2):
-        case TT(3):
-        case TT(4):
-        case TT(5):
-        case ONE_LSFT:
-        case ONE_LCTL:
-        case ONE_LALT:
-        case ONE_LGUI:
-        case ONE_HYPR:
-            return true;
-        default:
-            return false;
-    }
-}
-#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef ARCANE_ENABLE
-    bool is_idle = idle_timer == 0;
-    idle_timer   = (record->event.time + IDLE_TIMEOUT_MS) | 1;
+    const bool is_idle = timer_elapsed32(last_event_time) > IDLE_TIMEOUT_MS;
+    last_event_time    = timer_read32();
     if (keycode == ARCANE) {
         if (record->event.pressed) {
-            was_arcane = process_arcane(get_last_keycode(), get_last_mods(), is_idle);
+            // Strip mod-taps so home row mod letters match their plain keycode.
+            was_arcane = process_arcane(get_tap_keycode(get_last_keycode()), get_last_mods(), is_idle);
         }
         // Default to repeat key if no custom behavior is defined
         if (!was_arcane) {
@@ -102,9 +47,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
 #endif
 
-#ifdef NSM_ENABLE
-    process_nshot_state(keycode, record, false);
-#endif
+    if (IS_QK_LAYER_TAP(keycode) && record->tap.count) {
+        switch (QK_LAYER_TAP_GET_TAP_KEYCODE(keycode)) {
+            case KC_F23:
+                repeat_key_invoke(&record->event);
+                return false;
+            case KC_F24:
+                alt_repeat_key_invoke(&record->event);
+                return false;
+        }
+    }
+
+    if (!process_record_keymap(keycode, record)) {
+        return false;
+    }
 
     switch (keycode) {
         case UPDIR: // Types ../ to go up a directory on the shell.
@@ -114,29 +70,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return false;
         case CPY_URL: // Copy browser URL
             if (record->event.pressed) {
-                SEND_STRING_DELAY(SS_LGUI("lc"), TAP_CODE_DELAY);
+                tap_code16(SHORTCUT(KC_L));
+                tap_code16(SHORTCUT(KC_C));
             }
             return false;
         case SRCHSEL: // Searches the current selection in a new tab.
             if (record->event.pressed) {
-                SEND_STRING_DELAY(SS_LGUI("ct") SS_DELAY(100) SS_LGUI("v") SS_TAP(X_ENTER), TAP_CODE_DELAY);
+                tap_code16(SHORTCUT(KC_C));
+                tap_code16(SHORTCUT(KC_T));
+                wait_ms(100);
+                tap_code16(SHORTCUT(KC_V));
+                tap_code(KC_ENTER);
             }
             return false;
         case JOINLN: // Join lines like Vim's `J` command.
             if (record->event.pressed) {
-                SEND_STRING_DELAY( // Go to the end of the line and tap delete.
-                    SS_LGUI(SS_TAP(X_RGHT)) SS_TAP(X_DEL)
-                    // In case this has joined two words together, insert one space.
-                    SS_TAP(X_SPC) SS_LALT(
-                        // Go to the beginning of the next word.
-                        SS_TAP(X_RGHT) SS_TAP(X_LEFT)
-                        // Select back to the end of the previous word. This should select
-                        // all spaces and tabs between the joined lines from indentation
-                        // or trailing whitespace, including the space inserted earlier.
-                        SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT)))
-                    // Replace the selection with a single space.
-                    SS_TAP(X_SPC),
-                    TAP_CODE_DELAY);
+                // Go to the end of the line and tap delete. In case this has
+                // joined two words together, insert one space. Then go to the
+                // beginning of the next word and select back to the end of the
+                // previous word. This selects all spaces and tabs between the
+                // joined lines from indentation or trailing whitespace,
+                // including the space inserted earlier. Finally, replace the
+                // selection with a single space.
+                if (IS_MAC) {
+                    SEND_STRING_DELAY(SS_LGUI(SS_TAP(X_RGHT)) SS_TAP(X_DEL) SS_TAP(X_SPC) SS_LALT(SS_TAP(X_RGHT) SS_TAP(X_LEFT) SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT))) SS_TAP(X_SPC), TAP_CODE_DELAY);
+                } else {
+                    SEND_STRING_DELAY(SS_TAP(X_END) SS_TAP(X_DEL) SS_TAP(X_SPC) SS_LCTL(SS_TAP(X_RGHT) SS_TAP(X_LEFT) SS_LSFT(SS_TAP(X_LEFT) SS_TAP(X_RGHT))) SS_TAP(X_SPC), TAP_CODE_DELAY);
+                }
             }
             return false;
 #ifdef RGBLIGHT_ENABLE
@@ -196,7 +156,15 @@ void suspend_power_down_user(void) {
 void suspend_wakeup_init_user(void) {
     // code will run on keyboard wakeup
     rgblight_enable_noeeprom();
-    rgblight_sethsv_noeeprom(HSV_MAGENTA);
+    layer_state_set_user(layer_state); // Restore the current layer's color.
     rgblight_mode_noeeprom(1);
+}
+#endif
+
+#ifdef CONVERT_TO_LIATRIS
+void keyboard_pre_init_user(void) {
+    // Turn off the Liatris power LED. It is active low.
+    gpio_set_pin_output(24);
+    gpio_write_pin_high(24);
 }
 #endif

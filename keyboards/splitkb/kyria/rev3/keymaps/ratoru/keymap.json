@@ -5,16 +5,16 @@
     "layout": "LAYOUT_split_3x6_5",
     "layers": [
         [
-            "KC_TAB"        , "KC_B"           , "KC_F"           , "KC_L"           , "KC_K"           , "KC_Q"          ,
-            "KC_P"          , "KC_G"           , "KC_O"           , "KC_U"           , "KC_DOT"         , "KC_BSPC"       ,
-            "CTL_T(KC_ESC)" , "CTL_T(KC_N)"   , "OPT_T(KC_S)"   , "CMD_T(KC_H)"   , "SFT_T(KC_T)"   , "KC_M"          ,
-            "KC_Y"          , "SFT_T(KC_C)"   , "CMD_T(KC_A)"   , "OPT_T(KC_E)"   , "CTL_T(KC_I)"   , "KC_ENT"        ,
-            "OS_LSFT"       , "KC_X"           , "KC_V"           , "MEH_T(KC_J)"   , "HYPR_T(KC_D)"  , "KC_Z"          ,
+            "KC_TAB"        , "KC_B"          , "KC_F"           , "KC_L"          , "KC_K"          , "KC_Q"          ,
+            "KC_P"          , "KC_G"          , "KC_O"           , "KC_U"          , "KC_DOT"        , "KC_BSPC"       ,
+            "CTL_T(KC_ESC)" , "CTL_T(KC_N)"   , "OPT_T(KC_S)"    , "CMD_T(KC_H)"   , "SFT_T(KC_T)"   , "KC_M"          ,
+            "KC_Y"          , "SFT_T(KC_C)"   , "CMD_T(KC_A)"    , "OPT_T(KC_E)"   , "CTL_T(KC_I)"   , "KC_ENT"        ,
+            "OS_LSFT"       , "KC_X"          , "KC_V"           , "MEH_T(KC_J)"   , "HYPR_T(KC_D)"  , "KC_Z"          ,
             "DM_PLY1"       , "DM_REC1"       ,
             "DM_REC2"       , "DM_PLY2"       ,
-            "KC_QUOT"       , "HYPR_T(KC_W)"  , "MEH_T(KC_SLSH)", "KC_SCLN"        , "KC_COMM"        , "OS_RSFT"       ,
-            "MO(5)"         , "ANY(UPDIR)"    , "MO(3)"          , "KC_R"           , "MO(4)"         ,
-            "QK_REP"        , "KC_SPC"         , "MO(2)"          , "ANY(ARCANE)"   , "MO(5)"
+            "KC_QUOT"       , "HYPR_T(KC_W)"  , "MEH_T(KC_SLSH)", "KC_SCLN"        , "KC_COMM"       , "OS_RSFT"       ,
+            "MO(5)"         , "ANY(UPDIR)"    , "MO(3)"          , "KC_R"          , "MO(4)"         ,
+            "QK_REP"        , "KC_SPC"        , "MO(2)"          , "ANY(ARCANE)"   , "MO(5)"
         ],
         [
             "KC_TAB"        , "KC_B"           , "KC_L"           , "KC_D"           , "KC_C"           , "KC_V"          ,
@@ -44,11 +44,11 @@
             "_______"       , "KC_CIRC"        , "KC_LCBR"        , "KC_RCBR"        , "KC_DLR"         , "KC_AT"         ,
             "KC_AMPR"       , "KC_HASH"        , "KC_ASTR"        , "KC_PLUS"        , "KC_QUES"        , "_______"       ,
             "QK_LLCK"       , "KC_DQUO"        , "KC_LPRN"        , "KC_RPRN"        , "KC_SCLN"        , "KC_EXLM"       ,
-            "KC_GRV"        , "KC_EQL"         , "KC_COLN"        , "KC_UNDS"        , "KC_QUOT"        , "_______"       ,
-            "_______"       , "KC_TILD"        , "KC_LBRC"        , "KC_RBRC"        , "KC_MINS"        , "KC_BSLS"       ,
+            "KC_SLSH"       , "KC_EQL"         , "KC_MINS"        , "KC_UNDS"        , "KC_QUOT"        , "_______"       ,
+            "_______"       , "KC_TILD"        , "KC_LBRC"        , "KC_RBRC"        , "KC_COLN"        , "KC_BSLS"       ,
             "_______"       , "_______"        ,
             "_______"       , "_______"        ,
-            "KC_PIPE"       , "KC_SLSH"        , "KC_LT"          , "KC_GT"          , "KC_PERC"        , "_______"       ,
+            "KC_PIPE"       , "KC_GRV"         , "KC_LT"          , "KC_GT"          , "KC_PERC"        , "_______"       ,
             "_______"       , "_______"        , "_______"        , "_______"        , "_______"        ,
             "_______"       , "QK_REP"         , "_______"        , "_______"        , "_______"
         ],

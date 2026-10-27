@@ -1,7 +1,0 @@
-# This is used to draw the keymap
-combos:
-  # Other combos (Night layout)
-  - {tk: [S, H], k: TAB, l: [Night]}
-  - {tk: [Y, C], k: ESC, l: [Night]}
-  - {tk: [C, A], k: "$$tabler:list-search$$", l: [Night]}
-  - {tk: [T, M], k: "$$tabler:letter-case-upper$$", l: [Night]}

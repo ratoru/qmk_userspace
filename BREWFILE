@@ -4,3 +4,4 @@ brew "clang-format"
 
 # To execute the drawing flow
 brew "uv"
+brew "jq"

@@ -1,3 +1,3 @@
 # Kyria Keymap
 
-![kyria-generated-keymap](../../../../../../docs/generated/kyria/kyria_graphite.svg)
+![kyria-generated-keymap](../../../../../../docs/generated/kyria/kyria.svg)

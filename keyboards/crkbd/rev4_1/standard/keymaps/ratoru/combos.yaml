@@ -1,6 +1,0 @@
-# This is used to draw the keymap
-combos:
-  - {tk: [F, G], k: TAB, l: [Qwerty]}
-  - {tk: [F, R], k: "$$tabler:list-search$$", l: [Qwerty]}
-  - {tk: [H, J], k: ESC, l: [Qwerty]}
-  - {tk: [U, J], k: "$$tabler:letter-case-upper$$", l: [Qwerty]}

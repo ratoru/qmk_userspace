@@ -11,13 +11,6 @@ enum custom_keycodes {
     CPY_URL,
     JOINLN,
 
-    // N-Shot Mods: "normal" callum-style n-shot mods (now featuring MULTI MODS!)
-    ONE_LSFT,
-    ONE_LCTL,
-    ONE_LALT,
-    ONE_LGUI,
-    ONE_HYPR,
-
     // RGB codes
     RGBT_NE,
     RGB_DB_NE,

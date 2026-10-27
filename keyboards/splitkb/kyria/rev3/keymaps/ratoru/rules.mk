@@ -1,7 +1,6 @@
 USER_NAME := ratoru
 
 ARCANE_ENABLE = yes
-COMBO_ENABLE = yes
 
 LAYER_LOCK_ENABLE = yes
 

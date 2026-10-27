@@ -36,10 +36,10 @@
       "MEH_T(KC_SLSH)",
       "KC_SCLN",
       "KC_COMM",
-      "LT(2,QK_REP)",
+      "LT(2,KC_F23)",
       "KC_SPC",
       "LT(3,KC_R)",
-      "LT(4,QK_AREP)"
+      "LT(4,KC_F24)"
     ],
     [
       "KC_B",
@@ -72,10 +72,10 @@
       "MEH_T(KC_QUOT)",
       "KC_SCLN",
       "KC_DOT",
-      "LT(2,QK_REP)",
+      "LT(2,KC_F23)",
       "KC_SPC",
       "LT(3,KC_BSPC)",
-      "LT(4,QK_AREP)"
+      "LT(4,KC_F24)"
     ],
     [
       "ANY(DM_REC1)",

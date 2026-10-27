@@ -18,12 +18,3 @@ jobs:
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
     needs: build
-
-  draw:
-    name: "Draw QMK Keymaps"
-    needs: build
-    uses: ./.github/workflows/draw_qmk.yaml
-    with:
-      keymap_patterns: "keyboards/**/keymap.json"
-      config_path: "keymap_drawer.config.yaml"
-      destination: "artifact"

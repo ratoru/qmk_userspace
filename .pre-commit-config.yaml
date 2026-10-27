@@ -11,7 +11,7 @@ repos:
         name: Draw keymaps
         entry: just draw-all
         language: system
-        always_run: true
+        files: (keymap\.json|drawer_config\.yaml|justfile)$
         pass_filenames: false
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -21,3 +21,4 @@ repos:
     - id: end-of-file-fixer
     - id: check-yaml
     - id: check-json
+      exclude: ^\.(devcontainer|vscode)/ # JSON with comments

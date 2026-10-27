@@ -54,3 +54,7 @@ __attribute__((weak)) bool bindings_host_is_mac(void) {
 #        define IS_MAC true
 #    endif // BINDINGS_OS_WIN
 #endif     // defined(BINDINGS_OS_DYNAMIC) || defined(OS_DETECTION_ENABLE)
+
+// The platform's shortcut modifier: Cmd on Mac, Ctrl elsewhere.
+#define SHORTCUT(kc) (IS_MAC ? G(kc) : C(kc))
+#define SHORTCUT_MOD_MASK (IS_MAC ? MOD_MASK_GUI : MOD_MASK_CTRL)

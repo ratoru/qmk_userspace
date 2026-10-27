@@ -1,3 +1,3 @@
-# Sweep OSM Keymap
+# Elora Keymap
 
-![sweep-generated-keymap](../../../../../../../docs/generated/sweep/sweep.svg)
+![elora-generated-keymap](../../../../../../../docs/generated/elora/elora.svg)

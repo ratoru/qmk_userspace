@@ -139,11 +139,6 @@ parse_config:
     LSFT: '$$tabler:arrow-big-up-line$$'
     RSFT: '$$tabler:arrow-big-up-line$$'
     ANY(QK_LLCK): '$$tabler:lock$$'
-    ANY(ONE_LCTL): 'OS Ctrl'
-    ANY(ONE_LALT): '$$tabler:alt$$'
-    ANY(ONE_LGUI): '$$tabler:command$$'
-    ANY(ONE_LSFT): '$$tabler:arrow-big-up-line$$'
-    ANY(ONE_HYPR): 'OS HYPR'
     ANY(UPDIR): '../'
     LGUI(KC_TAB): 'Cmd Tab'
     LSG(KC_TAB): 'Cmd⇧Tab'
@@ -162,6 +157,8 @@ parse_config:
     ANY(DM_PLY1): '$$tabler:photo-video$$'
     QK_REP: '$$tabler:repeat$$'
     QK_AREP: '$$fa:solid/hat-wizard$$'
+    F23: '$$tabler:repeat$$' # Repeat placeholder in LT(), see ratoru.c
+    F24: '$$fa:solid/hat-wizard$$' # Alt Repeat placeholder in LT()
     SLEP: '$$tabler:zzz$$'
     ANY(SRCHSEL): '$$tabler:list-search$$'
     ANY(CPY_URL): '$$tabler:link$$'

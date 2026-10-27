@@ -1,6 +1,8 @@
 #include QMK_KEYBOARD_H
+#include "ratoru.h"
+#include "features/magic_string.h"
 
-// Placeholder keycodes for magic key sequences (alt repeat logic TBD).
+// Keycodes for the magic key sequences, typed in process_record_keymap().
 enum sweep_magic_keycodes {
     M_THE = NEW_SAFE_RANGE,
     M_ION,
@@ -183,10 +185,47 @@ uint16_t get_alt_repeat_key_keycode_user(uint16_t keycode, uint8_t mods) {
     return KC_TRNS;
 }
 
-void keyboard_pre_init_user(void) {
-    // Set our LED pin as output
-    gpio_set_pin_output(24);
-    // Turn the LED off
-    // (Due to technical reasons, high is off and low is on)
-    gpio_write_pin_high(24);
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
+    if (!record->event.pressed) {
+        return true;
+    }
+
+    switch (keycode) {
+        case M_THE:
+            MAGIC_STRING(/* */ "the", KC_N);
+            return false;
+        case M_ION:
+            MAGIC_STRING(/*i*/ "on", KC_S);
+            return false;
+        case M_MENT:
+            MAGIC_STRING(/*m*/ "ent", KC_S);
+            return false;
+        case M_QUEN:
+            MAGIC_STRING(/*q*/ "uen", KC_C);
+            return false;
+        case M_TMENT:
+            MAGIC_STRING(/*t*/ "ment", KC_S);
+            return false;
+        case M_UPDIR:
+            MAGIC_STRING(/*.*/ "./", UPDIR);
+            return false;
+        case M_INCLUDE:
+            SEND_STRING_DELAY(/*#*/ "include ", TAP_CODE_DELAY);
+            return false;
+        case M_NBSP:
+            SEND_STRING_DELAY(/*&*/ "nbsp;", TAP_CODE_DELAY);
+            return false;
+        case M_EQEQ:
+            SEND_STRING_DELAY(/*=*/"==", TAP_CODE_DELAY);
+            return false;
+        case M_DOCSTR:
+            SEND_STRING_DELAY(/*"*/ "\"\"\"\"\"" SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT), TAP_CODE_DELAY);
+            return false;
+        case M_MKGRVS:
+            SEND_STRING_DELAY(/*`*/ "`````" SS_TAP(X_LEFT) SS_TAP(X_LEFT) SS_TAP(X_LEFT), TAP_CODE_DELAY);
+            return false;
+        case M_NOOP:
+            return false;
+    }
+    return true;
 }

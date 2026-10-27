@@ -1,16 +1,11 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
-#include "keycodes.h"
+#include "ratoru_keycodes.h"
 
-#ifdef NSM_ENABLE
-#    include "features/nshot_mod.h"
-#endif
-
-// gboards combos
-#ifdef COMBO_ENABLE
-#    include "g/keymap_combo.h"
-#endif
+// Optional keymap-level hook, called by process_record_user before the
+// userspace keycodes. Return false to stop further processing.
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record);
 
 // Define custom alt repeat keys
 #ifdef ARCANE_ENABLE
