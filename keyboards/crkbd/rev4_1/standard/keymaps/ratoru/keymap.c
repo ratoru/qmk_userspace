@@ -2,7 +2,7 @@
 
 void keyboard_post_init_user(void) {
     // Set the effect.
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_CUSTOM_PALETTEFX_REACTIVE);
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_COMMUNITY_MODULE_PALETTEFX_REACTIVE);
     // Set the palette and maximize saturation and brightness.
     uint8_t palette_index = PALETTEFX_NOTPINK;
     rgb_matrix_sethsv_noeeprom(RGB_MATRIX_HUE_STEP * palette_index, 255, 255);
