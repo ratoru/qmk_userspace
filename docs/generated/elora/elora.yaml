@@ -39,7 +39,7 @@ layers:
     - $$tabler:repeat$$
     - $$tabler:space$$
     - Nav
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - Adjust
   Gallium:
   - [ESC, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ESC]
@@ -73,92 +73,92 @@ layers:
     - ','
     - OS RSFT
     - Adjust
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - Nav
     - $$tabler:space$$
     - Num
     - $$tabler:repeat$$
     - $$tabler:repeat$$
     - Sym
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - Adjust
   Nav:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - Ctrl Tab
     - Cmd `
     - Cmd Tab
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - PGUP
     - HOME
     - $$tabler:arrow-narrow-up$$
     - END
     - DEL
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - LCTL
     - LALT
     - $$tabler:brand-windows$$
     - $$tabler:arrow-big-up-line$$
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - PGDN
     - $$tabler:arrow-narrow-left$$
     - $$tabler:arrow-narrow-down$$
     - $$tabler:arrow-narrow-right$$
     - $$tabler:backspace$$
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - SRCHSEL
     - JOINLN
     - $$tabler:letter-case-upper$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - SELWBAK
   - - SELLINE
     - SELWORD
     - QK LLCK
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   Sym:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - ^
     - '{'
     - '}'
@@ -169,7 +169,7 @@ layers:
     - '*'
     - +
     - '?'
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   - - QK LLCK
     - '"'
     - (
@@ -181,145 +181,145 @@ layers:
     - ':'
     - _
     - ''''
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - '~'
     - '['
     - ']'
     - '-'
     - \
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '|'
     - /
   - - <
     - '>'
     - '%'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:repeat$$
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   Num:
   - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - $
     - '['
     - ']'
     - Sft+Alt+2
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '7'
     - '8'
     - '9'
     - .
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   - - QK LLCK
     - LCTL
     - LALT
     - $$tabler:brand-windows$$
     - $$tabler:arrow-big-up-line$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '0'
     - '1'
     - '2'
     - '3'
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - /
     - '*'
     - '-'
     - +
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '4'
   - - '5'
     - '6'
     - ','
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   Adjust:
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - {t: Night, h: toggle}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:brightness-down$$
     - $$tabler:brightness-up$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - {t: Gallium, h: toggle}
     - $$tabler:player-track-prev$$
     - $$tabler:player-play$$
     - $$tabler:player-track-next$$
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - LUMINO
     - RM NEXT
     - RM HUEU
     - RM SATU
     - RM SPDU
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:volume-3$$
     - $$tabler:volume-2$$
     - $$tabler:volume$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - RM PREV
   - - RM HUED
     - RM SATD
     - RM SPDD
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}

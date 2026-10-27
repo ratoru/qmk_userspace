@@ -289,6 +289,26 @@
   <path d="M4 10v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1 -1v-3" />
 </svg>
 </svg>
+<svg id="tabler:stack-push">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="icon icon-tabler icons-tabler-outline icon-tabler-stack-push"
+>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M6 10l-2 1l8 4l8 -4l-2 -1" />
+  <path d="M4 15l8 4l8 -4" />
+  <path d="M12 4v7" />
+  <path d="M15 8l-3 3l-3 -3" />
+</svg>
+</svg>
 <svg id="tabler:volume">
 <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -469,6 +489,8 @@ path.combo {
     visibility: hidden;
 }
 /* End Tabler Icons Cleanup */
+
+.trans { opacity: 0.4; }
 </style>
 <g transform="translate(30, 0)" class="layer-Night">
 <text x="0" y="28" class="label" id="Night">Night:</text>
@@ -744,7 +766,7 @@ path.combo {
 </a></g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -996,7 +1018,7 @@ path.combo {
 </a></g>
 <g transform="translate(224, 266)" class="key trans keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(280, 280)" class="key keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1027,7 +1049,7 @@ path.combo {
 </a></g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1041,59 +1063,59 @@ path.combo {
 <g transform="translate(0, 56)">
 <g transform="translate(28, 70)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 70)" class="key trans keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 42)" class="key trans keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(196, 28)" class="key trans keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(252, 42)" class="key trans keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(308, 56)" class="key trans keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 56)" class="key trans keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 42)" class="key trans keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(728, 28)" class="key trans keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(784, 42)" class="key trans keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(840, 70)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(896, 70)" class="key trans keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 126)" class="key trans keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 126)" class="key trans keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 98)" class="key keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1115,7 +1137,7 @@ path.combo {
 </g>
 <g transform="translate(308, 112)" class="key trans keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 112)" class="key keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1139,11 +1161,11 @@ path.combo {
 </g>
 <g transform="translate(896, 126)" class="key trans keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 182)" class="key trans keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 182)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1163,7 +1185,7 @@ path.combo {
 </g>
 <g transform="translate(308, 168)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 168)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1187,15 +1209,15 @@ path.combo {
 </g>
 <g transform="translate(896, 182)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 238)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 238)" class="key trans keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 210)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1211,23 +1233,23 @@ path.combo {
 </g>
 <g transform="translate(308, 224)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(364, 252)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(420, 266)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(504, 266)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(560, 252)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 224)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1252,46 +1274,46 @@ path.combo {
 </g>
 <g transform="translate(896, 238)" class="key trans keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(168, 266)" class="key trans keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(224, 266)" class="key trans keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(280, 280)" class="key trans keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(336, 308)" class="key trans keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(392, 322)" class="key trans keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(532, 322)" class="key trans keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(588, 308)" class="key trans keypos-58">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(644, 280)" class="key held keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key trans keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 </g>
 </g>
@@ -1300,55 +1322,55 @@ path.combo {
 <g transform="translate(0, 56)">
 <g transform="translate(28, 70)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 70)" class="key trans keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 42)" class="key trans keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(196, 28)" class="key trans keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(252, 42)" class="key trans keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(308, 56)" class="key trans keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 56)" class="key trans keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 42)" class="key trans keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(728, 28)" class="key trans keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(784, 42)" class="key trans keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(840, 70)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(896, 70)" class="key trans keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 126)" class="key trans keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 126)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1392,7 +1414,7 @@ path.combo {
 </g>
 <g transform="translate(896, 126)" class="key trans keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 182)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1442,11 +1464,11 @@ path.combo {
 </g>
 <g transform="translate(896, 182)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 238)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 238)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1470,19 +1492,19 @@ path.combo {
 </g>
 <g transform="translate(364, 252)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(420, 266)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(504, 266)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(560, 252)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 224)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1506,30 +1528,30 @@ path.combo {
 </g>
 <g transform="translate(896, 238)" class="key trans keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(168, 266)" class="key trans keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(224, 266)" class="key trans keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(280, 280)" class="key held keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(336, 308)" class="key trans keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(392, 322)" class="key trans keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(532, 322)" class="key trans keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(588, 308)" class="key keypos-58">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1537,15 +1559,15 @@ path.combo {
 </g>
 <g transform="translate(644, 280)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key trans keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 </g>
 </g>
@@ -1602,7 +1624,7 @@ path.combo {
 </g>
 <g transform="translate(28, 126)" class="key trans keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 126)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1624,11 +1646,11 @@ path.combo {
 </g>
 <g transform="translate(308, 112)" class="key trans keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 112)" class="key trans keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 98)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1648,7 +1670,7 @@ path.combo {
 </g>
 <g transform="translate(896, 126)" class="key trans keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 182)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1674,11 +1696,11 @@ path.combo {
 </g>
 <g transform="translate(308, 168)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 168)" class="key trans keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 154)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1698,11 +1720,11 @@ path.combo {
 </g>
 <g transform="translate(896, 182)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 238)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 238)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1722,27 +1744,27 @@ path.combo {
 </g>
 <g transform="translate(308, 224)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(364, 252)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(420, 266)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(504, 266)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(560, 252)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 224)" class="key trans keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 210)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1762,46 +1784,46 @@ path.combo {
 </g>
 <g transform="translate(896, 238)" class="key trans keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(168, 266)" class="key trans keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(224, 266)" class="key trans keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(280, 280)" class="key trans keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(336, 308)" class="key trans keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(392, 322)" class="key held keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(532, 322)" class="key trans keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(588, 308)" class="key trans keypos-58">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(644, 280)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key trans keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 </g>
 </g>
@@ -1810,55 +1832,55 @@ path.combo {
 <g transform="translate(0, 56)">
 <g transform="translate(28, 70)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 70)" class="key trans keypos-1">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 42)" class="key trans keypos-2">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(196, 28)" class="key trans keypos-3">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(252, 42)" class="key trans keypos-4">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(308, 56)" class="key trans keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 56)" class="key trans keypos-6">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 42)" class="key trans keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(728, 28)" class="key trans keypos-8">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(784, 42)" class="key trans keypos-9">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(840, 70)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(896, 70)" class="key trans keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 126)" class="key trans keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 126)" class="key keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1868,7 +1890,7 @@ path.combo {
 </g>
 <g transform="translate(140, 98)" class="key trans keypos-14">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(196, 84)" class="key keypos-15">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1880,35 +1902,35 @@ path.combo {
 </g>
 <g transform="translate(308, 112)" class="key trans keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 112)" class="key trans keypos-18">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 98)" class="key trans keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(728, 84)" class="key trans keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(784, 98)" class="key trans keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(840, 126)" class="key trans keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(896, 126)" class="key trans keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 182)" class="key trans keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 182)" class="key keypos-25">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1930,7 +1952,7 @@ path.combo {
 </g>
 <g transform="translate(308, 168)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 168)" class="key keypos-30">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1962,15 +1984,15 @@ path.combo {
 </g>
 <g transform="translate(896, 182)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(28, 238)" class="key trans keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(84, 238)" class="key trans keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(140, 210)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1986,27 +2008,27 @@ path.combo {
 </g>
 <g transform="translate(308, 224)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(364, 252)" class="key trans keypos-42">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(420, 266)" class="key trans keypos-43">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(504, 266)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(560, 252)" class="key trans keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(616, 224)" class="key trans keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(672, 210)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -2034,46 +2056,46 @@ path.combo {
 </g>
 <g transform="translate(896, 238)" class="key trans keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(168, 266)" class="key held keypos-52">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(224, 266)" class="key trans keypos-53">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(280, 280)" class="key trans keypos-54">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(336, 308)" class="key trans keypos-55">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(392, 322)" class="key trans keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(532, 322)" class="key trans keypos-57">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(588, 308)" class="key trans keypos-58">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(644, 280)" class="key trans keypos-59">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(700, 266)" class="key trans keypos-60">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 <g transform="translate(756, 266)" class="key trans keypos-61">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<use href="#tabler:stack-push" xlink:href="#tabler:stack-push" x="-7" y="-7" height="14" width="14.0" class="key trans tap glyph tabler:stack-push"/>
 </g>
 </g>
 </g>

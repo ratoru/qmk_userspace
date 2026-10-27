@@ -27,7 +27,8 @@ draw_config:
     rel_h: 12
     rx: 4
     ry: 4
-  svg_extra_style: ''
+  svg_extra_style: |
+    .trans { opacity: 0.4; }
   footer_text: ''
   shrink_wide_legends: 7
   style_layer_activators: true
@@ -43,7 +44,7 @@ parse_config:
   toggle_label: toggle
   tap_toggle_label: tap-toggle
   trans_legend:
-    t: ▽
+    t: $$tabler:stack-push$$
     type: trans
   layer_legend_map: {}
   mark_alternate_layer_activators: false

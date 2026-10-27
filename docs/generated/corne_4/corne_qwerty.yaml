@@ -37,35 +37,35 @@ layers:
     - $$tabler:space$$
     - {t: Sym, h: tap-toggle}
   Nav:
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:video$$
     - $$tabler:photo-video$$
     - $$tabler:list-search$$
     - $$tabler:link$$
     - join
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - PGUP
     - HOME
     - $$tabler:arrow-narrow-up$$
     - END
   - - $$tabler:backspace$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:brackets-contain$$
     - LALT
     - LCTL
     - $$tabler:arrow-big-up-line$$
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - PGDN
     - $$tabler:arrow-narrow-left$$
   - - $$tabler:arrow-narrow-down$$
     - $$tabler:arrow-narrow-right$$
     - DEL
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - Cmd `
     - Cmd Tab
@@ -76,43 +76,43 @@ layers:
   - - ''
     - ''
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
     - $$tabler:backspace$$
     - TAB
     - DEL
   Fun:
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - F1
     - F2
     - F3
     - F4
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - $$tabler:volume-3$$
     - $$tabler:volume-2$$
     - $$tabler:volume$$
   - - $$tabler:brightness-up$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - F5
     - F6
     - F7
     - F8
     - ''
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - $$tabler:arrow-big-up-line$$
   - - LCTL
     - LALT
     - $$tabler:brackets-contain$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - F9
     - F10
     - F11
@@ -123,43 +123,43 @@ layers:
   - - $$tabler:player-play$$
     - $$tabler:player-track-next$$
     - $$tabler:brightness-down$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   Num:
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - $$tabler:bulb$$
     - $$tabler:bounce-left$$
     - $$tabler:bounce-right$$
     - '%'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - +
     - '7'
     - '8'
     - '9'
   - - ','
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - $$tabler:brackets-contain$$
     - LALT
     - LCTL
     - $$tabler:arrow-big-up-line$$
     - '='
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '-'
     - '4'
   - - '5'
     - '6'
     - '0'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ''
     - ''
     - $$tabler:palette-off$$
@@ -170,43 +170,43 @@ layers:
   - - '2'
     - '3'
     - .
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ENT
     - $$tabler:space$$
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
   Sym:
-  - - {t: ▽, type: trans}
+  - - {t: '$$tabler:stack-push$$', type: trans}
     - '~'
     - <
     - '>'
     - '#'
     - '@'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '&'
     - '`'
     - '['
     - ']'
   - - \
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '!'
     - '-'
     - ':'
     - '='
     - '0'
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - '1'
     - _
   - - (
     - )
     - $
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - ^
     - +
     - '*'
@@ -217,10 +217,10 @@ layers:
   - - '{'
     - '}'
     - '%'
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - TAB
     - $$tabler:space$$
     - $$tabler:backspace$$
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
+    - {t: '$$tabler:stack-push$$', type: trans}
     - {type: held}
